@@ -1,0 +1,17 @@
+{
+  "env": {
+    "HYPERFRAMES_BROWSER_PATH": "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/scripts/setup.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
