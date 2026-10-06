@@ -11,5 +11,5 @@ ffmpeg -v error -y -i out/picture.mp4 -i assets/voice.wav -i assets/music-advert
   afade=t=in:d=0.4,afade=t=out:st=$(echo "$LEN - 1.6" | bc):d=1.6[bed];
 [bed][key]sidechaincompress=threshold=0.05:ratio=2.5:attack=30:release=500:makeup=1[ducked];
 [voice][ducked]amix=inputs=2:duration=longest:normalize=0,loudnorm=I=-14:TP=-1.2:LRA=9[mix]" \
-  -map 0:v -map "[mix]" -c:v libx264 -preset slow -crf 19 -pix_fmt yuv420p -c:a aac -b:a 192k -ar 48000 -movflags +faststart out/foherb-reel-v1.mp4
-echo "out/foherb-reel-v1.mp4"
+  -map 0:v -map "[mix]" -c:v libx264 -preset slow -crf 19 -pix_fmt yuv420p -c:a aac -b:a 192k -ar 48000 -movflags +faststart out/foherb-reel-v2-uz.mp4
+echo "out/foherb-reel-v2-uz.mp4"
