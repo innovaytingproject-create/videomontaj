@@ -1,0 +1,182 @@
+[
+ {
+  "block": "hook",
+  "src_in": 0.3667,
+  "src_out": 3.1333,
+  "out_start": 0.0
+ },
+ {
+  "block": "hook",
+  "src_in": 3.4,
+  "src_out": 13.1333,
+  "out_start": 2.7666
+ },
+ {
+  "block": "carry",
+  "src_in": 19.0333,
+  "src_out": 26.1333,
+  "out_start": 12.4999
+ },
+ {
+  "block": "carry",
+  "src_in": 26.5667,
+  "src_out": 27.3,
+  "out_start": 19.5999
+ },
+ {
+  "block": "carry",
+  "src_in": 38.3,
+  "src_out": 42.0333,
+  "out_start": 20.3332
+ },
+ {
+  "block": "carry",
+  "src_in": 42.7,
+  "src_out": 44.3,
+  "out_start": 24.0665
+ },
+ {
+  "block": "gloves",
+  "src_in": 47.9333,
+  "src_out": 48.5667,
+  "out_start": 25.6665
+ },
+ {
+  "block": "gloves",
+  "src_in": 48.7333,
+  "src_out": 50.0,
+  "out_start": 26.2999
+ },
+ {
+  "block": "gloves",
+  "src_in": 52.9667,
+  "src_out": 54.4667,
+  "out_start": 27.5666
+ },
+ {
+  "block": "gloves",
+  "src_in": 54.7,
+  "src_out": 56.5,
+  "out_start": 29.0666
+ },
+ {
+  "block": "gloves",
+  "src_in": 56.7,
+  "src_out": 58.0333,
+  "out_start": 30.8666
+ },
+ {
+  "block": "gloves",
+  "src_in": 58.1667,
+  "src_out": 61.2,
+  "out_start": 32.1999
+ },
+ {
+  "block": "gloves",
+  "src_in": 61.5,
+  "src_out": 63.3,
+  "out_start": 35.2332
+ },
+ {
+  "block": "device",
+  "src_in": 98.0333,
+  "src_out": 100.6,
+  "out_start": 37.0332
+ },
+ {
+  "block": "device",
+  "src_in": 101.1333,
+  "src_out": 104.2667,
+  "out_start": 39.5999
+ },
+ {
+  "block": "device",
+  "src_in": 104.6333,
+  "src_out": 106.3333,
+  "out_start": 42.7333
+ },
+ {
+  "block": "functions",
+  "src_in": 112.3,
+  "src_out": 115.5,
+  "out_start": 44.4333
+ },
+ {
+  "block": "functions",
+  "src_in": 120.9,
+  "src_out": 121.3667,
+  "out_start": 47.6333
+ },
+ {
+  "block": "functions",
+  "src_in": 121.6333,
+  "src_out": 125.3333,
+  "out_start": 48.1
+ },
+ {
+  "block": "functions",
+  "src_in": 125.5333,
+  "src_out": 129.9333,
+  "out_start": 51.8
+ },
+ {
+  "block": "stat",
+  "src_in": 136.1,
+  "src_out": 139.0667,
+  "out_start": 56.2
+ },
+ {
+  "block": "stat",
+  "src_in": 139.2667,
+  "src_out": 144.1,
+  "out_start": 59.1667
+ },
+ {
+  "block": "stat",
+  "src_in": 144.2,
+  "src_out": 149.2667,
+  "out_start": 64.0
+ },
+ {
+  "block": "veins",
+  "src_in": 165.2,
+  "src_out": 165.5667,
+  "out_start": 69.0667
+ },
+ {
+  "block": "veins",
+  "src_in": 165.9333,
+  "src_out": 169.3667,
+  "out_start": 69.4334
+ },
+ {
+  "block": "veins",
+  "src_in": 170.0333,
+  "src_out": 171.5,
+  "out_start": 72.8668
+ },
+ {
+  "block": "veins",
+  "src_in": 171.6667,
+  "src_out": 182.9,
+  "out_start": 74.3335
+ },
+ {
+  "block": "compact",
+  "src_in": 183.4667,
+  "src_out": 187.7,
+  "out_start": 85.5668
+ },
+ {
+  "block": "cta",
+  "src_in": 187.8,
+  "src_out": 194.3333,
+  "out_start": 89.8001
+ },
+ {
+  "block": "cta",
+  "src_in": 194.7333,
+  "src_out": 195.8667,
+  "out_start": 96.3334
+ }
+]

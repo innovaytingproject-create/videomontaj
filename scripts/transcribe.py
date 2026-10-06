@@ -6,7 +6,10 @@ Writes <input>.words.json (per-word timings) and <input>.srt next to the input.
 """
 import argparse
 import json
+import subprocess
 from pathlib import Path
+
+import numpy as np
 
 from faster_whisper import WhisperModel
 
@@ -19,6 +22,16 @@ def srt_time(t: float) -> str:
     return f"{h:02}:{m:02}:{s:02},{ms:03}"
 
 
+def load_audio(path: Path) -> np.ndarray:
+    # Decode with ffmpeg directly: faster-whisper's PyAV decoder breaks on some PyAV versions.
+    raw = subprocess.run(
+        ["ffmpeg", "-v", "error", "-i", str(path), "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
+        check=True,
+        capture_output=True,
+    ).stdout
+    return np.frombuffer(raw, np.float32)
+
+
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("input")
@@ -29,7 +42,7 @@ def main() -> None:
     src = Path(args.input)
     model = WhisperModel(args.model, device="cpu", compute_type="int8")
     segments, _ = model.transcribe(
-        str(src), language=args.lang, word_timestamps=True, vad_filter=True
+        load_audio(src), language=args.lang, word_timestamps=True, vad_filter=True
     )
 
     words, srt = [], []
