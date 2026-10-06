@@ -14,21 +14,20 @@ MEDIA = Path(__file__).resolve().parents[3] / "media"
 ENV = np.load(Path(__file__).with_name("env.npy"))  # built by pauses.py
 
 # (block id, source in, source out) — chosen from the transcript; everything else is drafts/fumbling.
+# The whole take is content (the unpacking included): contiguous blocks, nothing removed.
+# Blocks only drive framing changes and graphics.
 RANGES = [
-    ("hook", 0.00, 13.15),
-    ("carry", 18.70, 27.30),
-    ("carry", 38.30, 44.30),
-    ("gloves", 47.20, 50.00),
-    ("gloves", 52.30, 63.30),
-    ("device", 97.50, 106.35),
-    ("functions", 112.30, 115.50),
-    ("functions", 120.90, 129.95),
-    ("stat", 136.10, 144.10),
-    ("stat", 144.20, 149.25),
-    ("veins", 165.20, 182.90),
-    ("compact", 183.00, 187.70),
-    ("cta", 187.80, 195.85),
+    ("hook", 0.00, 18.70),
+    ("carry", 18.70, 47.20),
+    ("gloves", 47.20, 97.50),
+    ("device", 97.50, 112.30),
+    ("functions", 112.30, 136.10),
+    ("stat", 136.10, 165.20),
+    ("veins", 165.20, 183.00),
+    ("compact", 183.00, 187.80),
+    ("cta", 187.80, 197.17),
 ]
+CUT_PAUSES = False  # v1 tightened pauses; the client wants the full take kept
 THRESH_DB = -38.0  # speech-band level below which a stretch counts as a pause
 MIN_PAUSE = 0.4    # shorter pauses are natural rhythm and stay
 PAD = 0.12         # breathing room kept on each side of a cut pause
@@ -36,6 +35,8 @@ FPS = 30
 
 
 def split(block, a, b):
+    if not CUT_PAUSES:
+        return [(block, round(round(a * FPS) / FPS, 4), round(round(b * FPS) / FPS, 4))]
     cuts, start = [], a
     for x, y in pauses(ENV, a, b, THRESH_DB, MIN_PAUSE):
         if x - a < 0.05:          # leading silence: just start later

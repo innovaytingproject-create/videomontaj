@@ -20,8 +20,11 @@ for i, p in enumerate(pieces):
     zoom = 1.12 if blocks.index(p["block"]) % 2 else 1.0
     crop = f"crop=iw/{zoom}:ih/{zoom}:(iw-iw/{zoom})/2:(ih-ih/{zoom})*0.32," if zoom != 1.0 else ""
     chains.append(f"[{i}:v]{crop}scale=1080:1920:flags=lanczos,setsar=1,fps=30,eq=contrast=1.04:saturation=1.08,trim=end_frame={nf},setpts=PTS-STARTPTS[v{i}]")
-    chains.append(f"[{i}:a]aresample=48000,pan=mono|c0=0.5*c0+0.5*c1,atrim=duration={d:.4f},asetpts=PTS-STARTPTS,"
-                  f"afade=t=in:d={FADE},afade=t=out:st={d - FADE:.3f}:d={FADE}[a{i}]")
+    # Fade only at real splices; contiguous blocks join seamlessly.
+    prev_join = i > 0 and abs(pieces[i - 1]["src_out"] - p["src_in"]) < 1e-3
+    next_join = i + 1 < len(pieces) and abs(pieces[i + 1]["src_in"] - p["src_out"]) < 1e-3
+    fades = ("" if prev_join else f",afade=t=in:d={FADE}") + ("" if next_join else f",afade=t=out:st={d - FADE:.3f}:d={FADE}")
+    chains.append(f"[{i}:a]aresample=48000,pan=mono|c0=0.5*c0+0.5*c1,atrim=duration={d:.4f},asetpts=PTS-STARTPTS{fades}[a{i}]")
 n = len(pieces)
 chains.append("".join(f"[v{i}][a{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=1[v][araw]")
 # Voice cleanup: rumble cut, gentle denoise, presence, leveling, then loudness to -16 LUFS.
