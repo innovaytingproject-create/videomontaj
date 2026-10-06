@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Transcribe a video/audio file to word-level timestamps for cuts and captions.
 
-Usage: python3 scripts/transcribe.py media/source.mp4 [--model small] [--lang ru]
+Usage: python3 scripts/transcribe.py media/source.mp4 [--model large-v3-turbo] [--lang ru]
 Writes <input>.words.json (per-word timings) and <input>.srt next to the input.
 """
 import argparse
@@ -22,7 +22,7 @@ def srt_time(t: float) -> str:
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("input")
-    p.add_argument("--model", default="small")
+    p.add_argument("--model", default="large-v3-turbo")
     p.add_argument("--lang", default="ru")
     args = p.parse_args()
 

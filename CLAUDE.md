@@ -10,7 +10,7 @@
 
 ## Окружение (облачная песочница)
 - Браузер для рендера — локальный Chromium headless shell; путь задан в `remotion.config.ts` и в `HYPERFRAMES_BROWSER_PATH`.
-- Внешние CDN, Hugging Face, remotion.media заблокированы сетевой политикой: все библиотеки и шрифты держать локально.
+- Сеть открыта для Google Drive, Hugging Face, HyperFrames registry, jsDelivr/unpkg, Google Fonts, remotion.media. Библиотеки для рендера всё равно лучше держать локально (детерминизм).
 - Шрифт Inter с кириллицей установлен в системе.
 
 ## Рендер
