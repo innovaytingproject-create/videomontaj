@@ -51,7 +51,7 @@ for i, (a, b, kind, text) in enumerate(S.CAPTIONS):
 # Hook title 1: "Любите массаж?" as two slabs.
 s, e = out(0.0), out(2.9, True)
 clips.append(f'<div id="t1" class="clip title" data-start="{r(s)}" data-duration="{r(e - s + .25)}" data-track-index="4">'
-             '<div class="slab dark"><span>Любите</span></div><div class="slab orange tilt"><span>массаж?</span></div></div>')
+             '<div class="slab dark"><span>Massajni</span></div><div class="slab orange tilt"><span>sevasizmi?</span></div></div>')
 tl.append(f'tl.fromTo("#t1 .slab", {{scaleX: 0}}, {{scaleX: 1, duration: .38, ease: "expo.out", stagger: .16}}, {r(s + .05)});')
 tl.append(f'tl.fromTo("#t1 .slab span", {{yPercent: 110}}, {{yPercent: 0, duration: .42, ease: "back.out(1.8)", stagger: .16}}, {r(s + .2)});')
 tl.append(f'tl.to("#t1 .slab", {{xPercent: -120, duration: .3, ease: "power3.in", stagger: .06}}, {r(e - .1)});')
@@ -59,14 +59,14 @@ tl.append(f'tl.to("#t1 .slab", {{xPercent: -120, duration: .3, ease: "power3.in"
 # Product name tag.
 s, e = out(S.PRODUCT_TAG[0]), out(S.PRODUCT_TAG[1], True)
 clips.append(f'<div id="tag" class="clip tag" data-start="{r(s)}" data-duration="{r(e - s + .3)}" data-track-index="3">'
-             '<div class="tag-in"><span class="logo">FOHERB</span><span class="tag-sep"></span><span>Биомассажёр</span></div></div>')
+             '<div class="tag-in"><span class="logo">FOHERB</span><span class="tag-sep"></span><span>Biomassajyor</span></div></div>')
 tl.append(f'tl.fromTo("#tag .tag-in", {{x: -80, opacity: 0}}, {{x: 0, opacity: 1, duration: .45, ease: "expo.out"}}, {r(s)});')
 tl.append(f'tl.to("#tag .tag-in", {{x: -60, opacity: 0, duration: .25, ease: "power2.in"}}, {r(e)});')
 
 # Hook title 2: "Это просто ЧУДО" with sparkles.
 s, e = out(11.30), out(13.15, True)
 clips.append(f'<div id="t2" class="clip title" data-start="{r(s)}" data-duration="{r(e - s)}" data-track-index="4">'
-             '<div class="slab dark small"><span>Это просто</span></div><div class="miracle">чудо'
+             '<div class="slab dark small"><span>Bu shunchaki</span></div><div class="miracle">mo’jiza'
              '<i class="spark s1"></i><i class="spark s2"></i><i class="spark s3"></i></div></div>')
 tl.append(f'tl.fromTo("#t2 .slab", {{scaleX: 0}}, {{scaleX: 1, duration: .3, ease: "expo.out"}}, {r(s)});')
 tl.append(f'tl.fromTo("#t2 .slab span", {{yPercent: 110}}, {{yPercent: 0, duration: .35, ease: "back.out(1.8)"}}, {r(s + .1)});')
@@ -88,7 +88,7 @@ for i, (a, num, label) in enumerate(S.CHIPS):
 # Big "5".
 s, e = out(S.BIG_FIVE[0]), out(S.BIG_FIVE[1], True)
 clips.append(f'<div id="five" class="clip five" data-start="{r(s)}" data-duration="{r(e - s + .5)}" data-track-index="4">'
-             '<div class="five-in"><span class="five-n">5</span><span class="five-l">функций</span></div></div>')
+             '<div class="five-in"><span class="five-n">5</span><span class="five-l">funksiya</span></div></div>')
 tl.append(f'tl.fromTo("#five .five-n", {{scale: 2.4, opacity: 0}}, {{scale: 1, opacity: 1, duration: .45, ease: "expo.out"}}, {r(s)});')
 tl.append(f'tl.fromTo("#five .five-l", {{y: 40, opacity: 0}}, {{y: 0, opacity: 1, duration: .35, ease: "power3.out"}}, {r(s + .2)});')
 tl.append(f'tl.to("#five .five-in", {{scale: .85, opacity: 0, duration: .3, ease: "power2.in"}}, {r(e + .2)});')
@@ -108,7 +108,7 @@ d = e - s
 clips.append(f'<div id="stat" class="clip stat" data-start="{r(s)}" data-duration="{r(d)}" data-track-index="4">'
              '<div class="stat-in"><div class="stat-row"><span class="stat-1">1</span><span class="stat-eq">=</span>'
              '<span class="stat-10" id="statnum">10</span></div>'
-             '<div class="stat-l1">биомассажёр</div><div class="stat-l2">заменяет 10 ручных массажей</div></div></div>')
+             '<div class="stat-l1">biomassajyor</div><div class="stat-l2">o’nta qo’l massaji o’rnini bosadi</div></div></div>')
 tl.append(f'tl.fromTo("#stat .stat-in", {{y: 120, opacity: 0}}, {{y: 0, opacity: 1, duration: .5, ease: "expo.out"}}, {r(s)});')
 tl.append(f'tl.fromTo("#stat .stat-1, #stat .stat-eq", {{scale: 0}}, {{scale: 1, duration: .4, ease: "back.out(2.5)", stagger: .1}}, {r(s + .15)});')
 tl.append(f'tl.fromTo(counter, {{v: 1}}, {{v: 10, duration: 1.1, ease: "power2.out", onUpdate: () => {{ document.getElementById("statnum").textContent = Math.round(counter.v); }}}}, {r(s + .35)});')
@@ -120,12 +120,12 @@ tl.append(f'tl.to("#stat .stat-in", {{y: 80, opacity: 0, duration: .3, ease: "po
 s = out(S.CTA_START)
 ecs = out(194.35)
 clips.append(f'<div id="cta" class="clip title cta" data-start="{r(s)}" data-duration="{r(ecs - s)}" data-track-index="4">'
-             '<div class="slab orange tilt"><span>Свой физиокабинет?</span></div></div>')
+             '<div class="slab dark small"><span>Fiziokabinet</span></div><div class="slab orange tilt"><span>ochmoqchimisiz?</span></div></div>')
 tl.append(f'tl.fromTo("#cta .slab", {{scaleX: 0}}, {{scaleX: 1, duration: .4, ease: "expo.out"}}, {r(s)});')
 tl.append(f'tl.fromTo("#cta .slab span", {{yPercent: 110}}, {{yPercent: 0, duration: .4, ease: "back.out(1.8)"}}, {r(s + .15)});')
 clips.append(f'<div id="end" class="clip endcard" data-start="{r(ecs)}" data-duration="{r(END - ecs)}" data-track-index="6">'
-             '<div class="end-bg"></div><div class="end-in"><div class="end-rec">Рекомендую!</div>'
-             '<div class="end-logo">FOHERB</div><div class="end-line"></div><div class="end-sub">Биомассажёр · 5 функций в одном</div></div></div>')
+             '<div class="end-bg"></div><div class="end-in"><div class="end-rec">Tavsiya qilaman!</div>'
+             '<div class="end-logo">FOHERB</div><div class="end-line"></div><div class="end-sub">Biomassajyor · 5 funksiya</div></div></div>')
 tl.append(f'tl.fromTo("#end .end-bg", {{clipPath: "inset(100% 0 0 0)"}}, {{clipPath: "inset(0% 0 0 0)", duration: .55, ease: "expo.inOut"}}, {r(ecs)});')
 tl.append(f'tl.fromTo("#end .end-rec", {{y: 60, opacity: 0}}, {{y: 0, opacity: 1, duration: .45, ease: "back.out(2)"}}, {r(ecs + .3)});')
 tl.append(f'tl.fromTo("#end .end-logo", {{scale: 1.35, opacity: 0}}, {{scale: 1, opacity: 1, duration: .7, ease: "expo.out"}}, {r(ecs + .5)});')
