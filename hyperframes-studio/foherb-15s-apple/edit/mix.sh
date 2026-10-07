@@ -23,5 +23,5 @@ ffmpeg -v error -y -i out/pic.mp4 -i assets/voice15.wav -i assets/music-chronos.
 [s1][s2][s3][s4][s5][s6][s7][s8][s9]amix=inputs=9:duration=longest:normalize=0,volume=-14dB,apad=whole_dur=${LEN}[sfx];
 [voice][ducked][sfx]amix=inputs=3:duration=first:normalize=0,loudnorm=I=-13:TP=-1.0:LRA=9[mix]" \
   -map 0:v -map "[mix]" -c:v libx264 -preset slow -crf 19 -pix_fmt yuv420p \
-  -c:a aac -b:a 160k -ar 48000 -movflags +faststart out/foherb-15s-apple-v2.mp4
+  -c:a aac -b:a 160k -ar 48000 -movflags +faststart out/foherb-15s-apple-v3.mp4
 echo done
