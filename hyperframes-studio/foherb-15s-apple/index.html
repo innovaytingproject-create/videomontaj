@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      :root {
+        --ink: #1d1d1f;
+        --gray: #63666d;
+        --blue: #0a7aff;
+        --blue-deep: #0066e8;
+        --ice: #f5f8fc;
+        --tint: #e3eefc;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ice); }
+      #root { width: 100%; height: 100%; position: relative; overflow: hidden;
+              font-family: Inter, "Helvetica Neue", sans-serif; }
+
+      /* ---------- footage ---------- */
+      .vidwrap { position: absolute; inset: 0; overflow: hidden; background: var(--ice); }
+      .vidzoom { width: 100%; height: 100%; }
+      #aroll { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .whitefade { position: absolute; inset: 0; background: var(--ice); pointer-events: none; }
+
+      /* ---------- intro ---------- */
+      .intro { position: absolute; inset: 0; }
+      .intro-in { position: absolute; inset: 0; background:
+        radial-gradient(1200px 900px at 50% 8%, #ffffff 0%, rgba(255,255,255,0) 55%),
+        radial-gradient(1000px 1000px at 50% 108%, #dbe9fb 0%, rgba(219,233,251,0) 60%), var(--ice); }
+      .tag { position: absolute; top: 190px; left: 0; right: 0; display: flex; justify-content: center; }
+      .tag-in { display: flex; align-items: center; gap: 14px; background: #fff; border-radius: 60px; padding: 16px 34px;
+                box-shadow: 0 10px 34px rgba(29,55,97,.1); font-weight: 700; font-size: 30px; color: var(--gray); }
+      .tag-in i { display: block; width: 14px; height: 14px; border-radius: 50%; background: var(--blue); }
+      .tag-in b { color: var(--ink); font-weight: 900; }
+
+      .hgroup { position: absolute; top: 420px; left: 0; right: 0; text-align: center; }
+      .hsub { font-weight: 400; font-size: 58px; color: var(--gray); letter-spacing: .01em; }
+      .hrow { margin-top: 8px; position: relative; display: flex; justify-content: center; }
+      .hmain { position: relative; z-index: 0; font-weight: 900; font-size: 118px; color: var(--ink); letter-spacing: -0.02em; padding: 0 28px; }
+      .hmain .ltr { display: inline-block; white-space: pre; }
+      .hl { position: absolute; left: 10px; right: 10px; top: 12%; bottom: 6%; background: rgba(10,122,255,.14);
+            border-radius: 14px; transform-origin: left center; z-index: -1; }
+      .hdot { position: absolute; width: 22px; height: 22px; border-radius: 50%; background: var(--blue);
+              border: 5px solid #fff; box-shadow: 0 2px 10px rgba(10,122,255,.4); }
+      .hd1 { left: -2px; top: -4px; }
+      .hd2 { right: -2px; bottom: -14px; }
+
+      .widget { position: absolute; top: 760px; left: 0; right: 0; display: flex; justify-content: center; }
+      .widget-in { background: linear-gradient(160deg, #ffffff 0%, var(--tint) 100%); border-radius: 64px; padding: 26px;
+                   box-shadow: 0 40px 90px rgba(29,55,97,.16), 0 8px 24px rgba(29,55,97,.08); }
+      .widget-in img { display: block; width: 560px; height: 560px; object-fit: cover; border-radius: 44px; }
+      .wcap { margin-top: 20px; text-align: center; font-weight: 700; font-size: 32px; color: var(--gray); }
+      .wcap b { color: var(--blue-deep); font-weight: 900; }
+
+      /* ---------- captions ---------- */
+      .cap { position: absolute; left: 70px; right: 70px; bottom: 560px; display: flex; justify-content: center; }
+      .cap-card { max-width: 880px; background: rgba(255,255,255,.92); border-radius: 30px; padding: 24px 40px 28px;
+                  box-shadow: 0 14px 40px rgba(29,55,97,.16); text-align: center;
+                  font-weight: 700; font-size: 46px; line-height: 1.2; color: var(--ink); letter-spacing: -0.01em; }
+      .w { display: inline-block; }
+      .hot { color: var(--blue-deep); }
+
+      /* ---------- brand pill ---------- */
+      .brand { position: absolute; top: 150px; left: 60px; }
+      .brand-in { display: flex; align-items: center; gap: 16px; background: rgba(255,255,255,.92); border-radius: 60px;
+                  padding: 16px 32px; box-shadow: 0 10px 30px rgba(29,55,97,.14); }
+      .brand-in i { display: block; width: 14px; height: 14px; border-radius: 50%; background: var(--blue); }
+      .brand-in b { font-weight: 900; font-size: 30px; color: var(--ink); letter-spacing: .02em; }
+      .brand-in span { font-weight: 400; font-size: 28px; color: var(--gray); }
+
+      /* ---------- mo'jiza card ---------- */
+      .mojiza { position: absolute; left: 0; right: 0; top: 1020px; display: flex; justify-content: center; }
+      .mj-card { background: rgba(255,255,255,.95); border-radius: 48px; padding: 44px 78px 52px; text-align: center;
+                 box-shadow: 0 36px 80px rgba(29,55,97,.2); }
+      .mj-sub { font-weight: 400; font-size: 44px; color: var(--gray); }
+      .mj-main { margin-top: 2px; font-weight: 900; font-size: 108px; color: var(--ink); letter-spacing: -0.02em; }
+      .mj-main em { font-style: normal; color: var(--blue); }
+
+      /* ---------- end card ---------- */
+      .endcard { position: absolute; inset: 0; }
+      .end-bg { position: absolute; inset: 0; background:
+        radial-gradient(1100px 900px at 50% 16%, #ffffff 0%, rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 1100px at 50% 112%, #cfe3fa 0%, rgba(207,227,250,0) 62%), var(--ice); }
+      .end-in { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center;
+                justify-content: center; padding-bottom: 140px; }
+      .end-sub { font-weight: 400; font-size: 48px; color: var(--gray); }
+      .end-logo-mask { overflow: hidden; padding: 6px 20px 14px; }
+      .end-logo { font-weight: 900; font-size: 164px; color: var(--ink); letter-spacing: -0.03em; }
+      .end-line { margin-top: 2px; font-weight: 400; font-size: 40px; color: var(--gray); }
+      .end-pill { margin-top: 44px; background: var(--blue); color: #fff; border-radius: 60px; padding: 24px 56px 28px;
+                  font-weight: 700; font-size: 44px; box-shadow: 0 20px 50px rgba(10,122,255,.35); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15.4" data-width="1080" data-height="1920">
+
+      <div id="vid" class="vidwrap">
+        <div class="vidzoom" id="vz">
+          <video id="aroll" class="clip" src="assets/cut15cool.mp4" playsinline muted data-start="0" data-duration="13.2" data-track-index="0"></video>
+        </div>
+      </div>
+      <div id="wf" class="clip whitefade" data-start="2.3" data-duration="1.1" data-track-index="1"></div>
+
+      <div id="intro" class="clip intro" data-start="0" data-duration="2.75" data-track-index="3">
+        <div class="intro-in" id="introin">
+          <div class="tag"><div class="tag-in" id="tagin"><i></i><b>FOHERB</b><span>·</span>Biomassajyor</div></div>
+          <div class="hgroup">
+            <div class="hsub" id="hsub">Massajni</div>
+            <div class="hrow"><div class="hmain" id="hmain"><span class="hl" id="hl"></span><i class="hdot hd1" id="hd1"></i><i class="hdot hd2" id="hd2"></i></div></div>
+          </div>
+          <div class="widget" id="widget">
+            <div class="widget-in" id="widgetin">
+              <img src="assets/product.jpg" alt="" />
+              <div class="wcap"><b>5 funksiya</b> · bitta priborda</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="brand" class="clip brand" data-start="3.4" data-duration="9.4" data-track-index="2">
+        <div class="brand-in"><i></i><b>FOHERB</b><span>Biomassajyor</span></div>
+      </div>
+
+      <div id="cap1" class="clip cap" data-start="2.95" data-duration="2.15" data-track-index="4">
+        <p class="cap-card"><span class="w">Men</span> <span class="w">massajni</span> <span class="w hot">juda</span> <span class="w hot">sevaman</span></p>
+      </div>
+      <div id="cap2" class="clip cap" data-start="5.15" data-duration="3.3" data-track-index="4">
+        <p class="cap-card"><span class="w">Shuning</span> <span class="w">uchun</span> <span class="w">assotsiatsiyada</span> <span class="w">o&#8217;zimga</span></p>
+      </div>
+      <div id="cap3" class="clip cap" data-start="8.5" data-duration="2.6" data-track-index="4">
+        <p class="cap-card"><span class="w hot">biomassajyor</span> <span class="w">xarid</span> <span class="w">qildim</span></p>
+      </div>
+
+      <div id="mojiza" class="clip mojiza" data-start="11.3" data-duration="1.75" data-track-index="4">
+        <div class="mj-card" id="mjcard">
+          <div class="mj-sub">bu shunchaki</div>
+          <div class="mj-main">Mo&#8217;jiza<em>.</em></div>
+        </div>
+      </div>
+
+      <div id="end" class="clip endcard" data-start="13.05" data-duration="2.35" data-track-index="5">
+        <div class="end-bg" id="endbg"></div>
+        <div class="end-in">
+          <div class="end-sub" id="esub">Tavsiya qilaman</div>
+          <div class="end-logo-mask"><div class="end-logo" id="elogo">FOHERB</div></div>
+          <div class="end-line" id="eline">Biomassajyor&nbsp;·&nbsp;5 funksiya</div>
+          <div class="end-pill" id="epill">Batafsil&nbsp;&mdash;&nbsp;profilda</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* Per-letter reveal for the headline, Apple keynote style. */
+      const word = "Sevasizmi?";
+      const hmain = document.getElementById("hmain");
+      for (const ch of word) {
+        const s = document.createElement("span");
+        s.className = "ltr";
+        s.textContent = ch;
+        hmain.appendChild(s);
+      }
+
+      const tl = gsap.timeline({ paused: true });
+
+      /* ---- intro ---- */
+      tl.fromTo("#tagin", { y: -40, opacity: 0 }, { y: 0, opacity: 1, duration: .5, ease: "power3.out" }, 0.08);
+      tl.fromTo("#hsub", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: .45, ease: "power2.out" }, 0.22);
+      tl.fromTo("#hmain .ltr", { opacity: 0, y: 14, filter: "blur(6px)" },
+                { opacity: 1, y: 0, filter: "blur(0px)", duration: .4, ease: "power2.out", stagger: .04 }, 0.38);
+      tl.fromTo("#hl", { scaleX: 0 }, { scaleX: 1, duration: .45, ease: "power3.inOut" }, 0.95);
+      tl.fromTo("#hd1, #hd2", { scale: 0 }, { scale: 1, duration: .35, ease: "back.out(2)", stagger: .08 }, 1.15);
+      tl.fromTo("#widgetin", { y: 90, opacity: 0, scale: .88 }, { y: 0, opacity: 1, scale: 1, duration: .6, ease: "back.out(1.35)" }, 0.55);
+      tl.to("#widgetin", { y: -10, duration: 1.3, ease: "sine.inOut" }, 1.2);
+      /* soft white dissolve out */
+      tl.to("#introin", { opacity: 0, scale: 1.035, duration: .45, ease: "power2.inOut" }, 2.28);
+
+      /* ---- footage reveal ---- */
+      tl.fromTo("#wf", { opacity: 1 }, { opacity: 0, duration: .75, ease: "power2.out" }, 2.42);
+      tl.fromTo("#vz", { scale: 1.1 }, { scale: 1.03, duration: 1.0, ease: "power2.out" }, 2.35);
+      tl.to("#vz", { scale: 1.08, duration: 7.9, ease: "sine.inOut" }, 3.4);
+      tl.to("#vz", { scale: 1.13, duration: .45, ease: "power2.out" }, 11.3);
+
+      /* ---- captions ---- */
+      for (const [id, t] of [["cap1", 2.95], ["cap2", 5.15], ["cap3", 8.5]]) {
+        tl.fromTo("#" + id + " .cap-card", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: .4, ease: "power3.out" }, t);
+        tl.fromTo("#" + id + " .w", { opacity: 0 }, { opacity: 1, duration: .25, ease: "power1.out", stagger: .04 }, t + .08);
+      }
+      tl.to("#cap1 .cap-card", { y: 24, opacity: 0, duration: .25, ease: "power2.in" }, 4.83);
+      tl.to("#cap2 .cap-card", { y: 24, opacity: 0, duration: .25, ease: "power2.in" }, 8.18);
+      tl.to("#cap3 .cap-card", { y: 24, opacity: 0, duration: .2, ease: "power2.in" }, 10.86);
+
+      /* ---- brand pill ---- */
+      tl.fromTo("#brand .brand-in", { y: -40, opacity: 0 }, { y: 0, opacity: 1, duration: .5, ease: "power3.out" }, 3.4);
+      tl.to("#brand .brand-in", { y: -30, opacity: 0, duration: .3, ease: "power2.in" }, 12.46);
+
+      /* ---- mo'jiza ---- */
+      tl.fromTo("#mjcard", { scale: .82, opacity: 0, y: 40 }, { scale: 1, opacity: 1, y: 0, duration: .55, ease: "back.out(1.45)" }, 11.34);
+      tl.to("#mjcard", { scale: .94, opacity: 0, duration: .25, ease: "power2.in" }, 12.78);
+
+      /* ---- end card ---- */
+      tl.fromTo("#endbg", { opacity: 0 }, { opacity: 1, duration: .5, ease: "power2.inOut" }, 13.05);
+      tl.fromTo("#esub", { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: .4, ease: "power2.out" }, 13.5);
+      tl.fromTo("#elogo", { yPercent: 115 }, { yPercent: 0, duration: .55, ease: "power4.out" }, 13.62);
+      tl.fromTo("#eline", { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: .4, ease: "power2.out" }, 13.9);
+      tl.fromTo("#epill", { scale: .7, opacity: 0 }, { scale: 1, opacity: 1, duration: .5, ease: "back.out(1.6)" }, 14.1);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
