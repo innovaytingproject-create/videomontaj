@@ -55,12 +55,15 @@
       .wcap b { color: var(--blue-deep); font-weight: 900; }
 
       /* ---------- captions ---------- */
+      .grad { position: absolute; left: 0; right: 0; top: 1080px; bottom: 0; pointer-events: none;
+              background: linear-gradient(180deg, rgba(7,14,26,0) 0%, rgba(7,14,26,.34) 55%, rgba(7,14,26,.52) 100%); }
       .cap { position: absolute; left: 70px; right: 70px; bottom: 560px; display: flex; justify-content: center; }
-      .cap-card { max-width: 880px; background: rgba(255,255,255,.92); border-radius: 30px; padding: 24px 40px 28px;
-                  box-shadow: 0 14px 40px rgba(29,55,97,.16); text-align: center;
-                  font-weight: 700; font-size: 46px; line-height: 1.2; color: var(--ink); letter-spacing: -0.01em; }
+      .cap-card { max-width: 900px; text-align: center; font-weight: 900; font-size: 54px; line-height: 1.18;
+                  color: #fff; letter-spacing: -0.01em;
+                  -webkit-text-stroke: 9px #101c2c; paint-order: stroke fill;
+                  text-shadow: 0 3px 8px rgba(5,12,24,.5), 0 14px 40px rgba(5,12,24,.4); }
       .w { display: inline-block; }
-      .hot { color: var(--blue-deep); }
+      .hot { color: #9ed1ff; }
 
       /* ---------- brand pill ---------- */
       .brand { position: absolute; top: 150px; left: 60px; }
@@ -69,6 +72,25 @@
       .brand-in i { display: block; width: 14px; height: 14px; border-radius: 50%; background: var(--blue); }
       .brand-in b { font-weight: 900; font-size: 30px; color: var(--ink); letter-spacing: .02em; }
       .brand-in span { font-weight: 400; font-size: 28px; color: var(--gray); }
+
+      /* ---------- iOS notification banner ---------- */
+      .banner { position: absolute; top: 150px; left: 0; right: 0; display: flex; justify-content: center; }
+      .banner-in { display: flex; align-items: center; gap: 22px; width: 880px; background: rgba(250,252,255,.96);
+                   border-radius: 40px; padding: 24px 32px; box-shadow: 0 24px 60px rgba(7,20,40,.35); }
+      .b-icon { width: 92px; height: 92px; border-radius: 24px; flex: none; display: flex; align-items: center; justify-content: center;
+                background: linear-gradient(150deg, #3f9bff, #0a62e0); color: #fff; font-weight: 900; font-size: 52px; }
+      .b-body { flex: 1; min-width: 0; }
+      .b-title { font-weight: 700; font-size: 34px; color: var(--ink); }
+      .b-text { margin-top: 2px; font-weight: 400; font-size: 31px; color: var(--gray); }
+      .b-time { align-self: flex-start; font-weight: 400; font-size: 26px; color: var(--gray); }
+
+      /* ---------- Apple-Pay-style confirmation ---------- */
+      .paydone { position: absolute; left: 0; right: 0; top: 1120px; display: flex; justify-content: center; }
+      .pay-in { display: flex; align-items: center; gap: 24px; background: rgba(250,252,255,.97); border-radius: 60px;
+                padding: 22px 46px 22px 26px; box-shadow: 0 26px 64px rgba(7,20,40,.4); }
+      .p-check { width: 84px; height: 84px; border-radius: 50%; background: #0a7aff; color: #fff; flex: none;
+                 display: flex; align-items: center; justify-content: center; font-size: 46px; font-weight: 900; }
+      .pay-in span { font-weight: 700; font-size: 42px; color: var(--ink); }
 
       /* ---------- mo'jiza card ---------- */
       .mojiza { position: absolute; left: 0; right: 0; top: 1020px; display: flex; justify-content: center; }
@@ -98,9 +120,10 @@
 
       <div id="vid" class="vidwrap">
         <div class="vidzoom" id="vz">
-          <video id="aroll" class="clip" src="assets/cut15cool.mp4" playsinline muted data-start="0" data-duration="13.2" data-track-index="0"></video>
+          <video id="aroll" class="clip" src="assets/cut15cine.mp4" playsinline muted data-start="0" data-duration="13.2" data-track-index="0"></video>
         </div>
       </div>
+      <div class="grad"></div>
       <div id="wf" class="clip whitefade" data-start="2.3" data-duration="1.1" data-track-index="1"></div>
 
       <div id="intro" class="clip intro" data-start="0" data-duration="2.75" data-track-index="3">
@@ -119,7 +142,7 @@
         </div>
       </div>
 
-      <div id="brand" class="clip brand" data-start="3.4" data-duration="9.4" data-track-index="2">
+      <div id="brand" class="clip brand" data-start="3.4" data-duration="1.9" data-track-index="2">
         <div class="brand-in"><i></i><b>FOHERB</b><span>Biomassajyor</span></div>
       </div>
 
@@ -131,6 +154,18 @@
       </div>
       <div id="cap3" class="clip cap" data-start="8.5" data-duration="2.6" data-track-index="4">
         <p class="cap-card"><span class="w hot">biomassajyor</span> <span class="w">xarid</span> <span class="w">qildim</span></p>
+      </div>
+
+      <div id="banner" class="clip banner" data-start="5.35" data-duration="2.95" data-track-index="2">
+        <div class="banner-in" id="bannerin">
+          <div class="b-icon">F</div>
+          <div class="b-body"><div class="b-title">FOHERB</div><div class="b-text">Biomassajyor &mdash; yangi xarid</div></div>
+          <div class="b-time">hozir</div>
+        </div>
+      </div>
+
+      <div id="paydone" class="clip paydone" data-start="8.95" data-duration="2.0" data-track-index="2">
+        <div class="pay-in" id="payin"><div class="p-check">&#10003;</div><span>Xarid qilindi</span></div>
       </div>
 
       <div id="mojiza" class="clip mojiza" data-start="11.3" data-duration="1.75" data-track-index="4">
@@ -193,7 +228,17 @@
 
       /* ---- brand pill ---- */
       tl.fromTo("#brand .brand-in", { y: -40, opacity: 0 }, { y: 0, opacity: 1, duration: .5, ease: "power3.out" }, 3.4);
-      tl.to("#brand .brand-in", { y: -30, opacity: 0, duration: .3, ease: "power2.in" }, 12.46);
+      tl.to("#brand .brand-in", { y: -30, opacity: 0, duration: .25, ease: "power2.in" }, 5.02);
+
+      /* ---- iOS banner: drop, hang, retract ---- */
+      tl.fromTo("#bannerin", { y: -260, opacity: 0, scale: .96 }, { y: 0, opacity: 1, scale: 1, duration: .6, ease: "back.out(1.2)" }, 5.4);
+      tl.to("#bannerin", { y: -14, duration: 1.5, ease: "sine.inOut" }, 6.05);
+      tl.to("#bannerin", { y: -260, opacity: 0, duration: .4, ease: "power3.in" }, 7.85);
+
+      /* ---- Apple-Pay confirmation bounce ---- */
+      tl.fromTo("#payin", { scale: .4, opacity: 0 }, { scale: 1, opacity: 1, duration: .55, ease: "back.out(1.9)" }, 9.0);
+      tl.fromTo("#paydone .p-check", { scale: 0, rotation: -40 }, { scale: 1, rotation: 0, duration: .45, ease: "back.out(2.4)" }, 9.18);
+      tl.to("#payin", { scale: .9, opacity: 0, duration: .22, ease: "power2.in" }, 10.7);
 
       /* ---- mo'jiza ---- */
       tl.fromTo("#mjcard", { scale: .82, opacity: 0, y: 40 }, { scale: 1, opacity: 1, y: 0, duration: .55, ease: "back.out(1.45)" }, 11.34);
