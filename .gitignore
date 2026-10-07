@@ -72,3 +72,5 @@ snapshots/
 *.npy
 .hyperframes/
 __pycache__/
+/hyperframes-studio/foherb-full/kit/overlays/*.mp4
+/hyperframes-studio/foherb-full/kit/overlays/*.webm

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="../vendor/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 400; src: url("vendor/fonts/InterDisplay-Regular.otf") format("opentype"); }
+      @font-face { font-family: "Inter Display"; font-weight: 600; src: url("vendor/fonts/InterDisplay-SemiBold.otf") format("opentype"); }
+      @font-face { font-family: "Inter Display"; font-weight: 700; src: url("vendor/fonts/InterDisplay-Bold.otf") format("opentype"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("vendor/fonts/InterDisplay-ExtraBold.otf") format("opentype"); }
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("vendor/fonts/InterDisplay-Black.otf") format("opentype"); }
+      :root {
+        --ink: #1d1d1f;
+        --gray: #63666d;
+        --blue: #0a7aff;
+        --blue-deep: #0066e8;
+        --ice: #f5f8fc;
+        --tint: #e3eefc;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ice); }
+      #root { width: 100%; height: 100%; position: relative; overflow: hidden;
+              font-family: "Inter Display", Inter, "Helvetica Neue", sans-serif; }
+
+      /* ---------- footage ---------- */
+      .vidwrap { position: absolute; inset: 0; overflow: hidden; background: var(--ice); }
+      .vidzoom { width: 100%; height: 100%; }
+      #aroll { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .whitefade { position: absolute; inset: 0; background: var(--ice); pointer-events: none; }
+
+      /* ---------- intro ---------- */
+      .intro { position: absolute; inset: 0; }
+      .intro-in { position: absolute; inset: 0; background:
+        radial-gradient(1200px 900px at 50% 8%, #ffffff 0%, rgba(255,255,255,0) 55%),
+        radial-gradient(1000px 1000px at 50% 108%, #dbe9fb 0%, rgba(219,233,251,0) 60%), var(--ice); }
+      .tag { position: absolute; top: 190px; left: 0; right: 0; display: flex; justify-content: center; }
+      .tag-in { display: flex; align-items: center; gap: 14px; background: #fff; border-radius: 60px; padding: 16px 34px;
+                box-shadow: 0 10px 34px rgba(29,55,97,.1); font-weight: 700; font-size: 30px; color: var(--gray); }
+      .tag-in i { display: block; width: 14px; height: 14px; border-radius: 50%; background: var(--blue); }
+      .tag-in b { color: var(--ink); font-weight: 900; }
+
+      .hgroup { position: absolute; top: 420px; left: 0; right: 0; text-align: center; }
+      .hsub { font-weight: 400; font-size: 58px; color: var(--gray); letter-spacing: .01em; }
+      .hrow { margin-top: 8px; position: relative; display: flex; justify-content: center; }
+      .hmain { position: relative; z-index: 0; font-weight: 900; font-size: 118px; color: var(--ink); letter-spacing: -0.02em; padding: 0 28px; }
+      .hmain .ltr { display: inline-block; white-space: pre; }
+      .hl { position: absolute; left: 10px; right: 10px; top: 12%; bottom: 6%; background: rgba(10,122,255,.14);
+            border-radius: 14px; transform-origin: left center; z-index: -1; }
+      .hdot { position: absolute; width: 22px; height: 22px; border-radius: 50%; background: var(--blue);
+              border: 5px solid #fff; box-shadow: 0 2px 10px rgba(10,122,255,.4); }
+      .hd1 { left: -2px; top: -4px; }
+      .hd2 { right: -2px; bottom: -14px; }
+
+      .widget { position: absolute; top: 760px; left: 0; right: 0; display: flex; justify-content: center; }
+      .widget-in { background: linear-gradient(160deg, #ffffff 0%, var(--tint) 100%); border-radius: 64px; padding: 26px;
+                   box-shadow: 0 40px 90px rgba(29,55,97,.16), 0 8px 24px rgba(29,55,97,.08); }
+      .widget-in img { display: block; width: 560px; height: 560px; object-fit: cover; border-radius: 44px; }
+      .wcap { margin-top: 20px; text-align: center; font-weight: 700; font-size: 32px; color: var(--gray); }
+      .wcap b { color: var(--blue-deep); font-weight: 900; }
+
+      /* ---------- captions ---------- */
+      .grad { position: absolute; left: 0; right: 0; top: 1080px; bottom: 0; pointer-events: none;
+              background: linear-gradient(180deg, rgba(7,14,26,0) 0%, rgba(7,14,26,.42) 55%, rgba(7,14,26,.6) 100%); }
+      .cap { position: absolute; left: 70px; right: 70px; bottom: 560px; display: flex; justify-content: center; }
+      .cap-card { max-width: 900px; text-align: center; font-weight: 600; font-size: 56px; line-height: 1.22;
+                  color: #fff; letter-spacing: -0.015em;
+                  text-shadow: 0 1px 2px rgba(5,12,24,.85), 0 3px 9px rgba(5,12,24,.65), 0 14px 44px rgba(5,12,24,.5); }
+      .w { display: inline-block; }
+      .hot { color: #a6d4ff; }
+
+      /* ---------- brand pill ---------- */
+      .brand { position: absolute; top: 150px; left: 60px; }
+      .brand-in { display: flex; align-items: center; gap: 16px; background: rgba(255,255,255,.92); border-radius: 60px;
+                  padding: 16px 32px; box-shadow: 0 10px 30px rgba(29,55,97,.14); }
+      .brand-in i { display: block; width: 14px; height: 14px; border-radius: 50%; background: var(--blue); }
+      .brand-in b { font-weight: 900; font-size: 30px; color: var(--ink); letter-spacing: .02em; }
+      .brand-in span { font-weight: 400; font-size: 28px; color: var(--gray); }
+
+      /* ---------- iOS notification banner ---------- */
+      .banner { position: absolute; top: 150px; left: 0; right: 0; display: flex; justify-content: center; }
+      .banner-in { display: flex; align-items: center; gap: 22px; width: 880px; background: rgba(250,252,255,.96);
+                   border-radius: 40px; padding: 24px 32px; box-shadow: 0 24px 60px rgba(7,20,40,.35); }
+      .b-icon { width: 92px; height: 92px; border-radius: 24px; flex: none; display: flex; align-items: center; justify-content: center;
+                background: linear-gradient(150deg, #3f9bff, #0a62e0); color: #fff; font-weight: 900; font-size: 52px; }
+      .b-body { flex: 1; min-width: 0; }
+      .b-title { font-weight: 700; font-size: 34px; color: var(--ink); }
+      .b-text { margin-top: 2px; font-weight: 400; font-size: 31px; color: var(--gray); }
+      .b-time { align-self: flex-start; font-weight: 400; font-size: 26px; color: var(--gray); }
+
+      /* ---------- Apple-Pay-style confirmation ---------- */
+      .paydone { position: absolute; left: 0; right: 0; top: 1120px; display: flex; justify-content: center; }
+      .pay-in { display: flex; align-items: center; gap: 24px; background: rgba(250,252,255,.97); border-radius: 60px;
+                padding: 22px 46px 22px 26px; box-shadow: 0 26px 64px rgba(7,20,40,.4); }
+      .p-check { width: 84px; height: 84px; border-radius: 50%; background: #0a7aff; color: #fff; flex: none;
+                 display: flex; align-items: center; justify-content: center; font-size: 46px; font-weight: 900; }
+      .pay-in span { font-weight: 700; font-size: 42px; color: var(--ink); }
+
+      /* ---------- mo'jiza card ---------- */
+      .mojiza { position: absolute; left: 0; right: 0; top: 1020px; display: flex; justify-content: center; }
+      .mj-card { background: rgba(255,255,255,.95); border-radius: 48px; padding: 44px 78px 52px; text-align: center;
+                 box-shadow: 0 36px 80px rgba(29,55,97,.2); }
+      .mj-sub { font-weight: 400; font-size: 44px; color: var(--gray); }
+      .mj-main { margin-top: 2px; font-weight: 900; font-size: 108px; color: var(--ink); letter-spacing: -0.02em; }
+      .mj-main em { font-style: normal; color: var(--blue); }
+
+      /* ---------- end card ---------- */
+      .endcard { position: absolute; inset: 0; }
+      .end-bg { position: absolute; inset: 0; background:
+        radial-gradient(1100px 900px at 50% 16%, #ffffff 0%, rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 1100px at 50% 112%, #cfe3fa 0%, rgba(207,227,250,0) 62%), var(--ice); }
+      .end-in { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center;
+                justify-content: center; padding-bottom: 140px; }
+      .end-sub { font-weight: 400; font-size: 48px; color: var(--gray); }
+      .end-logo-mask { overflow: hidden; padding: 6px 20px 14px; }
+      .end-logo { font-weight: 900; font-size: 164px; color: var(--ink); letter-spacing: -0.03em; }
+      .end-line { margin-top: 2px; font-weight: 400; font-size: 40px; color: var(--gray); }
+      .end-pill { margin-top: 44px; background: var(--blue); color: #fff; border-radius: 60px; padding: 24px 56px 28px;
+                  font-weight: 700; font-size: 44px; box-shadow: 0 20px 50px rgba(10,122,255,.35); }
+    
+      /* ---------- section pills ---------- */
+      .sec { position: absolute; top: 150px; left: 0; right: 0; display: flex; justify-content: center; }
+      .sec-in { display: flex; align-items: center; gap: 22px; background: rgba(250,252,255,.96); border-radius: 60px;
+                padding: 16px 40px 16px 18px; box-shadow: 0 18px 50px rgba(7,20,40,.3); }
+      .sec-in b { width: 68px; height: 68px; border-radius: 22px; flex: none; display: flex; align-items: center; justify-content: center;
+                  background: linear-gradient(150deg, #3f9bff, #0a62e0); color: #fff; font-weight: 800; font-size: 32px; }
+      .sec-in span { font-weight: 700; font-size: 36px; color: var(--ink); }
+
+      /* ---------- "5 funksiya" widget ---------- */
+      .fivew { position: absolute; left: 0; right: 0; top: 540px; display: flex; justify-content: center; }
+      .fivew-in { background: linear-gradient(160deg, #ffffff 0%, var(--tint) 100%); border-radius: 64px;
+                  padding: 46px 110px 54px; text-align: center;
+                  box-shadow: 0 40px 90px rgba(29,55,97,.18), 0 8px 24px rgba(29,55,97,.08); }
+      .f-num { font-weight: 900; font-size: 290px; line-height: .95; color: var(--blue); letter-spacing: -0.02em; }
+      .f-lab { margin-top: 2px; font-weight: 600; font-size: 46px; color: var(--gray); }
+
+      /* ---------- function pills ---------- */
+      .fnp { position: absolute; left: 60px; }
+      .fnp0 { top: 830px; } .fnp1 { top: 962px; } .fnp2 { top: 1094px; }
+      .fnp-in { display: flex; align-items: center; gap: 20px; background: rgba(250,252,255,.96); border-radius: 60px;
+                padding: 20px 40px; box-shadow: 0 16px 44px rgba(7,20,40,.3); }
+      .fnp-in i { display: block; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); }
+      .fnp-in span { font-weight: 700; font-size: 38px; color: var(--ink); }
+
+      /* ---------- 1 = 10 stat card ---------- */
+      .statc { position: absolute; left: 0; right: 0; top: 960px; display: flex; justify-content: center; }
+      .statc-in { background: rgba(250,252,255,.97); border-radius: 56px; padding: 38px 84px 46px; text-align: center;
+                  box-shadow: 0 36px 80px rgba(7,20,40,.32); }
+      .s-row { display: flex; align-items: center; justify-content: center; gap: 30px;
+               font-weight: 900; font-size: 190px; line-height: 1.05; color: var(--ink); letter-spacing: -0.02em; }
+      .s-eq { color: var(--blue); font-size: 130px; }
+      .s-ten { color: var(--blue); min-width: 225px; text-align: center; }
+      .s-lab { margin-top: 8px; font-weight: 600; font-size: 38px; color: var(--gray); }
+    
+      html, body { background: #00ff00 !important; }
+      #root { background: #00ff00; }
+      * { box-shadow: none !important; text-shadow: none !important; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="2.6" data-width="1080" data-height="1920">
+
+      <div class="sec" style="top:150px"><div class="sec-in" id="el"><b>01</b><span>O’zingiz bilan oling</span></div></div>
+    </div>
+    <script>
+      const word = "Sevasizmi?";
+      const hmain = document.getElementById("hmain");
+      if (hmain) for (const ch of word) {
+        const s = document.createElement("span");
+        s.className = "ltr"; s.textContent = ch; hmain.appendChild(s);
+      }
+      const tl = gsap.timeline({ paused: true });
+      const counter = { v: 1 };
+
+      tl.fromTo("#el", { y: -150, opacity: 0 }, { y: 0, opacity: 1, duration: .5, ease: "back.out(1.2)" }, 0.25);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
