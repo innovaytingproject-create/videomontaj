@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="vendor/gsap.min.js"></script>
+    <link rel="stylesheet" href="vendor/fonts.css" />
+    <style>
+      /* Feruza Sabitova palette + WHIEDA typography (Montserrat). */
+      :root {
+        --white: #ffffff;
+        --gray: #f5f5f7;
+        --ice: #eaf3ff;
+        --sky: #bfd9ff;
+        --blue: #0a84ff;
+        --ink: #1d1d1f;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--white); }
+      #root { width: 100%; height: 100%; position: relative; overflow: hidden; font-family: "Montserrat", sans-serif; }
+
+      /* ---------- footage + camera ---------- */
+      .vidwrap { position: absolute; inset: 0; overflow: hidden; background: var(--white); }
+      .cam { width: 100%; height: 100%; }
+      #aroll { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .grad { position: absolute; left: 0; right: 0; top: 1150px; bottom: 0; pointer-events: none;
+              background: linear-gradient(180deg, rgba(10,20,40,0) 0%, rgba(10,20,40,.5) 45%, rgba(10,20,40,.62) 100%); }
+      .flash { position: absolute; inset: 0; background: var(--white); pointer-events: none; opacity: 0; }
+      .tint { position: absolute; inset: 0; pointer-events: none; opacity: 0;
+              background: radial-gradient(900px 900px at 50% 45%, rgba(191,217,255,0) 30%, rgba(191,217,255,.55) 100%); }
+
+      /* ---------- cover title (brandbook: white plate, 3-5 words, Montserrat Bold, one accent word) ---------- */
+      .cover { position: absolute; top: 250px; left: 0; right: 0; display: flex; justify-content: center; }
+      .cover-in { background: var(--white); border-radius: 28px; padding: 26px 46px 30px; text-align: center;
+                  box-shadow: 0 18px 50px rgba(10,30,70,.18); }
+      .cover-k { font-weight: 400; font-size: 30px; letter-spacing: .24em; color: var(--ink); opacity: .7; }
+      .cover-t { margin-top: 6px; font-weight: 800; font-size: 76px; line-height: 1.02; color: var(--ink); letter-spacing: -0.02em; }
+      .cover-t em { font-style: normal; color: var(--blue); }
+      .cover-line { margin: 18px auto 0; width: 200px; height: 6px; border-radius: 3px; background: var(--blue); transform-origin: left center; }
+
+      /* ---------- subtitles: Montserrat Bold, white, shadows only ---------- */
+      .cap { position: absolute; left: 70px; right: 70px; bottom: 400px; display: flex; justify-content: center; }
+      .cap-t { max-width: 920px; text-align: center; font-weight: 700; font-size: 58px; line-height: 1.2;
+               color: var(--white); letter-spacing: -0.01em;
+               text-shadow: 0 2px 3px rgba(5,12,28,.75), 0 4px 12px rgba(5,12,28,.55), 0 14px 44px rgba(5,12,28,.45); }
+      .w { display: inline-block; }
+      .hot { color: var(--sky); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+
+      <div class="vidwrap">
+        <div class="cam" id="cam">
+          <video id="aroll" class="clip" src="assets/clip.mp4" playsinline muted data-start="0" data-duration="15" data-track-index="0"></video>
+        </div>
+      </div>
+      <div class="grad"></div>
+      <div class="tint" id="tint"></div>
+      <div class="flash" id="flash"></div>
+
+      <div id="cover" class="clip cover" data-start="0.15" data-duration="5.25" data-track-index="3">
+        <div class="cover-in" id="coverin">
+          <div class="cover-k">WHIEDA &middot; TOSHKENT</div>
+          <div class="cover-t">Ofisimizga <em>sayohat</em></div>
+          <div class="cover-line" id="cline"></div>
+        </div>
+      </div>
+
+      <div id="c1" class="clip cap" data-start="0.05" data-duration="1.3" data-track-index="4"><p class="cap-t"><span class="w">Assalomu</span> <span class="w">alaykum,</span> <span class="w hot">azizlar!</span></p></div>
+      <div id="c2" class="clip cap" data-start="1.34" data-duration="2.2" data-track-index="4"><p class="cap-t"><span class="w">Bugun</span> <span class="w">biz</span> <span class="w">xalqaro</span> <span class="w hot">WHIEDA</span> <span class="w">assotsiatsiyasining</span></p></div>
+      <div id="c3" class="clip cap" data-start="3.54" data-duration="1.78" data-track-index="4"><p class="cap-t"><span class="w">Toshkentdagi</span> <span class="w hot">ofisidamiz</span></p></div>
+      <div id="c4" class="clip cap" data-start="5.4" data-duration="2.3" data-track-index="4"><p class="cap-t"><span class="w">Bilasiz,</span> <span class="w">men</span> <span class="w">mana</span> <span class="w">shu</span> <span class="w">assotsiatsiya</span> <span class="w">bilan</span></p></div>
+      <div id="c5" class="clip cap" data-start="7.7" data-duration="1.9" data-track-index="4"><p class="cap-t"><span class="w hot">hamkorlik</span> <span class="w hot">qilaman.</span> <span class="w">Qani,</span> <span class="w">ketdik!</span></p></div>
+      <div id="c6" class="clip cap" data-start="9.66" data-duration="2.44" data-track-index="4"><p class="cap-t"><span class="w">Ko&#8217;pchilik</span> <span class="w">so&#8217;raydi:</span> <span class="w hot">ofisingiz</span> <span class="w hot">bormi?</span></p></div>
+      <div id="c7" class="clip cap" data-start="12.24" data-duration="2.76" data-track-index="4"><p class="cap-t"><span class="w">Bu</span> <span class="w hot">rasmiy</span> <span class="w">ishlaydimi?</span></p></div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      /* ---- cover: plate pops, line draws, exits up ---- */
+      tl.fromTo("#coverin", { y: -40, opacity: 0, scale: .92 }, { y: 0, opacity: 1, scale: 1, duration: .55, ease: "back.out(1.5)" }, 0.2);
+      tl.fromTo("#cline", { scaleX: 0 }, { scaleX: 1, duration: .5, ease: "power3.inOut" }, 0.65);
+      tl.to("#coverin", { y: -30, opacity: 0, duration: .3, ease: "power2.in" }, 5.1);
+
+      /* ---- captions: card rises, words cascade ---- */
+      const caps = [["c1", 0.05, 1.35], ["c2", 1.34, 3.54], ["c3", 3.54, 5.32], ["c4", 5.4, 7.7],
+                    ["c5", 7.7, 9.6], ["c6", 9.66, 12.1], ["c7", 12.24, 15.0]];
+      for (const [id, a, b] of caps) {
+        tl.fromTo("#" + id + " .w", { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: .28, ease: "back.out(1.8)", stagger: .05 }, a);
+        if (b < 14.9) tl.to("#" + id + " .cap-t", { opacity: 0, y: -10, duration: .16, ease: "power2.in" }, b - .17);
+      }
+
+      /* ---- camera: zoom in -> transition @7 -> zoom out -> transition @14 -> zoom in ---- */
+      tl.fromTo("#cam", { scale: 1.0, rotation: 0, filter: "blur(0px)" },
+                { scale: 1.14, duration: 6.82, ease: "sine.inOut" }, 0);
+
+      // transition 1 (7s): whip-zoom with blur, flash and sky tint
+      tl.to("#cam", { scale: 1.45, rotation: 2.5, filter: "blur(18px)", duration: .18, ease: "power3.in" }, 6.82);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: .6, duration: .12, ease: "power1.in" }, 6.9);
+      tl.to("#flash", { opacity: 0, duration: .3, ease: "power2.out" }, 7.02);
+      tl.fromTo("#tint", { opacity: 0 }, { opacity: 1, duration: .15, ease: "power1.in" }, 6.88);
+      tl.to("#tint", { opacity: 0, duration: .45, ease: "power2.out" }, 7.03);
+      tl.fromTo("#cam", { scale: 1.42, rotation: -2.5, filter: "blur(18px)" },
+                { scale: 1.2, rotation: 0, filter: "blur(0px)", duration: .32, ease: "expo.out" }, 7.0);
+      tl.to("#cam", { scale: 1.0, duration: 6.5, ease: "sine.inOut" }, 7.32);
+
+      // transition 2 (14s)
+      tl.to("#cam", { scale: 1.32, rotation: -2.5, filter: "blur(18px)", duration: .18, ease: "power3.in" }, 13.82);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: .6, duration: .12, ease: "power1.in" }, 13.9);
+      tl.to("#flash", { opacity: 0, duration: .3, ease: "power2.out" }, 14.02);
+      tl.fromTo("#tint", { opacity: 0 }, { opacity: 1, duration: .15, ease: "power1.in" }, 13.88);
+      tl.to("#tint", { opacity: 0, duration: .45, ease: "power2.out" }, 14.03);
+      tl.fromTo("#cam", { scale: 1.3, rotation: 2.5, filter: "blur(18px)" },
+                { scale: 1.04, rotation: 0, filter: "blur(0px)", duration: .32, ease: "expo.out" }, 14.0);
+      tl.to("#cam", { scale: 1.1, duration: .68, ease: "sine.out" }, 14.32);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
