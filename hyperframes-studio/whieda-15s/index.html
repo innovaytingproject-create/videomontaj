@@ -6,6 +6,7 @@
     <script src="vendor/gsap.min.js"></script>
     <link rel="stylesheet" href="vendor/fonts.css" />
     <style>
+      @font-face { font-family: "Gilroy"; font-weight: 800; src: url("vendor/fonts/Gilroy-ExtraBold.otf") format("opentype"); }
       /* Feruza Sabitova palette + WHIEDA typography (Montserrat). */
       :root {
         --white: #ffffff;
@@ -48,6 +49,16 @@
       .b-text { margin-top: 2px; font-weight: 400; font-size: 26px; color: #5d6066; }
       .b-time { align-self: flex-start; font-weight: 400; font-size: 22px; color: #5d6066; }
 
+      /* ---------- WHIEDA logo plate (official logo on a light plate, per brandbook) ---------- */
+      .logo { position: absolute; top: 150px; left: 0; right: 0; display: flex; justify-content: center; }
+      .logo-in { display: flex; align-items: center; gap: 22px; background: var(--white); border-radius: 26px;
+                 padding: 18px 36px 18px 22px; box-shadow: 0 14px 40px rgba(10,30,70,.18); }
+      .logo-in img { display: block; width: 104px; height: auto; }
+      .logo-w { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 56px; line-height: 1; color: #ba7a08; letter-spacing: .03em; }
+      .logo-s { margin-top: 6px; font-weight: 400; font-size: 22px; letter-spacing: .14em; color: var(--ink); opacity: .7; }
+      .b-icon img { display: block; width: 52px; height: auto; }
+      .b-icon.logo-ic { background: var(--white); border: 2px solid #eef1f6; }
+
       /* ---------- stickers ---------- */
       .stk { position: absolute; display: block; }
       .stk img { display: block; width: 100%; height: auto; filter: drop-shadow(0 14px 22px rgba(10,20,40,.28)); }
@@ -65,12 +76,13 @@
       .wc-stk { margin-top: 26px; width: 300px; }
 
       /* ---------- subtitles: Montserrat Bold, white, shadows only ---------- */
-      .cap { position: absolute; left: 70px; right: 70px; bottom: 400px; display: flex; justify-content: center; }
-      .cap-t { max-width: 920px; text-align: center; font-weight: 700; font-size: 58px; line-height: 1.2;
-               color: var(--white); letter-spacing: -0.01em;
-               text-shadow: 0 2px 3px rgba(5,12,28,.75), 0 4px 12px rgba(5,12,28,.55), 0 14px 44px rgba(5,12,28,.45); }
+      /* chest level (~10 cm higher than before on a phone) */
+      .cap { position: absolute; left: 70px; right: 70px; bottom: 860px; display: flex; justify-content: center; }
+      .cap-t { max-width: 920px; text-align: center; font-family: "Gilroy", "Montserrat", sans-serif; font-weight: 800;
+               font-size: 62px; line-height: 1.16; color: var(--white); letter-spacing: 0;
+               text-shadow: 0 2px 2px rgba(5,12,28,.8), 0 3px 10px rgba(5,12,28,.6), 0 0 30px rgba(5,12,28,.45), 0 12px 40px rgba(5,12,28,.45); }
       .w { display: inline-block; }
-      .hot { color: var(--sky); }
+      .hot { color: var(--blue); }
     </style>
   </head>
   <body>
@@ -78,14 +90,21 @@
 
       <div class="vidwrap">
         <div class="cam" id="cam">
-          <video id="aroll" class="clip" src="assets/clip.mp4" playsinline muted data-start="0" data-duration="15" data-track-index="0"></video>
+          <video id="aroll" class="clip" src="assets/clip-graded.mp4" playsinline muted data-start="0" data-duration="15" data-track-index="0"></video>
         </div>
       </div>
-      <div class="grad"></div>
+      
       <div class="tint" id="tint"></div>
       <div class="flash" id="flash"></div>
 
-      <div id="cover" class="clip cover" data-start="0.15" data-duration="5.15" data-track-index="3">
+      <div id="logo" class="clip logo" data-start="1.3" data-duration="2.25" data-track-index="3">
+        <div class="logo-in" id="logoin">
+          <img src="assets/whieda-emblem.png" alt="" />
+          <div><div class="logo-w">WHIEDA</div><div class="logo-s">XALQARO ASSOTSIATSIYA</div></div>
+        </div>
+      </div>
+
+      <div id="cover" class="clip cover" data-start="3.55" data-duration="1.85" data-track-index="3">
         <div class="cover-in" id="coverin">
           <div class="cover-k">WHIEDA &middot; TOSHKENT</div>
           <div class="cover-t">Ofisimizga <em>sayohat</em></div>
@@ -93,18 +112,14 @@
         </div>
       </div>
 
-      <div id="st1" class="clip stk" data-start="0.5" data-duration="4.8" data-track-index="5" style="left:790px; top:300px; width:190px"><img src="assets/stickers/s4073.png" alt="" /></div>
-      <div id="st2" class="clip stk" data-start="1.6" data-duration="2.0" data-track-index="5" style="left:780px; top:560px; width:230px"><img src="assets/stickers/s4097.png" alt="" /></div>
-      <div id="st3" class="clip stk" data-start="3.6" data-duration="1.75" data-track-index="5" style="left:40px; top:700px; width:210px"><img src="assets/stickers/s4100.png" alt="" /></div>
 
       <div id="banner" class="clip banner" data-start="7.65" data-duration="1.95" data-track-index="3">
         <div class="banner-in" id="bannerin">
-          <div class="b-icon">W</div>
+          <div class="b-icon logo-ic"><img src="assets/whieda-emblem.png" alt="" /></div>
           <div class="b-body"><div class="b-title">WHIEDA</div><div class="b-text">Feruza &mdash; rasmiy hamkor</div></div>
           <div class="b-time">hozir</div>
         </div>
       </div>
-      <div id="st4" class="clip stk" data-start="7.8" data-duration="1.8" data-track-index="5" style="left:640px; top:820px; width:360px"><img src="assets/stickers/s4037.png" alt="" /></div>
 
       <div id="wcard" class="clip wcard" data-start="9.66" data-duration="2.5" data-track-index="6">
         <div class="wc-bg" id="wcbg"></div>
@@ -116,7 +131,6 @@
         </div>
       </div>
 
-      <div id="st5" class="clip stk" data-start="12.3" data-duration="2.7" data-track-index="5" style="left:800px; top:560px; width:170px"><img src="assets/stickers/s3898.png" alt="" /></div>
 
       <div id="c1" class="clip cap" data-start="0.05" data-duration="1.3" data-track-index="4"><p class="cap-t"><span class="w">Assalomu</span> <span class="w">alaykum,</span> <span class="w hot">azizlar!</span></p></div>
       <div id="c2" class="clip cap" data-start="1.34" data-duration="2.2" data-track-index="4"><p class="cap-t"><span class="w">Bugun</span> <span class="w">biz</span> <span class="w">xalqaro</span> <span class="w hot">WHIEDA</span> <span class="w">assotsiatsiyasining</span></p></div>
@@ -130,17 +144,14 @@
       const tl = gsap.timeline({ paused: true });
 
       /* ---- cover: plate pops, line draws, exits up ---- */
-      tl.fromTo("#coverin", { y: -40, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .55, ease: "back.out(1.5)" }, 0.2);
-      tl.fromTo("#cline", { scaleX: 0 }, { scaleX: 1, duration: .5, ease: "power3.inOut" }, 0.65);
-      tl.to("#coverin", { y: -30, opacity: 0, duration: .28, ease: "power2.in" }, 5.0);
+      tl.fromTo("#logoin", { y: -40, opacity: 0, scale: .88 }, { y: 0, opacity: 1, scale: 1, duration: .5, ease: "back.out(1.6)" }, 1.34);
+      tl.fromTo("#logoin img", { rotation: -90, scale: .6 }, { rotation: 0, scale: 1, duration: .6, ease: "back.out(1.8)" }, 1.4);
+      tl.to("#logoin", { y: -30, opacity: 0, duration: .25, ease: "power2.in" }, 3.28);
 
-      /* stickers: pop in with a tilt, idle wobble, pop out */
-      const stk = [["st1", 0.5, 5.3, -8], ["st2", 1.6, 3.6, 6], ["st3", 3.6, 5.35, -6], ["st4", 7.8, 9.6, 4], ["st5", 12.3, 15.0, 10]];
-      for (const [id, a, b, rot] of stk) {
-        tl.fromTo("#" + id + " img", { scale: 0, rotation: rot * 3, opacity: 0 }, { scale: 1, rotation: rot, opacity: 1, duration: .5, ease: "back.out(2.2)" }, a);
-        tl.to("#" + id + " img", { rotation: -rot, y: -8, duration: Math.max(.6, b - a - .8), ease: "sine.inOut" }, a + .5);
-        if (b < 14.9) tl.to("#" + id + " img", { scale: 0, opacity: 0, duration: .22, ease: "back.in(2)" }, b - .24);
-      }
+      tl.fromTo("#coverin", { y: -40, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .5, ease: "back.out(1.5)" }, 3.58);
+      tl.fromTo("#cline", { scaleX: 0 }, { scaleX: 1, duration: .5, ease: "power3.inOut" }, 3.95);
+      tl.to("#coverin", { y: -30, opacity: 0, duration: .26, ease: "power2.in" }, 5.12);
+
 
       /* iOS-style banner, compact, drops above the head */
       tl.fromTo("#bannerin", { y: -200, opacity: 0, scale: .96 }, { y: 0, opacity: 1, scale: 1, duration: .5, ease: "back.out(1.25)" }, 7.7);
