@@ -1,0 +1,103 @@
+@font-face { font-family: "Gilroy"; font-weight: 800; src: url("vendor/fonts/Gilroy-ExtraBold.otf") format("opentype"); }
+      /* Feruza Sabitova palette + WHIEDA typography (Montserrat). */
+      :root {
+        --white: #ffffff;
+        --gray: #f5f5f7;
+        --ice: #eaf3ff;
+        --sky: #bfd9ff;
+        --blue: #0a84ff;
+        --ink: #1d1d1f;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--white); }
+      #root { width: 100%; height: 100%; position: relative; overflow: hidden; font-family: "Montserrat", sans-serif; }
+
+      /* ---------- footage + camera ---------- */
+      .vidwrap { position: absolute; inset: 0; overflow: hidden; background: var(--white); }
+      .cam { width: 100%; height: 100%; }
+      #aroll { width: 100%; height: 100%; object-fit: cover; display: block; }
+            .flash { position: absolute; inset: 0; background: var(--white); pointer-events: none; opacity: 0; }
+      .tint { position: absolute; inset: 0; pointer-events: none; opacity: 0;
+              background: radial-gradient(900px 900px at 50% 45%, rgba(191,217,255,0) 30%, rgba(191,217,255,.55) 100%); }
+
+      /* ---------- compact inserts, all above the head (top 140-330px) ---------- */
+      .cover { position: absolute; top: 150px; left: 0; right: 0; display: flex; justify-content: center; }
+      .cover-in { position: relative; background: var(--white); border-radius: 22px; padding: 16px 32px 20px; text-align: center;
+                  box-shadow: 0 14px 40px rgba(10,30,70,.18); }
+      .cover-k { font-weight: 400; font-size: 22px; letter-spacing: .24em; color: var(--ink); opacity: .7; }
+      .cover-t { margin-top: 4px; font-weight: 800; font-size: 54px; line-height: 1.02; color: var(--ink); letter-spacing: -0.02em; }
+      .cover-t em { font-style: normal; color: var(--blue); }
+      .cover-line { margin: 12px auto 0; width: 140px; height: 5px; border-radius: 3px; background: var(--blue); transform-origin: left center; }
+
+      .banner { position: absolute; top: 150px; left: 0; right: 0; display: flex; justify-content: center; }
+      .banner-in { display: flex; align-items: center; gap: 18px; width: 720px; background: rgba(255,255,255,.96);
+                   border-radius: 32px; padding: 18px 26px; box-shadow: 0 18px 44px rgba(10,20,40,.3); }
+      .b-icon { width: 72px; height: 72px; border-radius: 19px; flex: none; display: flex; align-items: center; justify-content: center;
+                background: linear-gradient(150deg, #4aa3ff, var(--blue)); color: #fff; font-weight: 800; font-size: 40px; }
+      .b-body { flex: 1; min-width: 0; }
+      .b-title { font-weight: 700; font-size: 28px; color: var(--ink); }
+      .b-text { margin-top: 2px; font-weight: 400; font-size: 26px; color: #5d6066; }
+      .b-time { align-self: flex-start; font-weight: 400; font-size: 22px; color: #5d6066; }
+
+      /* ---------- WHIEDA logo plate (official logo on a light plate, per brandbook) ---------- */
+      .logo { position: absolute; top: 150px; left: 0; right: 0; display: flex; justify-content: center; }
+      .logo-in { display: flex; align-items: center; gap: 22px; background: var(--white); border-radius: 26px;
+                 padding: 18px 36px 18px 22px; box-shadow: 0 14px 40px rgba(10,30,70,.18); }
+      .logo-in img { display: block; width: 104px; height: auto; }
+      .logo-w { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 56px; line-height: 1; color: #ba7a08; letter-spacing: .03em; }
+      .logo-s { margin-top: 6px; font-weight: 400; font-size: 22px; letter-spacing: .14em; color: var(--ink); opacity: .7; }
+      .b-icon img { display: block; width: 52px; height: auto; }
+      .b-icon.logo-ic { background: var(--white); border: 2px solid #eef1f6; }
+
+      /* ---------- stickers ---------- */
+      .stk { position: absolute; display: block; }
+      .stk img { display: block; width: 100%; height: auto; filter: drop-shadow(0 14px 22px rgba(10,20,40,.28)); }
+
+      /* ---------- accent word card (every 15s): white screen, thin grey line, big word, blue accent ---------- */
+      .wcard { position: absolute; inset: 0; z-index: 10; }
+      .wc-bg { position: absolute; inset: 0; opacity: 0; background:
+        radial-gradient(1000px 800px at 50% 20%, #ffffff 0%, rgba(255,255,255,0) 60%),
+        radial-gradient(1100px 1000px at 50% 110%, var(--sky) 0%, rgba(191,217,255,0) 60%), var(--ice); }
+      .wc-in { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 160px; }
+      .wc-sub { font-weight: 400; font-size: 46px; color: #5d6066; }
+      .wc-mask { overflow: hidden; padding: 4px 24px 10px; }
+      .wc-big { font-weight: 800; font-size: 132px; line-height: 1.04; color: var(--ink); letter-spacing: -0.03em; text-align: center; }
+      .wc-big em { font-style: normal; color: var(--blue); }
+      .wc-stk { margin-top: 26px; width: 300px; }
+
+      /* ---------- subtitles: Montserrat Bold, white, shadows only ---------- */
+      /* chest level (~10 cm higher than before on a phone) */
+      .cap { position: absolute; left: 70px; right: 70px; bottom: 860px; display: flex; justify-content: center; }
+      .cap-t { max-width: 920px; text-align: center; font-family: "Gilroy", "Montserrat", sans-serif; font-weight: 800;
+               font-size: 62px; line-height: 1.16; color: var(--white); letter-spacing: 0;
+               text-shadow: 0 2px 2px rgba(5,12,28,.8), 0 3px 10px rgba(5,12,28,.6), 0 0 30px rgba(5,12,28,.45), 0 12px 40px rgba(5,12,28,.45); }
+      .w { display: inline-block; }
+      .hot { color: var(--blue); }
+    
+      /* pills above the head (check, section with icon) */
+      .pill { position: absolute; top: 160px; left: 0; right: 0; display: flex; justify-content: center; }
+      .pill-in { display: flex; align-items: center; gap: 18px; background: rgba(255,255,255,.97); border-radius: 60px;
+                 padding: 14px 34px 14px 16px; box-shadow: 0 14px 40px rgba(10,20,40,.28); }
+      .pill-in .dot { width: 64px; height: 64px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center;
+                      background: var(--blue); color: #fff; font-weight: 800; font-size: 34px; }
+      .pill-in .dot img { display: block; height: 46px; width: auto; }
+      .pill-in span { font-weight: 700; font-size: 34px; color: var(--ink); }
+      /* iMessage-style quotes, stacked above the head */
+      .bub { position: absolute; left: 70px; }
+      .bub0 { top: 150px; } .bub1 { top: 240px; } .bub2 { top: 330px; }
+      .bub-in { display: inline-block; background: rgba(255,255,255,.97); border-radius: 30px; padding: 14px 28px;
+                box-shadow: 0 12px 34px rgba(10,20,40,.26); font-weight: 700; font-size: 32px; color: var(--ink); }
+      .bub-in em { font-style: normal; color: var(--blue); }
+      .wc-ico { margin-top: 30px; height: 250px; width: auto; }
+      .wc-big.num { font-size: 230px; }
+      /* end card */
+      .endcard { position: absolute; inset: 0; z-index: 11; }
+      .end-bg { position: absolute; inset: 0; opacity: 0; background:
+        radial-gradient(1000px 800px at 50% 20%, #ffffff 0%, rgba(255,255,255,0) 60%),
+        radial-gradient(1100px 1000px at 50% 110%, var(--sky) 0%, rgba(191,217,255,0) 60%), var(--ice); }
+      .end-in { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 160px; }
+      .end-in img { width: 200px; height: auto; }
+      .end-logo { margin-top: 14px; font-weight: 700; font-size: 120px; line-height: 1; color: #ba7a08; letter-spacing: .03em; }
+      .end-sub { margin-top: 18px; font-weight: 400; font-size: 40px; color: #5d6066; }
+      .end-pill { margin-top: 40px; background: var(--blue); color: #fff; border-radius: 60px; padding: 22px 52px 26px;
+                  font-weight: 700; font-size: 42px; box-shadow: 0 18px 44px rgba(10,132,255,.35); }

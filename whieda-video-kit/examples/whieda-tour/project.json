@@ -1,0 +1,275 @@
+{
+  "name": "whieda-tour",
+  "_comment": "Тур по офису WHIEDA (Drive 1G228jyk23Asm1RjcjqAJ5sTTE5RVvD1I), утверждён клиентом. Все времена — секунды исходника (ничего не вырезано).",
+  "video_duration": 88.8,
+  "music": "chronos",
+  "transition_every": 7,
+  "captions": [
+    [
+      0.05,
+      1.35,
+      "Assalomu alaykum, *azizlar!*"
+    ],
+    [
+      1.4,
+      3.48,
+      "Bugun biz xalqaro *WHIEDA* assotsiatsiyasining"
+    ],
+    [
+      3.5,
+      5.35,
+      "Toshkentdagi *ofisidamiz*"
+    ],
+    [
+      5.4,
+      7.75,
+      "Bilasiz, men mana shu assotsiatsiya bilan"
+    ],
+    [
+      7.8,
+      9.7,
+      "*hamkorlik qilaman.* Qani, ketdik!"
+    ],
+    [
+      12.2,
+      15.1,
+      "Bu *rasmiy* ishlaydimi?"
+    ],
+    [
+      15.2,
+      16.85,
+      "Ha, albatta, ko’rib turibsiz:"
+    ],
+    [
+      16.9,
+      20.2,
+      "mana, bizda *sertifikatlar* bor"
+    ],
+    [
+      20.3,
+      23.3,
+      "har bir mahsulot uchun *sertifikat*"
+    ],
+    [
+      23.4,
+      25.95,
+      "Eng muhimi — *WHIEDA* xalqaro assotsiatsiyasi"
+    ],
+    [
+      26.0,
+      28.55,
+      "siz ham o’z faoliyatingizni"
+    ],
+    [
+      30.9,
+      32.65,
+      "Ana bu yerda, ko’rib turibsiz,"
+    ],
+    [
+      32.7,
+      35.9,
+      "*onlayn platformamizdagi* barcha mahsulotlar"
+    ],
+    [
+      36.3,
+      38.15,
+      "Bu mahsulotlarning hammasi"
+    ],
+    [
+      40.9,
+      43.35,
+      "Sizda *muammo* bormi:"
+    ],
+    [
+      43.4,
+      45.7,
+      "oyoqda, belda, panjada,"
+    ],
+    [
+      45.8,
+      47.75,
+      "boshda, qo’lda — *farqi yo’q*"
+    ],
+    [
+      47.8,
+      50.15,
+      "hamma narsani hozir"
+    ],
+    [
+      52.7,
+      56.2,
+      "o’zingizga o’zingiz qarab,"
+    ],
+    [
+      56.3,
+      57.75,
+      "*yordam bera olasiz*"
+    ],
+    [
+      57.8,
+      59.25,
+      "Hamma menga aytadi:"
+    ],
+    [
+      64.0,
+      66.15,
+      "Bularning hammasi — *WHIEDA* assotsiatsiyasining"
+    ],
+    [
+      66.2,
+      68.75,
+      "ajoyib *xitoy tibbiyoti*"
+    ],
+    [
+      68.8,
+      71.15,
+      "tabobati bo’yicha ishlab chiqarilgan"
+    ],
+    [
+      71.2,
+      72.65,
+      "yangi *texnologiya*, mahsulotlar"
+    ],
+    [
+      74.95,
+      78.15,
+      "Hozir biz yangiliklar bo’yicha"
+    ],
+    [
+      80.65,
+      81.35,
+      "barcha sohalarda"
+    ],
+    [
+      81.4,
+      83.55,
+      "va aynan tabobat bo’yicha"
+    ],
+    [
+      83.6,
+      85.15,
+      "mana, ko’rib turibsiz —"
+    ],
+    [
+      85.2,
+      87.95,
+      "*zo’r natija* beradigan mahsulotlar"
+    ]
+  ],
+  "logos": [
+    [
+      1.34,
+      3.48
+    ],
+    [
+      23.6,
+      25.95
+    ],
+    [
+      64.0,
+      66.15
+    ]
+  ],
+  "cover": {
+    "start": 3.5,
+    "end": 5.35,
+    "kicker": "WHIEDA · TOSHKENT",
+    "title": "Ofisimizga *sayohat*"
+  },
+  "banners": [
+    {
+      "start": 7.75,
+      "end": 9.7,
+      "title": "WHIEDA",
+      "text": "Feruza — rasmiy hamkor"
+    }
+  ],
+  "pills": [
+    {
+      "start": 16.9,
+      "end": 20.2,
+      "text": "Rasmiy sertifikatlar"
+    },
+    {
+      "start": 32.7,
+      "end": 35.9,
+      "text": "Onlayn platforma"
+    },
+    {
+      "start": 43.4,
+      "end": 47.75,
+      "text": "Oyoq · bel · bosh · qo’l",
+      "icon": "i7568"
+    }
+  ],
+  "bubbles": {
+    "end": 63.95,
+    "items": [
+      [
+        59.3,
+        "*Yosharibsiz!*"
+      ],
+      [
+        60.2,
+        "Salomatligingiz *zo’r!*"
+      ],
+      [
+        62.0,
+        "Figurangiz *yaxshi* bo’libdi!"
+      ]
+    ]
+  },
+  "cards": [
+    {
+      "start": 9.8,
+      "end": 12.1,
+      "thin": "Ko’pchilik so’raydi",
+      "big": "*Ofisingiz*|bormi?",
+      "icon": "i7557"
+    },
+    {
+      "start": 28.6,
+      "end": 30.85,
+      "thin": "Eng muhimi",
+      "big": "O’z|*biznesingiz*",
+      "icon": "i7565"
+    },
+    {
+      "start": 38.2,
+      "end": 40.75,
+      "thin": "Juda-juda foydali",
+      "big": "Inson|*salomatligi* uchun"
+    },
+    {
+      "start": 50.2,
+      "end": 52.65,
+      "thin": "Hamma narsani",
+      "big": "*Uyda*|o’tirib"
+    },
+    {
+      "start": 72.7,
+      "end": 74.9,
+      "thin": "An’anaviy",
+      "big": "*Xitoy*|tabobati"
+    },
+    {
+      "start": 78.2,
+      "end": 80.6,
+      "thin": "Yangiliklar bo’yicha",
+      "big": "*№1*",
+      "icon": "i7575",
+      "numeric": true
+    }
+  ],
+  "end_card": {
+    "sub": "Toshkent · rasmiy ofis",
+    "pill": "Bepul sinab ko’ring — profilda"
+  },
+  "sfx": [
+    [
+      "paydone",
+      17.08,
+      -6
+    ]
+  ]
+}

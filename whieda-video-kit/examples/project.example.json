@@ -1,0 +1,24 @@
+{
+  "name": "CHANGE-ME",
+  "_comment": "Заполни по CLAUDE.md. *слово* = синий акцент. Время в секундах исходника. Пример: examples/whieda-tour/project.json",
+  "music": "chronos",
+  "transition_every": 7,
+  "captions": [
+    [
+      0.05,
+      1.35,
+      "Assalomu alaykum, *azizlar!*"
+    ]
+  ],
+  "logos": [],
+  "cover": null,
+  "banners": [],
+  "pills": [],
+  "bubbles": null,
+  "cards": [],
+  "end_card": {
+    "sub": "Toshkent · rasmiy ofis",
+    "pill": "Bepul sinab ko’ring — profilda"
+  },
+  "sfx": []
+}
