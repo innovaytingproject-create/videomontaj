@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="vendor/gsap.min.js"></script>
+    <link rel="stylesheet" href="vendor/fonts.css" />
+    <style>
+      @font-face { font-family: "Gilroy"; font-weight: 800; src: url("vendor/fonts/Gilroy-ExtraBold.otf") format("opentype"); }
+      /* Feruza Sabitova palette + WHIEDA typography (Montserrat). */
+      :root {
+        --white: #ffffff;
+        --gray: #f5f5f7;
+        --ice: #eaf3ff;
+        --sky: #bfd9ff;
+        --blue: #0a84ff;
+        --ink: #1d1d1f;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--white); }
+      #root { width: 100%; height: 100%; position: relative; overflow: hidden; font-family: "Montserrat", sans-serif; }
+
+      /* ---------- footage + camera ---------- */
+      .vidwrap { position: absolute; inset: 0; overflow: hidden; background: var(--white); }
+      .cam { width: 100%; height: 100%; }
+      #aroll { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .grad { position: absolute; left: 0; right: 0; top: 1150px; bottom: 0; pointer-events: none;
+              background: linear-gradient(180deg, rgba(10,20,40,0) 0%, rgba(10,20,40,.5) 45%, rgba(10,20,40,.62) 100%); }
+      .flash { position: absolute; inset: 0; background: var(--white); pointer-events: none; opacity: 0; }
+      .tint { position: absolute; inset: 0; pointer-events: none; opacity: 0;
+              background: radial-gradient(900px 900px at 50% 45%, rgba(191,217,255,0) 30%, rgba(191,217,255,.55) 100%); }
+
+      /* ---------- compact inserts, all above the head (top 140-330px) ---------- */
+      .cover { position: absolute; top: 150px; left: 0; right: 0; display: flex; justify-content: center; }
+      .cover-in { position: relative; background: var(--white); border-radius: 22px; padding: 16px 32px 20px; text-align: center;
+                  box-shadow: 0 14px 40px rgba(10,30,70,.18); }
+      .cover-k { font-weight: 400; font-size: 22px; letter-spacing: .24em; color: var(--ink); opacity: .7; }
+      .cover-t { margin-top: 4px; font-weight: 800; font-size: 54px; line-height: 1.02; color: var(--ink); letter-spacing: -0.02em; }
+      .cover-t em { font-style: normal; color: var(--blue); }
+      .cover-line { margin: 12px auto 0; width: 140px; height: 5px; border-radius: 3px; background: var(--blue); transform-origin: left center; }
+
+      .banner { position: absolute; top: 150px; left: 0; right: 0; display: flex; justify-content: center; }
+      .banner-in { display: flex; align-items: center; gap: 18px; width: 720px; background: rgba(255,255,255,.96);
+                   border-radius: 32px; padding: 18px 26px; box-shadow: 0 18px 44px rgba(10,20,40,.3); }
+      .b-icon { width: 72px; height: 72px; border-radius: 19px; flex: none; display: flex; align-items: center; justify-content: center;
+                background: linear-gradient(150deg, #4aa3ff, var(--blue)); color: #fff; font-weight: 800; font-size: 40px; }
+      .b-body { flex: 1; min-width: 0; }
+      .b-title { font-weight: 700; font-size: 28px; color: var(--ink); }
+      .b-text { margin-top: 2px; font-weight: 400; font-size: 26px; color: #5d6066; }
+      .b-time { align-self: flex-start; font-weight: 400; font-size: 22px; color: #5d6066; }
+
+      /* ---------- WHIEDA logo plate (official logo on a light plate, per brandbook) ---------- */
+      .logo { position: absolute; top: 150px; left: 0; right: 0; display: flex; justify-content: center; }
+      .logo-in { display: flex; align-items: center; gap: 22px; background: var(--white); border-radius: 26px;
+                 padding: 18px 36px 18px 22px; box-shadow: 0 14px 40px rgba(10,30,70,.18); }
+      .logo-in img { display: block; width: 104px; height: auto; }
+      .logo-w { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 56px; line-height: 1; color: #ba7a08; letter-spacing: .03em; }
+      .logo-s { margin-top: 6px; font-weight: 400; font-size: 22px; letter-spacing: .14em; color: var(--ink); opacity: .7; }
+      .b-icon img { display: block; width: 52px; height: auto; }
+      .b-icon.logo-ic { background: var(--white); border: 2px solid #eef1f6; }
+
+      /* ---------- stickers ---------- */
+      .stk { position: absolute; display: block; }
+      .stk img { display: block; width: 100%; height: auto; filter: drop-shadow(0 14px 22px rgba(10,20,40,.28)); }
+
+      /* ---------- accent word card (every 15s): white screen, thin grey line, big word, blue accent ---------- */
+      .wcard { position: absolute; inset: 0; z-index: 10; }
+      .wc-bg { position: absolute; inset: 0; opacity: 0; background:
+        radial-gradient(1000px 800px at 50% 20%, #ffffff 0%, rgba(255,255,255,0) 60%),
+        radial-gradient(1100px 1000px at 50% 110%, var(--sky) 0%, rgba(191,217,255,0) 60%), var(--ice); }
+      .wc-in { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 160px; }
+      .wc-sub { font-weight: 400; font-size: 46px; color: #5d6066; }
+      .wc-mask { overflow: hidden; padding: 4px 24px 10px; }
+      .wc-big { font-weight: 800; font-size: 132px; line-height: 1.04; color: var(--ink); letter-spacing: -0.03em; text-align: center; }
+      .wc-big em { font-style: normal; color: var(--blue); }
+      .wc-stk { margin-top: 26px; width: 300px; }
+
+      /* ---------- subtitles: Montserrat Bold, white, shadows only ---------- */
+      /* chest level (~10 cm higher than before on a phone) */
+      .cap { position: absolute; left: 70px; right: 70px; bottom: 860px; display: flex; justify-content: center; }
+      .cap-t { max-width: 920px; text-align: center; font-family: "Gilroy", "Montserrat", sans-serif; font-weight: 800;
+               font-size: 62px; line-height: 1.16; color: var(--white); letter-spacing: 0;
+               text-shadow: 0 2px 2px rgba(5,12,28,.8), 0 3px 10px rgba(5,12,28,.6), 0 0 30px rgba(5,12,28,.45), 0 12px 40px rgba(5,12,28,.45); }
+      .w { display: inline-block; }
+      .hot { color: var(--blue); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+
+      <div class="vidwrap">
+        <div class="cam" id="cam">
+          <video id="aroll" class="clip" src="assets/clip-graded.mp4" playsinline muted data-start="0" data-duration="15" data-track-index="0"></video>
+        </div>
+      </div>
+      
+      <div class="tint" id="tint"></div>
+      <div class="flash" id="flash"></div>
+
+      <div id="logo" class="clip logo" data-start="1.3" data-duration="2.25" data-track-index="3">
+        <div class="logo-in" id="logoin">
+          <img src="assets/whieda-emblem.png" alt="" />
+          <div><div class="logo-w">WHIEDA</div><div class="logo-s">XALQARO ASSOTSIATSIYA</div></div>
+        </div>
+      </div>
+
+      <div id="cover" class="clip cover" data-start="3.55" data-duration="1.85" data-track-index="3">
+        <div class="cover-in" id="coverin">
+          <div class="cover-k">WHIEDA &middot; TOSHKENT</div>
+          <div class="cover-t">Ofisimizga <em>sayohat</em></div>
+          <div class="cover-line" id="cline"></div>
+        </div>
+      </div>
+
+
+      <div id="banner" class="clip banner" data-start="7.65" data-duration="1.95" data-track-index="3">
+        <div class="banner-in" id="bannerin">
+          <div class="b-icon logo-ic"><img src="assets/whieda-emblem.png" alt="" /></div>
+          <div class="b-body"><div class="b-title">WHIEDA</div><div class="b-text">Feruza &mdash; rasmiy hamkor</div></div>
+          <div class="b-time">hozir</div>
+        </div>
+      </div>
+
+      <div id="wcard" class="clip wcard" data-start="9.66" data-duration="2.5" data-track-index="6">
+        <div class="wc-bg" id="wcbg"></div>
+        <div class="wc-in">
+          <div class="wc-sub" id="wcsub">Ko&#8217;pchilik so&#8217;raydi</div>
+          <div class="wc-mask"><div class="wc-big" id="wcbig"><em>Ofisingiz</em></div></div>
+          <div class="wc-mask"><div class="wc-big" id="wcbig2">bormi?</div></div>
+          <img class="wc-stk" id="wcstk" src="assets/stickers/s3895.png" alt="" />
+        </div>
+      </div>
+
+
+      <div id="c1" class="clip cap" data-start="0.05" data-duration="1.3" data-track-index="4"><p class="cap-t"><span class="w">Assalomu</span> <span class="w">alaykum,</span> <span class="w hot">azizlar!</span></p></div>
+      <div id="c2" class="clip cap" data-start="1.34" data-duration="2.2" data-track-index="4"><p class="cap-t"><span class="w">Bugun</span> <span class="w">biz</span> <span class="w">xalqaro</span> <span class="w hot">WHIEDA</span> <span class="w">assotsiatsiyasining</span></p></div>
+      <div id="c3" class="clip cap" data-start="3.54" data-duration="1.78" data-track-index="4"><p class="cap-t"><span class="w">Toshkentdagi</span> <span class="w hot">ofisidamiz</span></p></div>
+      <div id="c4" class="clip cap" data-start="5.4" data-duration="2.3" data-track-index="4"><p class="cap-t"><span class="w">Bilasiz,</span> <span class="w">men</span> <span class="w">mana</span> <span class="w">shu</span> <span class="w">assotsiatsiya</span> <span class="w">bilan</span></p></div>
+      <div id="c5" class="clip cap" data-start="7.7" data-duration="1.9" data-track-index="4"><p class="cap-t"><span class="w hot">hamkorlik</span> <span class="w hot">qilaman.</span> <span class="w">Qani,</span> <span class="w">ketdik!</span></p></div>
+      <div id="c7" class="clip cap" data-start="12.24" data-duration="2.76" data-track-index="4"><p class="cap-t"><span class="w">Bu</span> <span class="w hot">rasmiy</span> <span class="w">ishlaydimi?</span></p></div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      /* ---- cover: plate pops, line draws, exits up ---- */
+      tl.fromTo("#logoin", { y: -40, opacity: 0, scale: .88 }, { y: 0, opacity: 1, scale: 1, duration: .5, ease: "back.out(1.6)" }, 1.34);
+      tl.fromTo("#logoin img", { rotation: -90, scale: .6 }, { rotation: 0, scale: 1, duration: .6, ease: "back.out(1.8)" }, 1.4);
+      tl.to("#logoin", { y: -30, opacity: 0, duration: .25, ease: "power2.in" }, 3.28);
+
+      tl.fromTo("#coverin", { y: -40, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .5, ease: "back.out(1.5)" }, 3.58);
+      tl.fromTo("#cline", { scaleX: 0 }, { scaleX: 1, duration: .5, ease: "power3.inOut" }, 3.95);
+      tl.to("#coverin", { y: -30, opacity: 0, duration: .26, ease: "power2.in" }, 5.12);
+
+
+      /* iOS-style banner, compact, drops above the head */
+      tl.fromTo("#bannerin", { y: -200, opacity: 0, scale: .96 }, { y: 0, opacity: 1, scale: 1, duration: .5, ease: "back.out(1.25)" }, 7.7);
+      tl.to("#bannerin", { y: -200, opacity: 0, duration: .32, ease: "power3.in" }, 9.26);
+
+      /* accent word card: soft white-in, masked word reveal, blur-out */
+      tl.fromTo("#wcbg", { opacity: 0 }, { opacity: 1, duration: .3, ease: "power2.out" }, 9.66);
+      tl.fromTo("#wcsub", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: .38, ease: "power2.out" }, 9.82);
+      tl.fromTo("#wcbig", { yPercent: 115 }, { yPercent: 0, duration: .5, ease: "power4.out" }, 9.92);
+      tl.fromTo("#wcbig2", { yPercent: 115 }, { yPercent: 0, duration: .5, ease: "power4.out" }, 10.08);
+      tl.fromTo("#wcstk", { scale: 0, rotation: -14 }, { scale: 1, rotation: 0, duration: .5, ease: "back.out(2)" }, 10.35);
+      tl.to("#wcstk", { y: -10, duration: 1.2, ease: "sine.inOut" }, 10.85);
+      tl.to("#wcard .wc-in", { opacity: 0, scale: 1.04, filter: "blur(8px)", duration: .3, ease: "power2.in" }, 11.86);
+      tl.to("#wcbg", { opacity: 0, duration: .3, ease: "power2.in" }, 11.86);
+
+      /* ---- captions: card rises, words cascade ---- */
+      const caps = [["c1", 0.05, 1.35], ["c2", 1.34, 3.54], ["c3", 3.54, 5.32], ["c4", 5.4, 7.7],
+                    ["c5", 7.7, 9.6], ["c7", 12.24, 15.0]];
+      for (const [id, a, b] of caps) {
+        tl.fromTo("#" + id + " .w", { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: .28, ease: "back.out(1.8)", stagger: .05 }, a);
+        if (b < 14.9) tl.to("#" + id + " .cap-t", { opacity: 0, y: -10, duration: .16, ease: "power2.in" }, b - .17);
+      }
+
+      /* ---- camera: zoom in -> transition @7 -> zoom out -> transition @14 -> zoom in ---- */
+      tl.fromTo("#cam", { scale: 1.0, rotation: 0, filter: "blur(0px)" },
+                { scale: 1.14, duration: 6.82, ease: "sine.inOut" }, 0);
+
+      // transition 1 (7s): whip-zoom with blur, flash and sky tint
+      tl.to("#cam", { scale: 1.45, rotation: 2.5, filter: "blur(18px)", duration: .18, ease: "power3.in" }, 6.82);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: .6, duration: .12, ease: "power1.in" }, 6.9);
+      tl.to("#flash", { opacity: 0, duration: .3, ease: "power2.out" }, 7.02);
+      tl.fromTo("#tint", { opacity: 0 }, { opacity: 1, duration: .15, ease: "power1.in" }, 6.88);
+      tl.to("#tint", { opacity: 0, duration: .45, ease: "power2.out" }, 7.03);
+      tl.fromTo("#cam", { scale: 1.42, rotation: -2.5, filter: "blur(18px)" },
+                { scale: 1.2, rotation: 0, filter: "blur(0px)", duration: .32, ease: "expo.out" }, 7.0);
+      tl.to("#cam", { scale: 1.0, duration: 6.5, ease: "sine.inOut" }, 7.32);
+
+      // transition 2 (14s)
+      tl.to("#cam", { scale: 1.32, rotation: -2.5, filter: "blur(18px)", duration: .18, ease: "power3.in" }, 13.82);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: .6, duration: .12, ease: "power1.in", immediateRender: false }, 13.9);
+      tl.to("#flash", { opacity: 0, duration: .3, ease: "power2.out" }, 14.02);
+      tl.fromTo("#tint", { opacity: 0 }, { opacity: 1, duration: .15, ease: "power1.in", immediateRender: false }, 13.88);
+      tl.to("#tint", { opacity: 0, duration: .45, ease: "power2.out" }, 14.03);
+      tl.fromTo("#cam", { scale: 1.3, rotation: 2.5, filter: "blur(18px)" },
+                { scale: 1.04, rotation: 0, filter: "blur(0px)", duration: .32, ease: "expo.out" }, 14.0);
+      tl.to("#cam", { scale: 1.1, duration: .68, ease: "sine.out" }, 14.32);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

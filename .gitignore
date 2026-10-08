@@ -74,3 +74,6 @@ snapshots/
 __pycache__/
 /hyperframes-studio/foherb-full/kit/overlays/*.mp4
 /hyperframes-studio/foherb-full/kit/overlays/*.webm
+/handoff/*.zip
+/handoff/FOHERB-WHIEDA-montazh/stickers/
+/handoff/FOHERB-WHIEDA-montazh/audio/
