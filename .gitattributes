@@ -1,0 +1,4 @@
+*.part* binary
+*.mp4 binary
+*.zip binary
+*.bat -text
