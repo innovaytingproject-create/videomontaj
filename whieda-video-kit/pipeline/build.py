@@ -58,7 +58,7 @@ def em(text):
     return re.sub(r"\*([^*]+)\*", r"<em>\1</em>", html.escape(text))
 
 
-clips, tl, used_icons = [], [], set()
+clips, tl, used_icons, used_stickers = [], [], set(), set()
 
 # ---------- captions ----------
 for i, (a, b, text) in enumerate(cfg["captions"]):
@@ -143,6 +143,22 @@ if bb:
         if b < DUR - .1:
             tl.append(f'tl.to("#bb{n} .bub-in", {{ y: -16, opacity: 0, duration: .22, ease: "power2.in" }}, {j(b - .27 + n * .04)});')
 
+# ---------- stickers (PNG cut-outs from assets/stickers; only when they match the words) ----------
+for n, st in enumerate(cfg.get("stickers", [])):
+    w = within(st["start"], st["end"])
+    if not w:
+        continue
+    a, b = w
+    used_stickers.add(st["file"])
+    rot = st.get("rot", -8)
+    clips.append(f'<div id="sk{n}" class="clip stk" data-start="{j(a)}" data-duration="{j(b - a)}" data-track-index="5" '
+                 f'style="left:{st.get("x", 640)}px;top:{st.get("y", 330)}px;width:{st.get("w", 300)}px">'
+                 f'<img src="assets/stickers/{st["file"]}.png" alt="" /></div>')
+    tl.append(f'tl.fromTo("#sk{n} img", {{ scale: 0, rotation: {rot - 25} }}, {{ scale: 1, rotation: {rot}, duration: .5, ease: "back.out(2.2)" }}, {j(a)});')
+    tl.append(f'tl.to("#sk{n} img", {{ y: -12, duration: {j(max(.5, b - a - .9))}, ease: "sine.inOut" }}, {j(a + .5)});')
+    if b < DUR - .1:
+        tl.append(f'tl.to("#sk{n} img", {{ scale: 0, rotation: {rot + 20}, duration: .25, ease: "back.in(2)" }}, {j(b - .27)});')
+
 # ---------- accent cards (one per 15 s) ----------
 cards = cfg.get("cards", [])
 for n, cd in enumerate(cards):
@@ -217,6 +233,9 @@ for d in ("vendor", "assets/icons"):
     (P / d).mkdir(parents=True, exist_ok=True)
 shutil.copytree(KIT / "template" / "vendor", P / "vendor", dirs_exist_ok=True)
 shutil.copy(KIT / "assets" / "logo" / "whieda-emblem.png", P / "assets" / "whieda-emblem.png")
+(P / "assets" / "stickers").mkdir(parents=True, exist_ok=True)
+for f in used_stickers:
+    shutil.copy(KIT / "assets" / "stickers" / f"{f}.png", P / "assets" / "stickers" / f"{f}.png")
 for f in used_icons:
     shutil.copy(KIT / "assets" / "icons" / f, P / "assets" / "icons" / f)
 hf = P / "hyperframes.json"
