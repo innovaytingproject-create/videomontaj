@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)", "Bash(python:*)", "Bash(py:*)", "Bash(pip:*)", "Bash(pip3:*)",
+      "Bash(npx:*)", "Bash(npm:*)", "Bash(node:*)",
+      "Bash(ffmpeg:*)", "Bash(ffprobe:*)",
+      "Bash(brew:*)", "Bash(winget:*)",
+      "Bash(ls:*)", "Bash(cat:*)", "Bash(mkdir:*)", "Bash(cp:*)", "Bash(mv:*)", "Bash(open:*)", "Bash(explorer:*)",
+      "Read", "Edit", "Write", "Glob", "Grep"
+    ]
+  }
+}
