@@ -189,6 +189,8 @@ EVERY = cfg.get("transition_every", 7)
 cam_end = min(VID, DUR)
 trans = [t for t in range(EVERY, int(cam_end - 1), EVERY)
          if all(not (c["start"] - 0.8 <= t <= c["end"] + 0.3) for c in cards)]
+if cfg.get("transitions") is not None:  # explicit list overrides the every-N rule
+    trans = [t for t in cfg["transitions"] if t < cam_end - 1]
 marks = [0.0] + trans + [cam_end]
 tl.append('tl.fromTo("#cam", { scale: 1.0, rotation: 0, filter: "blur(0px)" }, { scale: 1.0, duration: .01 }, 0);')
 zoom_in = True
