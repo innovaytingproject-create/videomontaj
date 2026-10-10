@@ -45,8 +45,8 @@ ev = [e for e in ev if 0 <= e[1] < LEN - .1]
 music = KIT / "assets" / "music" / f'{cfg.get("music", "chronos")}.mp3'
 inputs = ["-i", str(P / "out" / "pic.mp4"), "-i", str(P / "work" / "voice.wav"), "-stream_loop", "-1", "-i", str(music)]
 lift = f"volume='1+min(max(t-{tm['end_card_at'] - .15:.2f},0)/0.5,1)*0.55':eval=frame," if tm.get("end_card_at") else ""
-fc = [f"[1:a]aresample=48000,atrim=0:{LEN},apad=whole_dur={LEN},volume=2dB,asplit=2[voice][key]",
-      f"[2:a]aresample=48000,atrim=0:{LEN},asetpts=PTS-STARTPTS,volume=-17dB,{lift}afade=t=in:d=0.5,afade=t=out:st={LEN - 1.6:.2f}:d=1.6[bed]",
+fc = [f"[1:a]aresample=48000,atrim=0:{LEN},apad=whole_dur={LEN},volume={cfg.get('voice_db', 2)}dB,asplit=2[voice][key]",
+      f"[2:a]aresample=48000,atrim=0:{LEN},asetpts=PTS-STARTPTS,volume={cfg.get('music_db', -17)}dB,{lift}afade=t=in:d=0.5,afade=t=out:st={LEN - 1.6:.2f}:d=1.6[bed]",
       "[bed][key]sidechaincompress=threshold=0.03:ratio=4:attack=20:release=400:makeup=1[ducked]"]
 labels = []
 for i, (f, t, g) in enumerate(ev):
