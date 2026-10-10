@@ -222,6 +222,8 @@ if not hf.exists():
     hf.write_text(json.dumps({"name": args.name}, indent=2))
 
 css = (KIT / "template" / "style.css").read_text()
+if cfg.get("caption_accent"):  # e.g. light blue when the speaker wears red/blue (blue on red is unreadable)
+    css += f"      .cap .hot {{ color: {cfg['caption_accent']}; }}\n"
 vid_dur = min(VID, DUR)
 page = f"""<!doctype html>
 <html lang="uz">
