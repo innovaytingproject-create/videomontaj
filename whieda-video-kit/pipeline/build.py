@@ -189,9 +189,12 @@ for n, cd in enumerate(cards):
 # ---------- end card ----------
 if END and not SAMPLE:
     a = END_AT
+    emb = END.get("emblem", True)
+    head = ('<img id="eimg" src="assets/whieda-emblem.png" alt="" />' if emb else '<div id="eimg"></div>')
+    tstyle = "" if emb else ' style="color:#1d1d1f;font-size:96px"'
     clips.append(f'<div id="end" class="clip endcard" data-start="{j(a)}" data-duration="{j(DUR - a)}" data-track-index="7">'
-                 '<div class="end-bg" id="ebg"></div><div class="end-in">'
-                 '<img id="eimg" src="assets/whieda-emblem.png" alt="" /><div class="wc-mask"><div class="end-logo" id="elogo">WHIEDA</div></div>'
+                 '<div class="end-bg" id="ebg"></div><div class="end-in">' + head +
+                 f'<div class="wc-mask"><div class="end-logo" id="elogo"{tstyle}>{em(END.get("title", "WHIEDA"))}</div></div>'
                  f'<div class="end-sub" id="esub">{html.escape(END["sub"])}</div>'
                  f'<div class="end-pill" id="epill">{html.escape(END["pill"])}</div></div></div>')
     tl += [f'tl.fromTo("#ebg", {{ opacity: 0 }}, {{ opacity: 1, duration: .4, ease: "power2.out" }}, {j(a)});',
