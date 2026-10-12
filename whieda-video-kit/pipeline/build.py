@@ -205,6 +205,7 @@ if END and not SAMPLE:
 
 # ---------- camera: transition every N s, alternate push-in / pull-out ----------
 EVERY = cfg.get("transition_every", 7)
+FX = {"flash": .6, "tint": 1, "blur": 18, "rot": 2.5, **cfg.get("fx", {})}  # light-effect strength on transitions
 cam_end = min(VID, DUR)
 trans = [t for t in range(EVERY, int(cam_end - 1), EVERY)
          if all(not (c["start"] - 0.8 <= t <= c["end"] + 0.3) for c in cards)]
@@ -219,15 +220,15 @@ for k in range(len(marks) - 1):
     target = 1.14 if zoom_in else 1.0
     land = 1.04 if zoom_in else 1.2
     if k:
-        tl.append(f'tl.fromTo("#cam", {{ scale: {land + .22:.2f}, rotation: {(-2.5 if k % 2 else 2.5)}, filter: "blur(18px)" }}, '
+        tl.append(f'tl.fromTo("#cam", {{ scale: {land + .22:.2f}, rotation: {(-FX["rot"] if k % 2 else FX["rot"])}, filter: "blur({FX["blur"]}px)" }}, '
                   f'{{ scale: {land:.2f}, rotation: 0, filter: "blur(0px)", duration: .32, ease: "expo.out", immediateRender: false }}, {j(a)});')
     out_t = b - 0.18 if b < cam_end else b
     tl.append(f'tl.to("#cam", {{ scale: {target:.2f}, duration: {j(max(.5, out_t - start))}, ease: "sine.inOut" }}, {j(start)});')
     if b < cam_end:
-        tl.append(f'tl.to("#cam", {{ scale: {target + .3:.2f}, rotation: {(2.5 if k % 2 else -2.5)}, filter: "blur(18px)", duration: .18, ease: "power3.in" }}, {j(b - .18)});')
-        tl.append(f'tl.fromTo("#flash", {{ opacity: 0 }}, {{ opacity: .6, duration: .12, ease: "power1.in", immediateRender: false }}, {j(b - .1)});')
+        tl.append(f'tl.to("#cam", {{ scale: {target + .3:.2f}, rotation: {(FX["rot"] if k % 2 else -FX["rot"])}, filter: "blur({FX["blur"]}px)", duration: .18, ease: "power3.in" }}, {j(b - .18)});')
+        tl.append(f'tl.fromTo("#flash", {{ opacity: 0 }}, {{ opacity: {FX['flash']}, duration: .12, ease: "power1.in", immediateRender: false }}, {j(b - .1)});')
         tl.append(f'tl.to("#flash", {{ opacity: 0, duration: .3, ease: "power2.out" }}, {j(b + .02)});')
-        tl.append(f'tl.fromTo("#tint", {{ opacity: 0 }}, {{ opacity: 1, duration: .15, ease: "power1.in", immediateRender: false }}, {j(b - .12)});')
+        tl.append(f'tl.fromTo("#tint", {{ opacity: 0 }}, {{ opacity: {FX['tint']}, duration: .15, ease: "power1.in", immediateRender: false }}, {j(b - .12)});')
         tl.append(f'tl.to("#tint", {{ opacity: 0, duration: .45, ease: "power2.out" }}, {j(b + .03)});')
     zoom_in = not zoom_in
 
