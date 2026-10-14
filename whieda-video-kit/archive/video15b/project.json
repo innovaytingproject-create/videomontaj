@@ -1,0 +1,144 @@
+{
+  "name": "video15b",
+  "_comment": "Masterklass taklifi — 12.6 qism alohida",
+  "music": "chronos",
+  "transition_every": 7,
+  "caption_accent": "#9FD0FF",
+  "fx": {
+    "flash": 0.25,
+    "tint": 0.4,
+    "blur": 8,
+    "rot": 1.5
+  },
+  "captions": [
+    [
+      0.5,
+      2.45,
+      "Agar «Xitoy bilan *biznesni*"
+    ],
+    [
+      2.5,
+      4.8,
+      "qanday qilish kerak?» desangiz,"
+    ],
+    [
+      4.9,
+      6.9,
+      "siz uchun *zo’r* ma’lumot bor"
+    ],
+    [
+      7.0,
+      8.95,
+      "Har *shanba* kuni"
+    ],
+    [
+      9.0,
+      11.7,
+      "mana shu ofisda *masterklass* o’tkazamiz"
+    ],
+    [
+      14.4,
+      17.7,
+      "50 mingga juda *zo’r* ma’lumotga ega bo’lasiz"
+    ],
+    [
+      17.8,
+      20.2,
+      "Va albatta, ajoyib *mahsulotlarimiz*"
+    ],
+    [
+      20.2,
+      23.15,
+      "uchun *lotereya* ham o’ynaladi"
+    ],
+    [
+      23.3,
+      25.75,
+      "Masterklassga *yozilish* uchun"
+    ],
+    [
+      25.8,
+      28.95,
+      "*direktga* yozib, ro’yxatdan o’ting"
+    ]
+  ],
+  "logos": [],
+  "cover": {
+    "start": 0.5,
+    "end": 4.8,
+    "kicker": "WHIEDA · MASTERKLASS",
+    "title": "Xitoy bilan *biznes*"
+  },
+  "banners": [
+    {
+      "start": 7.0,
+      "end": 11.7,
+      "title": "WHIEDA",
+      "text": "Har shanba — masterklass"
+    }
+  ],
+  "pills": [
+    {
+      "start": 17.8,
+      "end": 23.15,
+      "text": "Sovg’alar o’yini",
+      "icon": "i7571"
+    },
+    {
+      "start": 23.3,
+      "end": 28.95,
+      "text": "Direktga yozing",
+      "icon": "i7582"
+    }
+  ],
+  "bubbles": null,
+  "cards": [
+    {
+      "start": 11.8,
+      "end": 14.35,
+      "thin": "Masterklass chiptasi",
+      "big": "*50 000*|so’m",
+      "numeric": true
+    }
+  ],
+  "stickers": [
+    {
+      "start": 4.9,
+      "end": 6.9,
+      "file": "s4043",
+      "x": 790,
+      "y": 220,
+      "w": 200,
+      "rot": -8
+    },
+    {
+      "start": 17.8,
+      "end": 23.15,
+      "file": "s3903",
+      "x": 770,
+      "y": 330,
+      "w": 250,
+      "rot": 8
+    },
+    {
+      "start": 23.3,
+      "end": 28.95,
+      "file": "s4054",
+      "x": 740,
+      "y": 330,
+      "w": 260,
+      "rot": -6
+    }
+  ],
+  "end_card": {
+    "sub": "WHIEDA · Feruza Sabitova",
+    "pill": "Masterklass — direktda"
+  },
+  "sfx": [],
+  "transitions": [
+    5.5,
+    10.5,
+    17.0,
+    23.0
+  ]
+}

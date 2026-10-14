@@ -1,0 +1,235 @@
+{
+  "name": "video6",
+  "_comment": "Feruza — ochki raspakovkasi (grafenli fotoxrom)",
+  "music": "chronos",
+  "transition_every": 7,
+  "caption_accent": "#0063E0",
+  "captions": [
+    [
+      0.0,
+      1.52,
+      "*WHIEDA* assotsiatsiyasida,"
+    ],
+    [
+      1.58,
+      3.78,
+      "azizlar, *iPhone* ishlab chiqaradi"
+    ],
+    [
+      3.84,
+      4.98,
+      "deb o’ylagandim,"
+    ],
+    [
+      5.02,
+      6.94,
+      "lekin bu *iPhone emas*, qarang!"
+    ],
+    [
+      7.1,
+      8.9,
+      "*Korobkasining* zo’rligini ko’ryapsizmi?"
+    ],
+    [
+      8.98,
+      11.18,
+      "Nima bu? Bu…"
+    ],
+    [
+      11.24,
+      13.38,
+      "azizlar, *ko’zingiz* uchun"
+    ],
+    [
+      17.26,
+      18.96,
+      "Voy, voy, buni qarang,"
+    ],
+    [
+      19.16,
+      20.1,
+      "*go’zalligini!*"
+    ],
+    [
+      20.16,
+      21.3,
+      "*Health priority* —"
+    ],
+    [
+      21.36,
+      22.48,
+      "ya’ni sog’ligingiz uchun"
+    ],
+    [
+      22.52,
+      23.56,
+      "Xuddi shunaqa, mana,"
+    ],
+    [
+      23.6,
+      27.0,
+      "*ko’chadagi nurdan* himoya qiluvchi"
+    ],
+    [
+      27.04,
+      28.64,
+      "Ya’ni bu ochki, qarang,"
+    ],
+    [
+      31.44,
+      33.44,
+      "ko’chadagi *radiatsiyalar* —"
+    ],
+    [
+      33.46,
+      35.2,
+      "shu nurlardan sizni *saqlaydi*"
+    ],
+    [
+      35.26,
+      36.98,
+      "Ko’zingizga *24 soat*"
+    ],
+    [
+      37.08,
+      38.76,
+      "ko’z qorachig’ingizdagi,"
+    ],
+    [
+      38.8,
+      41.38,
+      "boshingizdagi *qon aylanishini* ta’minlab beradi"
+    ],
+    [
+      41.44,
+      42.68,
+      "Va eng muhimi,"
+    ],
+    [
+      42.7,
+      44.74,
+      "men bu ochkini shunaqa *ko’p kutdim*"
+    ],
+    [
+      44.78,
+      45.8,
+      "bu yaqinda keldi!"
+    ],
+    [
+      48.58,
+      50.82,
+      "*xameleonga* o’xshab qorayadi"
+    ],
+    [
+      52.2,
+      53.86,
+      "Qarang *formatini*, ajoyibligini!"
+    ],
+    [
+      56.22,
+      58.7,
+      "ham ko’zni *nurdan* asraydi,"
+    ],
+    [
+      58.72,
+      59.84,
+      "ham *quyosh* ochki"
+    ],
+    [
+      59.88,
+      62.18,
+      "Yuz ellik, yuz dollarga sotishadi —"
+    ],
+    [
+      62.2,
+      64.92,
+      "bor-yo’g’i *bir million bir yuzga* bizdan xarid qilasiz"
+    ],
+    [
+      64.94,
+      67.58,
+      "Ko’zingizni davolab, *asraysiz*"
+    ],
+    [
+      67.62,
+      68.4,
+      "va *stil* bo’lib yurasiz"
+    ]
+  ],
+  "logos": [
+    [
+      0.0,
+      1.52
+    ]
+  ],
+  "cover": {
+    "start": 5.02,
+    "end": 6.94,
+    "kicker": "RASPAKOVKA · WHIEDA",
+    "title": "Bu *iPhone* emas!"
+  },
+  "banners": [
+    {
+      "start": 1.58,
+      "end": 3.78,
+      "title": "Feruza Sabitova",
+      "text": "Aktrisa · WHIEDA hamkori"
+    }
+  ],
+  "pills": [
+    {
+      "start": 35.26,
+      "end": 38.76,
+      "text": "24 soat himoya"
+    },
+    {
+      "start": 64.94,
+      "end": 67.58,
+      "text": "Himoya · stil · moda"
+    }
+  ],
+  "bubbles": {
+    "end": 51.94,
+    "items": [
+      [
+        50.86,
+        "*Zo’rmi?*"
+      ],
+      [
+        51.56,
+        "*Yarashdimi?*"
+      ]
+    ]
+  },
+  "cards": [
+    {
+      "start": 13.42,
+      "end": 16.96,
+      "thin": "Ajoyib grafenli",
+      "big": "*Fotoxrom*|ochki"
+    },
+    {
+      "start": 28.68,
+      "end": 31.4,
+      "thin": "Himoya qiladi:",
+      "big": "*Ko’k nurdan*|lazerdan"
+    },
+    {
+      "start": 45.86,
+      "end": 48.54,
+      "thin": "Ko’chaga chiqqaningizda",
+      "big": "*Rangi*|o’zgaradi"
+    },
+    {
+      "start": 53.88,
+      "end": 56.16,
+      "thin": "Ko’zingiz uchun",
+      "big": "*Himoya*"
+    }
+  ],
+  "end_card": {
+    "sub": "Feruza Sabitova · WHIEDA hamkori",
+    "pill": "Buyurtma — direktda"
+  },
+  "sfx": []
+}

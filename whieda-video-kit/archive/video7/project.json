@@ -1,0 +1,400 @@
+{
+  "name": "video7",
+  "_comment": "FOHERB biomassajyor — WHIEDA uslubi, 1.25x",
+  "music": "chronos",
+  "transition_every": 7,
+  "caption_accent": "#0063E0",
+  "captions": [
+    [
+      0.0,
+      2.32,
+      "Azizlar, siz *massajni* sevasizmi?"
+    ],
+    [
+      2.38,
+      4.1,
+      "Men massajni *juda* sevaman"
+    ],
+    [
+      4.14,
+      5.9,
+      "Shuning uchun *WHIEDA* assotsiatsiyasidan"
+    ],
+    [
+      5.94,
+      7.9,
+      "*biomassajyor* degan priborni"
+    ],
+    [
+      7.92,
+      9.52,
+      "o’zimga xarid qildim"
+    ],
+    [
+      9.56,
+      10.6,
+      "Bu shunchaki *mo’jiza!*"
+    ],
+    [
+      13.44,
+      13.96,
+      "Qarang!"
+    ],
+    [
+      15.06,
+      17.2,
+      "Buni *o’zingiz bilan* olib yursangiz bo’ladi"
+    ],
+    [
+      17.3,
+      19.5,
+      "Mana qarang, *remenchalari* bor"
+    ],
+    [
+      19.54,
+      20.76,
+      "remenchalardan taqib,"
+    ],
+    [
+      20.8,
+      23.4,
+      "bemalol *qo’lda* ushlasa ham bo’ladi"
+    ],
+    [
+      23.46,
+      24.6,
+      "remenlarini taqsa bo’ladi"
+    ],
+    [
+      24.7,
+      26.66,
+      "Remenlarini mana, qarang,"
+    ],
+    [
+      26.7,
+      28.5,
+      "bu tomondan taqiladi"
+    ],
+    [
+      28.7,
+      30.48,
+      "u tomondan ham, *bu tomondan* ham"
+    ],
+    [
+      33.74,
+      35.55,
+      "*grimyorlar* shunaqa taqib yuradi"
+    ],
+    [
+      36.12,
+      37.9,
+      "Men ham shunaqa *taqib yuraman*"
+    ],
+    [
+      41.98,
+      43.22,
+      "Qarang, bu yerda"
+    ],
+    [
+      43.24,
+      45.9,
+      "tolalarga *kumush* o’tkazilgan"
+    ],
+    [
+      49.04,
+      50.7,
+      "Bu perchatka bilan *massaj* qilinadi"
+    ],
+    [
+      54.48,
+      58.28,
+      "Bular — *ulash uchun* provodlar"
+    ],
+    [
+      58.32,
+      61.36,
+      "biomassajyor bir nechta *funksiyaga* ega"
+    ],
+    [
+      62.4,
+      67.84,
+      "*kumush qo’lqoplar* qo’lga taqiladi"
+    ],
+    [
+      69.12,
+      73.16,
+      "bu — *elektr quvvati*, rozetkaga ulanadi"
+    ],
+    [
+      80.48,
+      83.3,
+      "ajoyib, *kichkinagina* pribor"
+    ],
+    [
+      83.42,
+      85.2,
+      "uni *«qovoqcha»* deb ham atashadi"
+    ],
+    [
+      85.3,
+      87.86,
+      "Uni mana bunday *o’rnatamiz*"
+    ],
+    [
+      87.9,
+      89.38,
+      "va hammasini birga *ulaymiz*"
+    ],
+    [
+      92.52,
+      96.8,
+      "*banka massajini* o’zi qilib beradi"
+    ],
+    [
+      97.1,
+      100.0,
+      "Qo’lqop taqilsa — *impuls massaj*"
+    ],
+    [
+      100.04,
+      102.3,
+      "yana *gua sha* massaji"
+    ],
+    [
+      102.34,
+      104.08,
+      "va hatto *quruq hijoma*"
+    ],
+    [
+      104.14,
+      107.24,
+      "Yana mana bu kichkina *nasadkasi* bor"
+    ],
+    [
+      107.3,
+      110.14,
+      "Quloq og’riganda,"
+    ],
+    [
+      110.22,
+      114.6,
+      "*burun* bitib qolganda"
+    ],
+    [
+      114.64,
+      115.4,
+      "undan ham foydalanasiz"
+    ],
+    [
+      115.44,
+      117.84,
+      "Ya’ni biomassajyor"
+    ],
+    [
+      119.6,
+      122.98,
+      "Qo’l massajida *charchab* qolish mumkin,"
+    ],
+    [
+      123.08,
+      124.02,
+      "qorayish mumkin,"
+    ],
+    [
+      124.04,
+      128.0,
+      "lekin bu massajyorda — *boshqacha*"
+    ],
+    [
+      128.04,
+      130.32,
+      "O’zingiz *boshqarib* turib,"
+    ],
+    [
+      130.34,
+      132.3,
+      "bemalol ishlatsangiz bo’ladi"
+    ],
+    [
+      132.54,
+      133.92,
+      "Men buni *juda sevdim*,"
+    ],
+    [
+      133.96,
+      137.02,
+      "chunki onamning *og’riqlariga* yordam berdi"
+    ],
+    [
+      137.04,
+      139.44,
+      "*varikozda* ham yordam beradi"
+    ],
+    [
+      139.52,
+      140.96,
+      "bel og’rig’i, oyoq og’riqlari"
+    ],
+    [
+      143.44,
+      144.6,
+      "nafaqat teridan,"
+    ],
+    [
+      144.64,
+      146.44,
+      "balki *ichki tomirlar* bilan ishlaydi"
+    ],
+    [
+      146.54,
+      147.88,
+      "Bu shunaqa *kichkina* narsa —"
+    ],
+    [
+      147.92,
+      150.24,
+      "olib yurib, *bemalol* ishlatasiz"
+    ],
+    [
+      150.28,
+      151.06,
+      "uy sharoitida,"
+    ],
+    [
+      153.5,
+      155.92,
+      "bu *zo’r imkoniyat* — daromad qiling"
+    ],
+    [
+      156.14,
+      156.9,
+      "*Tavsiya qilaman!*"
+    ]
+  ],
+  "logos": [
+    [
+      4.14,
+      5.9
+    ]
+  ],
+  "cover": {
+    "start": 2.38,
+    "end": 4.1,
+    "kicker": "FOHERB · WHIEDA",
+    "title": "*Biomassajyor*"
+  },
+  "banners": [
+    {
+      "start": 5.94,
+      "end": 9.52,
+      "title": "Feruza Sabitova",
+      "text": "Aktrisa · WHIEDA hamkori"
+    }
+  ],
+  "pills": [
+    {
+      "start": 15.06,
+      "end": 17.2,
+      "text": "Olib yurish qulay"
+    },
+    {
+      "start": 54.48,
+      "end": 58.28,
+      "text": "Ulash provodlari"
+    },
+    {
+      "start": 62.4,
+      "end": 67.84,
+      "text": "Kumush qo’lqoplar"
+    },
+    {
+      "start": 69.12,
+      "end": 73.16,
+      "text": "Rozetkaga ulanadi"
+    },
+    {
+      "start": 147.92,
+      "end": 151.06,
+      "text": "Sumkada olib yuring"
+    }
+  ],
+  "bubbles": {
+    "end": 104.08,
+    "items": [
+      [
+        92.6,
+        "*Banka* massaji"
+      ],
+      [
+        97.2,
+        "*Impuls* massaj"
+      ],
+      [
+        100.1,
+        "*Gua sha*"
+      ]
+    ]
+  },
+  "cards": [
+    {
+      "start": 10.68,
+      "end": 13.4,
+      "thin": "Uyingiz uchun",
+      "big": "*Biomassajyor*"
+    },
+    {
+      "start": 30.52,
+      "end": 33.4,
+      "thin": "Xuddi",
+      "big": "*Kosmetichka*"
+    },
+    {
+      "start": 38.14,
+      "end": 41.9,
+      "thin": "Endi —",
+      "big": "*Ichidagi*|mo’jiza"
+    },
+    {
+      "start": 46.72,
+      "end": 49.0,
+      "thin": "Tolalarida kumush",
+      "big": "*Kumushli*|perchatka"
+    },
+    {
+      "start": 77.16,
+      "end": 80.4,
+      "thin": "Mana o’zi —",
+      "big": "*Biomassajyor*"
+    },
+    {
+      "start": 89.42,
+      "end": 92.48,
+      "thin": "Funksiyalari",
+      "big": "*5 ta*",
+      "numeric": true
+    },
+    {
+      "start": 117.88,
+      "end": 119.56,
+      "thin": "O’nta qo’l massajining",
+      "big": "*O’rnini*|oladi"
+    },
+    {
+      "start": 141.02,
+      "end": 143.4,
+      "thin": "Ikki qavat",
+      "big": "*Ichkariga*|ishlaydi"
+    },
+    {
+      "start": 151.1,
+      "end": 153.46,
+      "thin": "Fizioterapiya",
+      "big": "*Kabinet*|ochasizmi?"
+    }
+  ],
+  "end_card": {
+    "sub": "Feruza Sabitova · WHIEDA hamkori",
+    "pill": "Buyurtma — direktda"
+  },
+  "sfx": []
+}

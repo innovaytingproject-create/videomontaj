@@ -1,0 +1,216 @@
+{
+  "name": "video12",
+  "_comment": "Feruza Sabitova blogi — ishonchlar haqida",
+  "music": "chronos",
+  "transition_every": 7,
+  "captions": [
+    [
+      0.13,
+      2.53,
+      "Bugun siz bilan *ishonchlar* haqida,"
+    ],
+    [
+      2.59,
+      4.43,
+      "ya’ni *e’tiqodlar* haqida gaplashmoqchiman"
+    ],
+    [
+      7.2,
+      9.4,
+      "Ular bizni *qo’llab-quvvatlaydi*,"
+    ],
+    [
+      9.46,
+      11.25,
+      "xohlagan manzilimizga,"
+    ],
+    [
+      11.3,
+      13.57,
+      "*orzularimizga*, maqsadlarimizga olib boradi"
+    ],
+    [
+      13.67,
+      16.77,
+      "yoki aksincha — yo’limizdagi *to’siqqa* aylanadi"
+    ],
+    [
+      16.87,
+      17.7,
+      "Bu juda *muhim*:"
+    ],
+    [
+      17.97,
+      23.87,
+      "agar ong ostimizdagi *urug’lar* salbiy bo’lsa,"
+    ],
+    [
+      23.97,
+      27.3,
+      "hayotda qanchalik harakat qilmaylik, yugurmaylik,"
+    ],
+    [
+      27.57,
+      29.97,
+      "baribir natijasi *salbiy* bo’ladi"
+    ],
+    [
+      29.99,
+      32.07,
+      "Siz maqsadga *erisha olmaysiz*"
+    ],
+    [
+      32.19,
+      35.07,
+      "Agar *ijobiy* bo’lsa — albatta natija bo’ladi"
+    ],
+    [
+      38.47,
+      41.47,
+      "qarzga, kreditga *kirib* qolishadi"
+    ],
+    [
+      41.67,
+      45.07,
+      "Ular «ko’proq *ishlashim* kerak» deyishadi"
+    ],
+    [
+      45.15,
+      47.67,
+      "Lekin gap ko’p ishlashda *emas*,"
+    ],
+    [
+      47.73,
+      49.73,
+      "gap yugurishda *emas* ekan"
+    ],
+    [
+      49.87,
+      53.57,
+      "gap — *ildizga* qarashda ekan"
+    ],
+    [
+      56.63,
+      58.73,
+      "Agar biz o’sha *ildizni* o’zgartirmasak,"
+    ],
+    [
+      58.81,
+      62.17,
+      "yugurib-yugurib *charchab* qolamiz"
+    ],
+    [
+      62.3,
+      65.93,
+      "Oqibati — yana o’sha *qarz*, yana o’sha kredit"
+    ],
+    [
+      66.03,
+      68.3,
+      "Xo’sh, ildiz qayerda?"
+    ],
+    [
+      68.63,
+      69.73,
+      "Ildiz — bu *fikrimiz*,"
+    ],
+    [
+      69.79,
+      71.43,
+      "ildiz — bu *ong ostimiz*,"
+    ],
+    [
+      71.49,
+      76.97,
+      "ildiz — bu *pulga*, muvaffaqiyatga, farovonlikka munosabatingiz"
+    ]
+  ],
+  "logos": [],
+  "cover": {
+    "start": 0.18,
+    "end": 2.53,
+    "kicker": "FERUZA SABITOVA",
+    "title": "*Ishonchlar* haqida"
+  },
+  "banners": [],
+  "pills": [
+    {
+      "start": 56.63,
+      "end": 62.17,
+      "text": "Ildizni o’zgartiring"
+    }
+  ],
+  "bubbles": {
+    "end": 76.97,
+    "items": [
+      [
+        68.63,
+        "*Fikrimiz*"
+      ],
+      [
+        69.79,
+        "*Ong ostimiz*"
+      ],
+      [
+        71.49,
+        "*Pulga* munosabat"
+      ]
+    ]
+  },
+  "cards": [
+    {
+      "start": 4.49,
+      "end": 7.18,
+      "thin": "Ishonchlar —",
+      "big": "*Ijobiy*|yoki salbiy"
+    },
+    {
+      "start": 35.2,
+      "end": 38.17,
+      "thin": "Ko’p odamlar",
+      "big": "*Qarz* va|kreditda"
+    },
+    {
+      "start": 53.65,
+      "end": 56.63,
+      "thin": "Ildizimiz —",
+      "big": "*Ishonchimiz*"
+    }
+  ],
+  "stickers": [
+    {
+      "start": 13.67,
+      "end": 16.77,
+      "file": "s4055",
+      "x": 820,
+      "y": 130,
+      "w": 160,
+      "rot": 8
+    },
+    {
+      "start": 49.87,
+      "end": 53.57,
+      "file": "s6192",
+      "x": 700,
+      "y": 200,
+      "w": 330,
+      "rot": 0
+    },
+    {
+      "start": 62.3,
+      "end": 65.93,
+      "file": "s3935",
+      "x": 690,
+      "y": 230,
+      "w": 320,
+      "rot": -8
+    }
+  ],
+  "end_card": {
+    "emblem": false,
+    "title": "Feruza *Sabitova*",
+    "sub": "Ishonchlar haqida",
+    "pill": "Obuna bo’ling — davomi bor"
+  },
+  "sfx": []
+}

@@ -1,0 +1,183 @@
+{
+  "name": "video8",
+  "_comment": "Ochki raspakovkasi — so'zsiz, dinamik, musiqa ostida",
+  "music": "chronos",
+  "music_db": -8,
+  "voice_db": -4,
+  "transition_every": 5,
+  "captions": [
+    [
+      11.1,
+      12.7,
+      "Mana *u!*"
+    ],
+    [
+      12.8,
+      15.3,
+      "Grafenli *fotoxrom* ochki"
+    ],
+    [
+      19.0,
+      21.6,
+      "Qarang, *himoya* ishlayapti!"
+    ],
+    [
+      24.6,
+      27.0,
+      "*Yengil* va chiroyli"
+    ],
+    [
+      29.4,
+      32.0,
+      "Chiroyli *g’ilof* ham bor"
+    ],
+    [
+      38.0,
+      40.4,
+      "Hammasi *qutida*"
+    ],
+    [
+      42.0,
+      44.4,
+      "*Zo’r*, to’g’rimi?"
+    ]
+  ],
+  "logos": [
+    [
+      40.8,
+      43.6
+    ]
+  ],
+  "cover": {
+    "start": 0.2,
+    "end": 3.6,
+    "kicker": "RASPAKOVKA · WHIEDA",
+    "title": "Yangi *ochki* keldi!"
+  },
+  "banners": [
+    {
+      "start": 4.2,
+      "end": 7.6,
+      "title": "WHIEDA",
+      "text": "Buyurtma yetib keldi"
+    }
+  ],
+  "pills": [
+    {
+      "start": 17.2,
+      "end": 21.8,
+      "text": "UV va ko’k nurdan himoya"
+    },
+    {
+      "start": 25.0,
+      "end": 28.6,
+      "text": "Anti-UV · Blue light"
+    },
+    {
+      "start": 43.8,
+      "end": 45.5,
+      "text": "Buyurtma — direktda",
+      "icon": "i7582"
+    }
+  ],
+  "bubbles": {
+    "end": 24.1,
+    "items": [
+      [
+        22.0,
+        "*Vau!*"
+      ],
+      [
+        22.7,
+        "Qanday *chiroyli!*"
+      ]
+    ]
+  },
+  "cards": [
+    {
+      "start": 9.6,
+      "end": 11.0,
+      "thin": "Ichida",
+      "big": "*Nima* bor?"
+    },
+    {
+      "start": 15.5,
+      "end": 17.1,
+      "thin": "Endi —",
+      "big": "Ko’k nur|*testi*"
+    },
+    {
+      "start": 34.8,
+      "end": 37.8,
+      "thin": "Photochromic · Anti-UV",
+      "big": "*Grafenli*|ochki"
+    }
+  ],
+  "end_card": {
+    "sub": "WHIEDA · Feruza Sabitova",
+    "pill": "Buyurtma — direktda"
+  },
+  "sfx": [
+    [
+      "whoosh",
+      3.7,
+      -6
+    ],
+    [
+      "whoosh",
+      7.7,
+      -6
+    ],
+    [
+      "whoosh",
+      15.2,
+      -6
+    ],
+    [
+      "whoosh",
+      24.0,
+      -6
+    ],
+    [
+      "whoosh",
+      28.5,
+      -6
+    ],
+    [
+      "whoosh",
+      34.5,
+      -6
+    ],
+    [
+      "whoosh",
+      37.5,
+      -6
+    ],
+    [
+      "whoosh",
+      10.7,
+      -3
+    ],
+    [
+      "boom",
+      11.0,
+      -4
+    ],
+    [
+      "whoosh",
+      40.25,
+      -3
+    ],
+    [
+      "boom",
+      40.55,
+      -3
+    ],
+    [
+      "ding",
+      19.0,
+      -8
+    ]
+  ],
+  "caption_accent": "#5AB0FF"
+}

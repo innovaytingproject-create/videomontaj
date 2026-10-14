@@ -1,0 +1,215 @@
+{
+  "name": "video11",
+  "_comment": "Oyoq og'rig'iga sabab 3 odat",
+  "music": "chronos",
+  "transition_every": 9,
+  "caption_accent": "#0063E0",
+  "captions": [
+    [
+      0.0,
+      2.5,
+      "Kechqurun oyog’ingiz *yoshdan* og’rimaydi"
+    ],
+    [
+      2.58,
+      4.4,
+      "Mana shu *uchta odatdan* og’riydi"
+    ],
+    [
+      4.46,
+      5.6,
+      "*O’zingizni* tekshiring"
+    ],
+    [
+      5.62,
+      7.2,
+      "Agar sizda bittasi bo’lsa ham,"
+    ],
+    [
+      7.24,
+      8.55,
+      "shu odatni *tashlab* qo’ying"
+    ],
+    [
+      11.93,
+      13.86,
+      "ikkinchisini o’zingiz bilan olmaysiz"
+    ],
+    [
+      13.92,
+      16.8,
+      "Albatta *ikkinchi poyabzalni* olib yuring"
+    ],
+    [
+      16.88,
+      18.33,
+      "Yoki menga o’xshab"
+    ],
+    [
+      18.85,
+      21.17,
+      "*stelka* taqishingiz kerak —"
+    ],
+    [
+      21.17,
+      22.15,
+      "*magnitli* stelka"
+    ],
+    [
+      22.19,
+      26.17,
+      "Bu stelka *inson anatomiyasi* bo’yicha ishlab chiqarilgan"
+    ],
+    [
+      29.5,
+      32.17,
+      "Har soatda *5 daqiqa* turib yuring"
+    ],
+    [
+      35.47,
+      38.12,
+      "Bu oyog’ingiz uchun *juda foydali*"
+    ],
+    [
+      43.2,
+      46.27,
+      "Yaxshisi — *devorga* oyog’ingizni 20 daqiqa ko’taring"
+    ],
+    [
+      46.38,
+      48.24,
+      "Menga bunday narsa *kerak emas*,"
+    ],
+    [
+      48.35,
+      50.74,
+      "chunki men *korreksion stelka* taqaman"
+    ],
+    [
+      50.94,
+      54.44,
+      "Agar siz ham *magnitli stelka* buyurtma qilmoqchi bo’lsangiz,"
+    ],
+    [
+      54.48,
+      56.04,
+      "albatta *direktga* yozing!"
+    ]
+  ],
+  "logos": [],
+  "cover": {
+    "start": 0.05,
+    "end": 2.5,
+    "kicker": "OYOQ OG'RIG'I",
+    "title": "*3 ta* odat"
+  },
+  "banners": [],
+  "pills": [
+    {
+      "start": 32.27,
+      "end": 35.35,
+      "text": "Har soatda — 5 daqiqa yuring",
+      "icon": "i7569"
+    },
+    {
+      "start": 43.2,
+      "end": 46.27,
+      "text": "20 daqiqa · oyoq devorda"
+    },
+    {
+      "start": 2.58,
+      "end": 4.4,
+      "text": "Oyoq og’rig’i",
+      "icon": "i7568"
+    },
+    {
+      "start": 48.4,
+      "end": 50.7,
+      "text": "Korreksion stelka",
+      "icon": "i7575"
+    },
+    {
+      "start": 54.48,
+      "end": 56.0,
+      "text": "Direktga yozing",
+      "icon": "i7582"
+    }
+  ],
+  "bubbles": null,
+  "cards": [
+    {
+      "start": 8.63,
+      "end": 11.87,
+      "thin": "Birinchi odat — kun bo’yi",
+      "big": "*Bitta*|poyabzal"
+    },
+    {
+      "start": 26.43,
+      "end": 29.37,
+      "thin": "Ikkinchi odat — soatlab",
+      "big": "Oyoqni|*oyoqqa*|tashlash"
+    },
+    {
+      "start": 39.37,
+      "end": 43.1,
+      "thin": "Uchinchi odat — kechqurun",
+      "big": "Divanda|*yotish*"
+    }
+  ],
+  "stickers": [
+    {
+      "start": 4.46,
+      "end": 5.6,
+      "file": "s3895",
+      "x": 700,
+      "y": 250,
+      "w": 300,
+      "rot": 6
+    },
+    {
+      "start": 7.24,
+      "end": 8.55,
+      "file": "s4055",
+      "x": 760,
+      "y": 230,
+      "w": 230,
+      "rot": 8
+    },
+    {
+      "start": 29.5,
+      "end": 32.17,
+      "file": "s4042",
+      "x": 760,
+      "y": 260,
+      "w": 250,
+      "rot": -8
+    },
+    {
+      "start": 43.2,
+      "end": 45.77,
+      "file": "s4043",
+      "x": 780,
+      "y": 250,
+      "w": 220,
+      "rot": -6
+    }
+  ],
+  "end_card": {
+    "sub": "WHIEDA · Feruza Sabitova",
+    "pill": "Direktga yozing: «Stelka»"
+  },
+  "sfx": [],
+  "transitions": [
+    6.5,
+    16.0,
+    24.0,
+    46.0,
+    52.5
+  ],
+  "fx": {
+    "flash": 0.18,
+    "tint": 0.3,
+    "blur": 6,
+    "rot": 1.2
+  }
+}

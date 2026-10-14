@@ -1,0 +1,136 @@
+{
+  "name": "video9",
+  "_comment": "Fotoxrom ochki quyoshda qorayadi — oldin/keyin",
+  "music": "chronos",
+  "transition_every": 7,
+  "captions": [
+    [
+      2.34,
+      3.98,
+      "Hozir mana qarang,"
+    ],
+    [
+      4.04,
+      6.96,
+      "buning *rangini* ko’ryapsiz —"
+    ],
+    [
+      7.08,
+      10.1,
+      "endi buni *quyoshda* ushlab turamiz"
+    ],
+    [
+      10.16,
+      12.94,
+      "Bir necha daqiqa ushlaymiz,"
+    ],
+    [
+      13.0,
+      14.54,
+      "o’zingiz *ko’rasiz*"
+    ],
+    [
+      16.98,
+      18.98,
+      "ham *foydali*, ham himoya qiluvchi,"
+    ],
+    [
+      19.06,
+      22.9,
+      "ham *quyosh ochki* sifatida taqasiz"
+    ],
+    [
+      23.2,
+      25.04,
+      "Endi qarang — *mana!*"
+    ],
+    [
+      26.14,
+      27.56,
+      "Qoraydimi? *Qoraydi!*"
+    ],
+    [
+      30.48,
+      32.2,
+      "Farqini *ko’ryapsizmi?*"
+    ],
+    [
+      33.7,
+      35.2,
+      "*Tavsiya qilaman!*"
+    ]
+  ],
+  "logos": [],
+  "cover": {
+    "start": 0.05,
+    "end": 2.3,
+    "kicker": "FOTOXROM OCHKI",
+    "title": "Quyoshda *qorayadi!*"
+  },
+  "banners": [],
+  "pills": [
+    {
+      "start": 7.08,
+      "end": 14.54,
+      "text": "Quyoshda tekshiramiz"
+    },
+    {
+      "start": 23.2,
+      "end": 27.5,
+      "text": "Ochki qoraydi!"
+    },
+    {
+      "start": 30.48,
+      "end": 33.6,
+      "text": "Xonada tiniq · quyoshda qora"
+    }
+  ],
+  "bubbles": null,
+  "cards": [
+    {
+      "start": 14.62,
+      "end": 16.94,
+      "thin": "Bu ochki —",
+      "big": "*2 in 1*",
+      "numeric": true
+    }
+  ],
+  "end_card": {
+    "sub": "WHIEDA · Feruza Sabitova",
+    "pill": "Buyurtma — direktda"
+  },
+  "sfx": [
+    [
+      "whoosh",
+      27.32,
+      -2
+    ],
+    [
+      "boom",
+      27.62,
+      -2
+    ],
+    [
+      "ding",
+      27.9,
+      -6
+    ],
+    [
+      "riser",
+      21.9,
+      -8
+    ],
+    [
+      "boom",
+      23.2,
+      -6
+    ]
+  ],
+  "transitions": [
+    7,
+    14.62,
+    21,
+    27.62,
+    33
+  ]
+}

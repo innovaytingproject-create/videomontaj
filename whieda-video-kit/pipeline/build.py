@@ -239,7 +239,10 @@ shutil.copytree(KIT / "template" / "vendor", P / "vendor", dirs_exist_ok=True)
 shutil.copy(KIT / "assets" / "logo" / "whieda-emblem.png", P / "assets" / "whieda-emblem.png")
 (P / "assets" / "stickers").mkdir(parents=True, exist_ok=True)
 for f in used_stickers:
-    shutil.copy(KIT / "assets" / "stickers" / f"{f}.png", P / "assets" / "stickers" / f"{f}.png")
+    src = KIT / "assets" / "stickers" / f"{f}.png"
+    if not src.exists():  # full library: assets/stickers_all/_KATALOG.png
+        src = KIT / "assets" / "stickers_all" / f"{f}.png"
+    shutil.copy(src, P / "assets" / "stickers" / f"{f}.png")
 for f in used_icons:
     shutil.copy(KIT / "assets" / "icons" / f, P / "assets" / "icons" / f)
 hf = P / "hyperframes.json"

@@ -1,0 +1,324 @@
+{
+  "name": "video15",
+  "_comment": "Xitoy bilan biznes — 6 qism birlashtirildi, pauzalar kesildi",
+  "music": "chronos",
+  "transition_every": 7,
+  "caption_accent": "#9FD0FF",
+  "fx": {
+    "flash": 0.25,
+    "tint": 0.4,
+    "blur": 8,
+    "rot": 1.5
+  },
+  "captions": [
+    [
+      0.09,
+      1.38,
+      "Xitoy bilan *onlayn biznes*"
+    ],
+    [
+      1.43,
+      2.53,
+      "qanday qurish mumkin?"
+    ],
+    [
+      2.8,
+      4.63,
+      "Hozir mana shu *ko’zoynak*"
+    ],
+    [
+      4.85,
+      5.42,
+      "misolida ko’rsataman"
+    ],
+    [
+      5.59,
+      8.75,
+      "Ko’pchilik buning uchun *omborlar*,"
+    ],
+    [
+      8.8,
+      11.23,
+      "yoki katta *sarmoya* kerak deydi"
+    ],
+    [
+      11.44,
+      11.98,
+      "*Unday emas!*"
+    ],
+    [
+      12.17,
+      14.48,
+      "Qarang, *mahsulot* Xitoyda"
+    ],
+    [
+      14.53,
+      16.78,
+      "*nanotexnologiya* asosida ishlab chiqariladi"
+    ],
+    [
+      20.08,
+      20.88,
+      "Bu — *birinchisi*"
+    ],
+    [
+      20.93,
+      22.78,
+      "*Ikkinchisi* — mahsulotni"
+    ],
+    [
+      22.83,
+      24.98,
+      "o’zingiz *ishlatganingizdan* keyin,"
+    ],
+    [
+      25.03,
+      26.98,
+      "uning *foydasini* ko’rgach,"
+    ],
+    [
+      27.35,
+      28.38,
+      "boshqalarga *tavsiya* qilasiz"
+    ],
+    [
+      30.33,
+      32.98,
+      "Masalan, bu ko’zoynakni *55 dollarga* olasiz"
+    ],
+    [
+      33.71,
+      35.18,
+      "Boshqalarga *tavsiya* qilasiz —"
+    ],
+    [
+      35.23,
+      37.63,
+      "har bittasidan sizga *30 dollar* qoladi"
+    ],
+    [
+      37.73,
+      39.98,
+      "Bizning *WHIEDA* assotsiatsiyamizda"
+    ],
+    [
+      40.03,
+      41.98,
+      "kurs 13 mingdan — *tasavvur* qiling!"
+    ],
+    [
+      42.03,
+      43.38,
+      "Va eng *qizig’i*:"
+    ],
+    [
+      48.11,
+      49.68,
+      "Bu *sehrli tugma* emas,"
+    ],
+    [
+      49.73,
+      51.18,
+      "havodan *pul* kelmaydi"
+    ],
+    [
+      51.23,
+      53.79,
+      "Siz buni *o’rganasiz* va ishlaysiz,"
+    ],
+    [
+      54.01,
+      56.55,
+      "lekin hozir *uydan turib*"
+    ],
+    [
+      56.6,
+      58.04,
+      "boshlasangiz bo’ladi"
+    ],
+    [
+      58.23,
+      60.58,
+      "«Xitoy bilan *biznesni*"
+    ],
+    [
+      60.63,
+      62.93,
+      "qanday qilish kerak?» desangiz,"
+    ],
+    [
+      63.03,
+      65.03,
+      "siz uchun *zo’r* ma’lumot bor"
+    ],
+    [
+      65.13,
+      67.08,
+      "Har *shanba* kuni"
+    ],
+    [
+      67.13,
+      69.83,
+      "mana shu ofisda *masterklass* o’tkazamiz"
+    ],
+    [
+      72.53,
+      75.83,
+      "50 mingga juda *zo’r* ma’lumotga ega bo’lasiz"
+    ],
+    [
+      75.93,
+      78.28,
+      "Va albatta, ajoyib *mahsulotlarimiz*"
+    ],
+    [
+      78.33,
+      81.28,
+      "uchun *lotereya* ham o’ynaladi"
+    ],
+    [
+      81.43,
+      83.88,
+      "Masterklassga *yozilish* uchun"
+    ],
+    [
+      83.93,
+      86.88,
+      "*direktga* yozib, ro’yxatdan o’ting"
+    ]
+  ],
+  "logos": [
+    [
+      38.43,
+      39.93
+    ]
+  ],
+  "cover": {
+    "start": 0.09,
+    "end": 2.53,
+    "kicker": "WHIEDA · BIZNES",
+    "title": "*Xitoy* bilan biznes"
+  },
+  "banners": [],
+  "pills": [
+    {
+      "start": 2.8,
+      "end": 5.42,
+      "text": "Ko’zoynak misolida",
+      "icon": "i7556"
+    },
+    {
+      "start": 20.93,
+      "end": 24.98,
+      "text": "Avval o’zingiz sinab ko’rasiz",
+      "icon": "i7559"
+    },
+    {
+      "start": 51.23,
+      "end": 53.79,
+      "text": "O’rganasiz va ishlaysiz",
+      "icon": "i7581"
+    },
+    {
+      "start": 65.13,
+      "end": 69.83,
+      "text": "Har shanba · masterklass",
+      "icon": "i7556"
+    },
+    {
+      "start": 81.43,
+      "end": 86.88,
+      "text": "Direktga yozing",
+      "icon": "i7582"
+    }
+  ],
+  "bubbles": null,
+  "cards": [
+    {
+      "start": 17.33,
+      "end": 20.03,
+      "thin": "Toshkentda",
+      "big": "*Ombor*|tayyor"
+    },
+    {
+      "start": 28.51,
+      "end": 30.28,
+      "thin": "Uchinchisi —",
+      "big": "*Eng*|qizig’i"
+    },
+    {
+      "start": 43.43,
+      "end": 47.93,
+      "thin": "Ofis va xodim",
+      "big": "*Kerak*|emas"
+    },
+    {
+      "start": 69.93,
+      "end": 72.48,
+      "thin": "Masterklass chiptasi",
+      "big": "*50 000*|so’m",
+      "numeric": true
+    }
+  ],
+  "stickers": [
+    {
+      "start": 5.59,
+      "end": 8.75,
+      "file": "s4072",
+      "x": 770,
+      "y": 230,
+      "w": 250,
+      "rot": 6
+    },
+    {
+      "start": 8.8,
+      "end": 11.23,
+      "file": "s3935",
+      "x": 730,
+      "y": 230,
+      "w": 300,
+      "rot": -8
+    },
+    {
+      "start": 35.23,
+      "end": 37.63,
+      "file": "s3927",
+      "x": 720,
+      "y": 230,
+      "w": 320,
+      "rot": 6
+    },
+    {
+      "start": 54.01,
+      "end": 58.04,
+      "file": "s3892",
+      "x": 720,
+      "y": 230,
+      "w": 320,
+      "rot": -6
+    },
+    {
+      "start": 75.93,
+      "end": 81.28,
+      "file": "s3903",
+      "x": 770,
+      "y": 220,
+      "w": 250,
+      "rot": 8
+    },
+    {
+      "start": 81.43,
+      "end": 86.88,
+      "file": "s4054",
+      "x": 740,
+      "y": 330,
+      "w": 260,
+      "rot": -6
+    }
+  ],
+  "end_card": {
+    "sub": "WHIEDA · Feruza Sabitova",
+    "pill": "Masterklass — direktda"
+  },
+  "sfx": []
+}

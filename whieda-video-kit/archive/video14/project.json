@@ -1,0 +1,252 @@
+{
+  "name": "video14",
+  "_comment": "Spirulina va sauna — butun dubl, faqat bosh/oxir kesildi",
+  "music": "chronos",
+  "transition_every": 7,
+  "fx": {
+    "flash": 0.25,
+    "tint": 0.4,
+    "blur": 8,
+    "rot": 1.5
+  },
+  "captions": [
+    [
+      0.1,
+      1.33,
+      "*Azizlar*, mendan"
+    ],
+    [
+      1.35,
+      3.25,
+      "ko’pchiligingiz *so’rayapsiz*:"
+    ],
+    [
+      3.3,
+      5.15,
+      "«Qanday qilib *ozdingiz?*»"
+    ],
+    [
+      5.2,
+      6.7,
+      "Hatto mana shu *WHIEDA* assotsiatsiyasidan"
+    ],
+    [
+      6.75,
+      8.6,
+      "necha *ayollar* bugun so’rashdi"
+    ],
+    [
+      8.81,
+      10.5,
+      "Mana, aytaman:"
+    ],
+    [
+      10.55,
+      12.25,
+      "har kuni *spirulina* ichaman"
+    ],
+    [
+      14.35,
+      16.7,
+      "*suvo’tlaridan* olinadigan"
+    ],
+    [
+      16.75,
+      18.15,
+      "Mana shunaqa *tabletkalar*"
+    ],
+    [
+      18.25,
+      19.85,
+      "juda ham *zo’r*"
+    ],
+    [
+      22.65,
+      24.3,
+      "Va nafaqat *spirulina*,"
+    ],
+    [
+      24.35,
+      26.6,
+      "balki yonimdagi mana bu"
+    ],
+    [
+      26.65,
+      29.55,
+      "ajoyib *sauna*"
+    ],
+    [
+      32.65,
+      35.6,
+      "Buni *uyingizga* xarid qilsangiz,"
+    ],
+    [
+      35.65,
+      38.5,
+      "*mazza qilib* o’tirasiz"
+    ],
+    [
+      38.55,
+      41.4,
+      "sizdan shunaqa *terlar* oqadi"
+    ],
+    [
+      41.45,
+      44.2,
+      "Ter orqali qoningizdagi,"
+    ],
+    [
+      44.25,
+      47.1,
+      "ichingizdagi *toksinlar* chiqib ketadi"
+    ],
+    [
+      47.15,
+      50.0,
+      "Har kuni-har kuni *o’tiraman*,"
+    ],
+    [
+      50.05,
+      53.05,
+      "chunki maqsadim — *60 kilo*"
+    ],
+    [
+      57.15,
+      59.9,
+      "Azizlar, siz ham *sog’lom* bo’lishni,"
+    ],
+    [
+      59.95,
+      63.2,
+      "*quvvatli* bo’lishni xohlasangiz,"
+    ],
+    [
+      63.25,
+      64.8,
+      "«*Sauna*» so’zini direktga yozing"
+    ]
+  ],
+  "logos": [
+    [
+      5.95,
+      7.25
+    ]
+  ],
+  "cover": {
+    "start": 0.1,
+    "end": 3.25,
+    "kicker": "WHIEDA · SPIRULINA",
+    "title": "Qanday *ozdim?*"
+  },
+  "banners": [],
+  "pills": [
+    {
+      "start": 7.3,
+      "end": 8.6,
+      "text": "Ayollar so’rashdi",
+      "icon": "i7555"
+    },
+    {
+      "start": 50.05,
+      "end": 53.05,
+      "text": "Maqsad: 60 kilo",
+      "icon": "i7575"
+    },
+    {
+      "start": 63.25,
+      "end": 65.45,
+      "text": "Direktga: «Sauna»",
+      "icon": "i7582"
+    }
+  ],
+  "bubbles": {
+    "end": 22.6,
+    "items": [
+      [
+        19.95,
+        "*Ozish*"
+      ],
+      [
+        20.85,
+        "*Sog’lik*"
+      ],
+      [
+        21.85,
+        "*Quvvat*"
+      ]
+    ]
+  },
+  "cards": [
+    {
+      "start": 12.3,
+      "end": 14.3,
+      "thin": "Spirulina —",
+      "big": "*Dengiz*|o’simligi"
+    },
+    {
+      "start": 29.85,
+      "end": 32.6,
+      "thin": "Uyingizda",
+      "big": "*Sauna*"
+    },
+    {
+      "start": 53.1,
+      "end": 57.1,
+      "thin": "76 kilo edim — hozir",
+      "big": "*67 kilo*",
+      "numeric": true
+    }
+  ],
+  "stickers": [
+    {
+      "start": 3.3,
+      "end": 5.15,
+      "file": "s3899",
+      "x": 770,
+      "y": 220,
+      "w": 230,
+      "rot": 10
+    },
+    {
+      "start": 14.35,
+      "end": 16.7,
+      "file": "s5547",
+      "x": 770,
+      "y": 200,
+      "w": 240,
+      "rot": -12
+    },
+    {
+      "start": 35.65,
+      "end": 38.5,
+      "file": "s6201",
+      "x": 740,
+      "y": 220,
+      "w": 280,
+      "rot": 6
+    },
+    {
+      "start": 47.15,
+      "end": 50.0,
+      "file": "s4042",
+      "x": 780,
+      "y": 220,
+      "w": 220,
+      "rot": 8
+    },
+    {
+      "start": 57.15,
+      "end": 59.9,
+      "file": "s4051",
+      "x": 790,
+      "y": 220,
+      "w": 220,
+      "rot": -10
+    }
+  ],
+  "end_card": {
+    "sub": "WHIEDA · Feruza Sabitova",
+    "pill": "Direktga yozing: «Sauna»"
+  },
+  "sfx": []
+}

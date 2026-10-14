@@ -1,0 +1,272 @@
+{
+  "name": "video3",
+  "_comment": "Feruza — aktrisa, anion stelkalar (3 qism birlashtirildi, pauzalar kesildi)",
+  "music": "chronos",
+  "transition_every": 7,
+  "captions": [
+    [
+      0.0,
+      1.15,
+      "Assalomu alaykum, *azizlar!*"
+    ],
+    [
+      1.22,
+      3.56,
+      "Men aktrisa *Feruza Sabitovaman*"
+    ],
+    [
+      3.6,
+      5.48,
+      "Albatta, siz meni *kinodan* taniysiz"
+    ],
+    [
+      5.52,
+      6.72,
+      "Hozir esa men sizga"
+    ],
+    [
+      6.76,
+      8.24,
+      "kinoda *ko’rmagan* narsalar"
+    ],
+    [
+      8.28,
+      9.3,
+      "haqida gapiraman"
+    ],
+    [
+      9.34,
+      10.4,
+      "Bilasiz, men kinoda"
+    ],
+    [
+      12.72,
+      14.08,
+      "ishlagan vaqtlarim *bo’lgan*"
+    ],
+    [
+      14.14,
+      15.3,
+      "Bu *tungi* s’yomkalar,"
+    ],
+    [
+      15.36,
+      16.62,
+      "bu *kunduzgi* s’yomkalar,"
+    ],
+    [
+      16.68,
+      17.46,
+      "bu sahna…"
+    ],
+    [
+      17.52,
+      19.54,
+      "Albatta, bularning hammasi"
+    ],
+    [
+      19.58,
+      22.04,
+      "tanaga *charchoq* bo’lib keladi"
+    ],
+    [
+      22.08,
+      24.56,
+      "Tana esa bu *charchoqni* eslab qoladi"
+    ],
+    [
+      24.6,
+      26.36,
+      "Va bir kun shunday kun keldiki,"
+    ],
+    [
+      26.4,
+      28.5,
+      "tanam menga *bo’ysunmay* qoldi"
+    ],
+    [
+      30.84,
+      32.2,
+      "bel, oyoq *og’riqlari*,"
+    ],
+    [
+      32.26,
+      34.16,
+      "barmoqlar — *qimirlata olmasdim*"
+    ],
+    [
+      34.22,
+      36.64,
+      "Xullas, *jiddiy muammolarga* duch keldim"
+    ],
+    [
+      36.7,
+      38.0,
+      "Va bir kun men mana shu"
+    ],
+    [
+      38.04,
+      39.66,
+      "*anion stelkalar* bilan tanishdim"
+    ],
+    [
+      39.7,
+      41.2,
+      "*Anion* stelkalar —"
+    ],
+    [
+      43.88,
+      45.26,
+      "onamga, o’zimga, *o’g’limga*"
+    ],
+    [
+      45.3,
+      47.18,
+      "Ko’rasizki, onamning *oyoq* og’riqlari,"
+    ],
+    [
+      47.22,
+      48.46,
+      "mening *bel* og’riqlarim,"
+    ],
+    [
+      48.5,
+      50.34,
+      "qo’limni *ko’tara* boshladim"
+    ],
+    [
+      50.36,
+      51.92,
+      "Xullas, menda nima boshlandi?"
+    ],
+    [
+      54.66,
+      55.72,
+      "*yosharish* boshlandi!"
+    ],
+    [
+      55.74,
+      57.24,
+      "Albatta, bu mahsulotni"
+    ],
+    [
+      57.28,
+      59.22,
+      "hammaga *tavsiya* qilaman"
+    ],
+    [
+      59.26,
+      61.04,
+      "Siz ham men kabi *yosharishni*,"
+    ],
+    [
+      61.08,
+      61.86,
+      "*sog’lom* bo’lishni,"
+    ],
+    [
+      61.9,
+      64.0,
+      "*quvvatga to’la* bo’lishni xohlasangiz,"
+    ],
+    [
+      64.02,
+      65.86,
+      "*akkauntimga* obuna bo’ling"
+    ],
+    [
+      65.9,
+      66.4,
+      "Hali gaplashamiz!"
+    ]
+  ],
+  "logos": [],
+  "cover": {
+    "start": 5.52,
+    "end": 9.3,
+    "kicker": "FERUZA SABITOVA",
+    "title": "Kinoda *ko’rmaganlaringiz*"
+  },
+  "banners": [
+    {
+      "start": 1.22,
+      "end": 3.56,
+      "title": "Feruza Sabitova",
+      "text": "Aktrisa · WHIEDA hamkori"
+    }
+  ],
+  "pills": [
+    {
+      "start": 14.14,
+      "end": 17.46,
+      "text": "Tungi · kunduzgi s’yomkalar"
+    },
+    {
+      "start": 30.84,
+      "end": 34.16,
+      "text": "Bel · oyoq · barmoqlar",
+      "icon": "i7568"
+    },
+    {
+      "start": 38.04,
+      "end": 41.2,
+      "text": "Anion stelkalar"
+    },
+    {
+      "start": 64.02,
+      "end": 65.86,
+      "text": "Obuna bo’ling",
+      "icon": "i7582"
+    }
+  ],
+  "bubbles": {
+    "end": 64.0,
+    "items": [
+      [
+        59.4,
+        "*Yosharish*"
+      ],
+      [
+        61.1,
+        "*Sog’lom* bo’lish"
+      ],
+      [
+        62.2,
+        "*Quvvatga* to’la"
+      ]
+    ]
+  },
+  "cards": [
+    {
+      "start": 10.45,
+      "end": 12.7,
+      "thin": "Kinoda",
+      "big": "*12 soatlab*|oyoqda",
+      "icon": "i7564"
+    },
+    {
+      "start": 28.54,
+      "end": 30.8,
+      "thin": "Tanamda",
+      "big": "*Og’riqlar*|kuchaydi"
+    },
+    {
+      "start": 41.24,
+      "end": 43.7,
+      "thin": "Ya’ni bu",
+      "big": "*Xitoy*|tabobati"
+    },
+    {
+      "start": 51.96,
+      "end": 54.5,
+      "thin": "Hujayralar darajasida",
+      "big": "*Yangilanish*"
+    }
+  ],
+  "end_card": {
+    "sub": "Feruza Sabitova · WHIEDA hamkori",
+    "pill": "Obuna bo’ling — profilda"
+  },
+  "sfx": [],
+  "caption_accent": "#9FD0FF"
+}
