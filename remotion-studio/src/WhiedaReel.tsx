@@ -52,6 +52,7 @@ export type Edit = {
   name: string;
   duration: number; // seconds
   accent: string; // highlighted words
+  captionBottom?: number; // px from the bottom edge (default 860 = chest; 520 = hands, below the face)
   // Reframe: zoom around the face and lift it to the viewer's eye level.
   framing: { originX: number; originY: number; scale: number; shiftY: number };
   cuts: Cut[]; // camera transitions: number (= punch) or {t, type}
@@ -189,13 +190,13 @@ const BRollView: React.FC<{ b: BRoll; name: string }> = ({ b, name }) => {
   );
 };
 
-const CaptionView: React.FC<{ cap: Caption; accent: string }> = ({ cap, accent }) => {
+const CaptionView: React.FC<{ cap: Caption; accent: string; bottom: number }> = ({ cap, accent, bottom }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps + cap.start;
   const out = interpolate(t, [cap.end - 0.12, cap.end], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
-    <div style={{ position: "absolute", left: 70, right: 70, bottom: 860, display: "flex", justifyContent: "center", opacity: out }}>
+    <div style={{ position: "absolute", left: 70, right: 70, bottom, display: "flex", justifyContent: "center", opacity: out }}>
       <div
         style={{
           maxWidth: 920,
@@ -400,7 +401,7 @@ export const WhiedaReel: React.FC<{ edit: Edit }> = ({ edit }) => {
       ))}
       {edit.captions.map((c, i) => (
         <Sequence key={`c${i}`} from={sec(c.start)} durationInFrames={sec(c.end - c.start)} layout="none">
-          <CaptionView cap={c} accent={edit.accent} />
+          <CaptionView cap={c} accent={edit.accent} bottom={edit.captionBottom ?? 860} />
         </Sequence>
       ))}
       {(edit.cards ?? []).map((c, i) => (
