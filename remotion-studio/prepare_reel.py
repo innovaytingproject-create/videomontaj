@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Cut a fragment of a kit project for the Remotion reel and sync kit assets.
 
-Usage: python prepare_reel.py <kit-project> [--grade neutral] <start:end> [<start:end> ...]
+Usage: python prepare_reel.py <kit-project> [--grade cinema] [--as <reel>] <start:end> [<start:end> ...]
+  --as <reel>      write to public/<reel>/ instead of public/<kit-project>/ (several
+                   reels from one source, e.g. video16 = 15 s, video16-full = full)
   pieces (seconds of work/video.mp4) are joined in order — pauses cut out;
   put the reel's camera cuts on the joins to hide them.
   --grade kit      (default) the kit's approved bright, saturated "WHIEDA" look
@@ -27,6 +29,11 @@ grade = "kit"
 if "--grade" in args:
     i = args.index("--grade")
     grade = args[i + 1]
+    del args[i:i + 2]
+reel = None
+if "--as" in args:
+    i = args.index("--as")
+    reel = args[i + 1]
     del args[i:i + 2]
 name = args[0]
 pieces = [tuple(map(float, a.split(":"))) for a in args[1:]]
@@ -55,7 +62,7 @@ if GRADES[grade]:
     pre = GRADES[grade] + ","
 else:
     src, pre = W / "video.mp4", ""
-OUT = ROOT / "public" / name
+OUT = ROOT / "public" / (reel or name)
 OUT.mkdir(parents=True, exist_ok=True)
 
 n = len(pieces)

@@ -197,6 +197,9 @@ export const AccentCard: React.FC<{ card: Card; accent: string }> = ({ card, acc
   const icoK = spring({ frame: frame - 13, fps, config: { damping: 10, stiffness: 170 } });
   const drift = interpolate(frame, [0, len], [1, 1.05]);
   const lines = card.big.split("|");
+  // long words (e.g. "namoyonligi") shrink so a line never leaves the 1080 frame
+  const longest = Math.max(...lines.map((l) => l.replace(/\*/g, "").length));
+  const bigSize = Math.min(132, Math.floor(1560 / Math.max(longest, 1)));
 
   return (
     <AbsoluteFill
@@ -236,7 +239,7 @@ export const AccentCard: React.FC<{ card: Card; accent: string }> = ({ card, acc
             text={l}
             delay={5 + i * 4}
             dark={dark}
-            size={card.numeric && i === 0 ? 230 : 132}
+            size={card.numeric && i === 0 ? 230 : bigSize}
             accent={accent}
           />
         ))}
@@ -251,6 +254,61 @@ export const AccentCard: React.FC<{ card: Card; accent: string }> = ({ card, acc
             }}
           />
         ) : null}
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
+// End card for the reel: name with the accent marker, a subtitle and a pulsing
+// call-to-action button. Personal blog -> no WHIEDA logo (kit rule).
+export type EndCardSpec = {
+  start: number; // seconds in the reel; the card stays until the end
+  title: string; // *accent* supported
+  sub: string;
+  cta: string;
+};
+
+export const EndCard: React.FC<{ spec: EndCardSpec; accent: string }> = ({ spec, accent }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const ein = interpolate(frame, [0, 12], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
+  const subK = spring({ frame: frame - 14, fps, config: { damping: 200 } });
+  const btnK = spring({ frame: frame - 20, fps, config: { damping: 11, stiffness: 160 } });
+  const pulse = 1 + 0.045 * Math.max(0, Math.sin((frame - 30) / 5));
+  return (
+    <AbsoluteFill style={{ clipPath: `circle(${ein * 120}% at 50% 50%)` }}>
+      <WhiteBg frame={frame} />
+      <AbsoluteFill style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", paddingBottom: 120 }}>
+        <Line text={spec.title} delay={4} dark={false} size={118} accent={accent} />
+        <div
+          style={{
+            marginTop: 18,
+            fontFamily: "Montserrat",
+            fontWeight: 700,
+            fontSize: 44,
+            color: "#5D6066",
+            opacity: subK,
+            transform: `translateY(${(1 - subK) * 24}px)`,
+          }}
+        >
+          {spec.sub}
+        </div>
+        <div
+          style={{
+            marginTop: 70,
+            padding: "30px 64px",
+            borderRadius: 80,
+            background: INK,
+            color: "#FFFFFF",
+            fontFamily: "Gilroy, Montserrat, sans-serif",
+            fontWeight: 800,
+            fontSize: 56,
+            boxShadow: `0 18px 50px rgba(10,20,40,.30), 0 0 0 ${10 * Math.max(0, Math.sin((frame - 30) / 5))}px ${accent}66`,
+            transform: `scale(${btnK * pulse})`,
+          }}
+        >
+          {spec.cta}
+        </div>
       </AbsoluteFill>
     </AbsoluteFill>
   );

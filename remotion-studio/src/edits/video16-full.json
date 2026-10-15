@@ -1,0 +1,1090 @@
+{
+ "name": "video16-full",
+ "duration": 58.3,
+ "accent": "#FFD60A",
+ "framing": {
+  "originX": 540,
+  "originY": 720,
+  "scale": 1.35,
+  "shiftY": -110
+ },
+ "cuts": [
+  {
+   "t": 7.72,
+   "type": "whip"
+  },
+  {
+   "t": 11.96,
+   "type": "zoomblur"
+  },
+  {
+   "t": 19.36,
+   "type": "spin"
+  },
+  {
+   "t": 25.98,
+   "type": "punch"
+  },
+  {
+   "t": 35.7,
+   "type": "whip"
+  },
+  {
+   "t": 46.26,
+   "type": "spin"
+  },
+  {
+   "t": 53.24,
+   "type": "zoomblur"
+  }
+ ],
+ "punches": [
+  1.58,
+  10.62,
+  14.08,
+  22.44,
+  26.26,
+  36.32,
+  45.4,
+  50.64
+ ],
+ "captions": [
+  {
+   "start": 0.04,
+   "end": 1.2,
+   "words": [
+    {
+     "t": 0.06,
+     "text": "Men"
+    },
+    {
+     "t": 0.28,
+     "text": "Feruza",
+     "hot": true
+    },
+    {
+     "t": 0.64,
+     "text": "Sabitovaman,"
+    }
+   ]
+  },
+  {
+   "start": 1.24,
+   "end": 2.52,
+   "words": [
+    {
+     "t": 1.3,
+     "text": "qariyb"
+    },
+    {
+     "t": 1.58,
+     "text": "30",
+     "hot": true
+    },
+    {
+     "t": 1.84,
+     "text": "yildan",
+     "hot": true
+    },
+    {
+     "t": 2.32,
+     "text": "beri"
+    }
+   ]
+  },
+  {
+   "start": 2.58,
+   "end": 3.68,
+   "words": [
+    {
+     "t": 2.58,
+     "text": "kino"
+    },
+    {
+     "t": 2.84,
+     "text": "sohasida"
+    },
+    {
+     "t": 3.32,
+     "text": "aktrisa",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 3.72,
+   "end": 4.84,
+   "words": [
+    {
+     "t": 3.72,
+     "text": "bo’lib"
+    },
+    {
+     "t": 4.04,
+     "text": "ishlab"
+    },
+    {
+     "t": 4.34,
+     "text": "kelyapman."
+    }
+   ]
+  },
+  {
+   "start": 4.9,
+   "end": 6.4,
+   "words": [
+    {
+     "t": 4.9,
+     "text": "Yuzdan",
+     "hot": true
+    },
+    {
+     "t": 5.54,
+     "text": "ortiq",
+     "hot": true
+    },
+    {
+     "t": 6.02,
+     "text": "filmlarda"
+    }
+   ]
+  },
+  {
+   "start": 6.46,
+   "end": 7.66,
+   "words": [
+    {
+     "t": 6.46,
+     "text": "rol"
+    },
+    {
+     "t": 6.8,
+     "text": "ijro"
+    },
+    {
+     "t": 7.0,
+     "text": "etganman."
+    }
+   ]
+  },
+  {
+   "start": 7.72,
+   "end": 8.88,
+   "words": [
+    {
+     "t": 7.72,
+     "text": "Va"
+    },
+    {
+     "t": 7.92,
+     "text": "so’nggi"
+    },
+    {
+     "t": 8.56,
+     "text": "yillarda"
+    }
+   ]
+  },
+  {
+   "start": 8.94,
+   "end": 10.56,
+   "words": [
+    {
+     "t": 8.94,
+     "text": "men"
+    },
+    {
+     "t": 9.68,
+     "text": "o’z"
+    },
+    {
+     "t": 10.12,
+     "text": "ustimda"
+    }
+   ]
+  },
+  {
+   "start": 10.62,
+   "end": 11.9,
+   "words": [
+    {
+     "t": 10.62,
+     "text": "chuqur",
+     "hot": true
+    },
+    {
+     "t": 11.0,
+     "text": "ishlab"
+    },
+    {
+     "t": 11.34,
+     "text": "kelyapman."
+    }
+   ]
+  },
+  {
+   "start": 11.96,
+   "end": 13.48,
+   "words": [
+    {
+     "t": 11.96,
+     "text": "Va"
+    },
+    {
+     "t": 12.24,
+     "text": "bir"
+    },
+    {
+     "t": 12.8,
+     "text": "narsani"
+    },
+    {
+     "t": 12.96,
+     "text": "angladim:",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 13.54,
+   "end": 14.74,
+   "words": [
+    {
+     "t": 13.54,
+     "text": "men"
+    },
+    {
+     "t": 13.86,
+     "text": "o’z"
+    },
+    {
+     "t": 14.08,
+     "text": "qadrimni,",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 14.8,
+   "end": 16.24,
+   "words": [
+    {
+     "t": 14.8,
+     "text": "ichki",
+     "hot": true
+    },
+    {
+     "t": 15.64,
+     "text": "kuchimni",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 16.3,
+   "end": 17.7,
+   "words": [
+    {
+     "t": 16.3,
+     "text": "va"
+    },
+    {
+     "t": 16.62,
+     "text": "o’zimda"
+    },
+    {
+     "t": 17.2,
+     "text": "ayollik",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 17.76,
+   "end": 19.3,
+   "words": [
+    {
+     "t": 17.76,
+     "text": "energiyasini",
+     "hot": true
+    },
+    {
+     "t": 18.42,
+     "text": "ochishni"
+    },
+    {
+     "t": 18.8,
+     "text": "boshladim."
+    }
+   ]
+  },
+  {
+   "start": 19.36,
+   "end": 20.56,
+   "words": [
+    {
+     "t": 19.36,
+     "text": "Va"
+    },
+    {
+     "t": 19.52,
+     "text": "bir"
+    },
+    {
+     "t": 19.84,
+     "text": "narsani"
+    },
+    {
+     "t": 20.02,
+     "text": "angladim:"
+    }
+   ]
+  },
+  {
+   "start": 20.62,
+   "end": 21.28,
+   "words": [
+    {
+     "t": 20.62,
+     "text": "bu"
+    },
+    {
+     "t": 20.9,
+     "text": "narsa —"
+    }
+   ]
+  },
+  {
+   "start": 21.32,
+   "end": 22.84,
+   "words": [
+    {
+     "t": 21.32,
+     "text": "har"
+    },
+    {
+     "t": 22.32,
+     "text": "bir"
+    },
+    {
+     "t": 22.44,
+     "text": "ayol",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 22.9,
+   "end": 24.42,
+   "words": [
+    {
+     "t": 22.9,
+     "text": "o’zini"
+    },
+    {
+     "t": 23.24,
+     "text": "namoyon",
+     "hot": true
+    },
+    {
+     "t": 23.7,
+     "text": "qilishi"
+    },
+    {
+     "t": 24.14,
+     "text": "kerak."
+    }
+   ]
+  },
+  {
+   "start": 24.48,
+   "end": 25.92,
+   "words": [
+    {
+     "t": 24.48,
+     "text": "O’zining"
+    },
+    {
+     "t": 24.8,
+     "text": "qadrini",
+     "hot": true
+    },
+    {
+     "t": 25.36,
+     "text": "bilish,"
+    }
+   ]
+  },
+  {
+   "start": 25.98,
+   "end": 27.56,
+   "words": [
+    {
+     "t": 25.98,
+     "text": "o’zining"
+    },
+    {
+     "t": 26.26,
+     "text": "ichki",
+     "hot": true
+    },
+    {
+     "t": 26.58,
+     "text": "kuchini",
+     "hot": true
+    },
+    {
+     "t": 26.9,
+     "text": "topish,"
+    }
+   ]
+  },
+  {
+   "start": 27.62,
+   "end": 29.24,
+   "words": [
+    {
+     "t": 27.62,
+     "text": "o’ziga"
+    },
+    {
+     "t": 28.5,
+     "text": "ishonch",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 29.3,
+   "end": 31.88,
+   "words": [
+    {
+     "t": 29.3,
+     "text": "bilan"
+    },
+    {
+     "t": 31.1,
+     "text": "gapira"
+    },
+    {
+     "t": 31.42,
+     "text": "olish."
+    }
+   ]
+  },
+  {
+   "start": 31.94,
+   "end": 33.56,
+   "words": [
+    {
+     "t": 31.94,
+     "text": "Ya’ni,"
+    },
+    {
+     "t": 32.28,
+     "text": "katta",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 33.62,
+   "end": 34.32,
+   "words": [
+    {
+     "t": 33.62,
+     "text": "daromad",
+     "hot": true
+    },
+    {
+     "t": 33.94,
+     "text": "topish"
+    }
+   ]
+  },
+  {
+   "start": 34.38,
+   "end": 35.64,
+   "words": [
+    {
+     "t": 34.38,
+     "text": "va"
+    },
+    {
+     "t": 34.58,
+     "text": "baxtli",
+     "hot": true
+    },
+    {
+     "t": 35.0,
+     "text": "yashash"
+    },
+    {
+     "t": 35.36,
+     "text": "kerak."
+    }
+   ]
+  },
+  {
+   "start": 35.7,
+   "end": 37.22,
+   "words": [
+    {
+     "t": 35.7,
+     "text": "Shuning"
+    },
+    {
+     "t": 35.9,
+     "text": "uchun,"
+    },
+    {
+     "t": 36.32,
+     "text": "go’zal",
+     "hot": true
+    },
+    {
+     "t": 36.7,
+     "text": "ayollar,"
+    }
+   ]
+  },
+  {
+   "start": 37.28,
+   "end": 38.48,
+   "words": [
+    {
+     "t": 37.28,
+     "text": "noyabr",
+     "hot": true
+    },
+    {
+     "t": 37.78,
+     "text": "oyida"
+    },
+    {
+     "t": 38.06,
+     "text": "men"
+    }
+   ]
+  },
+  {
+   "start": 38.54,
+   "end": 39.74,
+   "words": [
+    {
+     "t": 38.54,
+     "text": "birinchi"
+    },
+    {
+     "t": 39.34,
+     "text": "marotaba"
+    }
+   ]
+  },
+  {
+   "start": 39.8,
+   "end": 41.48,
+   "words": [
+    {
+     "t": 39.8,
+     "text": "«Ayollik",
+     "hot": true
+    },
+    {
+     "t": 40.7,
+     "text": "namoyonligi»"
+    }
+   ]
+  },
+  {
+   "start": 41.54,
+   "end": 43.5,
+   "words": [
+    {
+     "t": 41.54,
+     "text": "nomli"
+    },
+    {
+     "t": 41.98,
+     "text": "master-klass",
+     "hot": true
+    },
+    {
+     "t": 42.96,
+     "text": "o’tkazaman."
+    }
+   ]
+  },
+  {
+   "start": 43.56,
+   "end": 44.9,
+   "words": [
+    {
+     "t": 43.56,
+     "text": "Barcha",
+     "hot": true
+    },
+    {
+     "t": 43.92,
+     "text": "ayollarni",
+     "hot": true
+    },
+    {
+     "t": 44.36,
+     "text": "taklif"
+    },
+    {
+     "t": 44.6,
+     "text": "qilaman."
+    }
+   ]
+  },
+  {
+   "start": 44.96,
+   "end": 46.2,
+   "words": [
+    {
+     "t": 44.96,
+     "text": "Tez"
+    },
+    {
+     "t": 45.1,
+     "text": "orada"
+    },
+    {
+     "t": 45.4,
+     "text": "sanasi,",
+     "hot": true
+    },
+    {
+     "t": 45.7,
+     "text": "joyi"
+    }
+   ]
+  },
+  {
+   "start": 46.26,
+   "end": 47.6,
+   "words": [
+    {
+     "t": 46.26,
+     "text": "va"
+    },
+    {
+     "t": 46.52,
+     "text": "barcha"
+    },
+    {
+     "t": 47.0,
+     "text": "ma’lumotlarini"
+    }
+   ]
+  },
+  {
+   "start": 47.66,
+   "end": 48.64,
+   "words": [
+    {
+     "t": 47.66,
+     "text": "sizga"
+    },
+    {
+     "t": 47.92,
+     "text": "e’lon",
+     "hot": true
+    },
+    {
+     "t": 48.2,
+     "text": "qilaman."
+    }
+   ]
+  },
+  {
+   "start": 48.7,
+   "end": 50.58,
+   "words": [
+    {
+     "t": 48.7,
+     "text": "Agar"
+    },
+    {
+     "t": 49.0,
+     "text": "sizga"
+    },
+    {
+     "t": 49.28,
+     "text": "ayollik",
+     "hot": true
+    },
+    {
+     "t": 50.08,
+     "text": "xarizmasi,",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 50.64,
+   "end": 52.1,
+   "words": [
+    {
+     "t": 50.64,
+     "text": "o’z",
+     "hot": true
+    },
+    {
+     "t": 50.9,
+     "text": "qadri",
+     "hot": true
+    },
+    {
+     "t": 51.48,
+     "text": "va"
+    },
+    {
+     "t": 51.6,
+     "text": "liderlik",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 52.16,
+   "end": 53.18,
+   "words": [
+    {
+     "t": 52.16,
+     "text": "mavzulari"
+    },
+    {
+     "t": 52.52,
+     "text": "qiziq"
+    },
+    {
+     "t": 52.92,
+     "text": "bo’lsa,"
+    }
+   ]
+  },
+  {
+   "start": 53.24,
+   "end": 54.42,
+   "words": [
+    {
+     "t": 53.24,
+     "text": "mening"
+    },
+    {
+     "t": 53.88,
+     "text": "Instagram",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 54.48,
+   "end": 55.84,
+   "words": [
+    {
+     "t": 54.48,
+     "text": "akkauntimga"
+    },
+    {
+     "t": 55.0,
+     "text": "obuna",
+     "hot": true
+    },
+    {
+     "t": 55.3,
+     "text": "bo’ling!",
+     "hot": true
+    }
+   ]
+  }
+ ],
+ "brolls": [
+  {
+   "file": "01_pexels_film-camera-monitor_1440p_50fps.mp4",
+   "start": 2.58,
+   "end": 4.86,
+   "from": 6.6,
+   "enter": "whip"
+  },
+  {
+   "file": "02_pexels_woman-rocks-sunset_1080p_60fps.mp4",
+   "start": 14.8,
+   "end": 17.72,
+   "from": 0.5,
+   "enter": "zoomblur"
+  },
+  {
+   "file": "03_pexels_woman-speaker-microphone_1440p_25fps.mp4",
+   "start": 28.4,
+   "end": 31.45,
+   "from": 1.0,
+   "enter": "whip"
+  },
+  {
+   "file": "04_pexels_woman-money-fan_1440p_25fps.mp4",
+   "start": 33.6,
+   "end": 35.66,
+   "from": 15.6,
+   "enter": "spin"
+  },
+  {
+   "file": "05_pexels_woman-clapping-event_1080p_24fps.mp4",
+   "start": 41.5,
+   "end": 44.92,
+   "from": 1.2,
+   "enter": "zoomblur"
+  }
+ ],
+ "cards": [
+  {
+   "start": 4.88,
+   "end": 6.44,
+   "thin": "Yuzdan ortiq",
+   "big": "*100+*|film",
+   "theme": "white",
+   "icon": "i7555",
+   "numeric": true,
+   "enter": "circle",
+   "exit": "slide"
+  },
+  {
+   "start": 22.88,
+   "end": 24.46,
+   "thin": "Har bir ayol o’zini",
+   "big": "*namoyon*|qilishi kerak",
+   "theme": "black",
+   "icon": "i7571",
+   "enter": "wipe",
+   "exit": "zoom"
+  },
+  {
+   "start": 37.28,
+   "end": 41.5,
+   "thin": "Noyabr · birinchi marotaba",
+   "big": "«Ayollik|*namoyonligi*»|master-klass",
+   "theme": "white",
+   "icon": "i7556",
+   "enter": "circle",
+   "exit": "slide"
+  },
+  {
+   "start": 48.7,
+   "end": 52.12,
+   "thin": "Sizga qiziqmi?",
+   "big": "Xarizma|O’z qadri|*Liderlik*",
+   "theme": "black",
+   "enter": "wipe",
+   "exit": "zoom"
+  }
+ ],
+ "pills": [
+  {
+   "start": 8.94,
+   "end": 11.9,
+   "text": "O’z ustida ishlash",
+   "icon": "i7565"
+  },
+  {
+   "start": 17.76,
+   "end": 19.3,
+   "text": "Ayollik energiyasi",
+   "icon": "i7561"
+  },
+  {
+   "start": 24.48,
+   "end": 25.94,
+   "text": "O’z qadrini bilish"
+  },
+  {
+   "start": 25.98,
+   "end": 27.58,
+   "text": "Ichki kuchini topish"
+  },
+  {
+   "start": 44.96,
+   "end": 46.22,
+   "text": "Tez orada e’lon",
+   "icon": "i7569"
+  },
+  {
+   "start": 53.24,
+   "end": 55.84,
+   "text": "@sabitova_akademiyasi",
+   "icon": "i7582"
+  }
+ ],
+ "badges": [
+  {
+   "start": 1.26,
+   "end": 2.56,
+   "icon": "i7575",
+   "label": "30 yil",
+   "theme": "white",
+   "x": 155,
+   "y": 560,
+   "size": 220,
+   "rot": -6
+  },
+  {
+   "start": 13.54,
+   "end": 14.76,
+   "icon": "i7566",
+   "label": "O’z qadri",
+   "theme": "black",
+   "x": 155,
+   "y": 580,
+   "size": 220,
+   "rot": 6
+  },
+  {
+   "start": 19.36,
+   "end": 20.58,
+   "icon": "i7557",
+   "label": "Angladim",
+   "theme": "white",
+   "x": 155,
+   "y": 580,
+   "size": 220,
+   "rot": -5
+  },
+  {
+   "start": 20.62,
+   "end": 22.86,
+   "icon": "i7562",
+   "label": "Har bir ayol",
+   "theme": "black",
+   "x": 155,
+   "y": 590,
+   "size": 220,
+   "rot": 5
+  },
+  {
+   "start": 46.26,
+   "end": 48.66,
+   "icon": "i7556",
+   "label": "Sana · joy",
+   "theme": "white",
+   "x": 155,
+   "y": 580,
+   "size": 220,
+   "rot": -6
+  },
+  {
+   "start": 54.48,
+   "end": 55.84,
+   "icon": "i7582",
+   "label": "Obuna!",
+   "theme": "black",
+   "x": 155,
+   "y": 590,
+   "size": 220,
+   "rot": 6
+  }
+ ],
+ "stickers": [
+  {
+   "file": "s4098",
+   "start": 6.5,
+   "end": 7.66,
+   "x": 870,
+   "y": 540,
+   "w": 260,
+   "rot": 8
+  },
+  {
+   "file": "s4043",
+   "start": 11.96,
+   "end": 13.48,
+   "x": 880,
+   "y": 560,
+   "w": 200,
+   "rot": 10
+  },
+  {
+   "file": "s4051",
+   "start": 13.54,
+   "end": 14.76,
+   "x": 885,
+   "y": 570,
+   "w": 220,
+   "rot": 8
+  },
+  {
+   "file": "s3900",
+   "start": 17.76,
+   "end": 19.3,
+   "x": 890,
+   "y": 610,
+   "w": 230,
+   "rot": 6
+  },
+  {
+   "file": "s4040",
+   "start": 25.98,
+   "end": 27.58,
+   "x": 880,
+   "y": 600,
+   "w": 240,
+   "rot": 10
+  },
+  {
+   "file": "s3935",
+   "start": 32.28,
+   "end": 33.56,
+   "x": 870,
+   "y": 600,
+   "w": 270,
+   "rot": -6
+  },
+  {
+   "file": "s3901",
+   "start": 35.72,
+   "end": 37.24,
+   "x": 885,
+   "y": 610,
+   "w": 220,
+   "rot": 7
+  },
+  {
+   "file": "s4046",
+   "start": 46.26,
+   "end": 48.66,
+   "x": 870,
+   "y": 580,
+   "w": 260,
+   "rot": -8
+  },
+  {
+   "file": "s3885",
+   "start": 53.24,
+   "end": 55.84,
+   "x": 880,
+   "y": 600,
+   "w": 200,
+   "rot": 8
+  }
+ ],
+ "endCard": {
+  "start": 55.86,
+  "title": "Feruza *Sabitova*",
+  "sub": "@sabitova_akademiyasi",
+  "cta": "Obuna bo’ling"
+ },
+ "music": "dreaming-big",
+ "musicDb": -13,
+ "musicFrom": 1.5,
+ "jumps": [
+  1.38,
+  9.26,
+  12.48,
+  13.66,
+  21.48,
+  24.56,
+  31.98,
+  36.44
+ ]
+}

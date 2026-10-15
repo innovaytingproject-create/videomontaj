@@ -12,7 +12,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { AccentCard, Card } from "./AccentCard";
+import { AccentCard, Card, EndCard, EndCardSpec } from "./AccentCard";
 
 // Vertical reel in the approved WHIEDA style, driven entirely by an edit JSON
 // (src/edits/<name>.json). Media lives in public/<name>/ (prepare_reel.py),
@@ -59,6 +59,7 @@ export type Edit = {
   jumps?: number[]; // jump cuts (removed pauses): framing alternates 1.0 / 1.07 to hide them
   cards?: Card[]; // full-screen animated accent cards (the voice keeps playing)
   brolls?: BRoll[]; // stock footage over the speaker, voice keeps playing
+  endCard?: EndCardSpec; // final card (name + subscribe button) until the end
   captions: Caption[];
   pills: Pill[];
   stickers: Sticker[];
@@ -370,6 +371,7 @@ export const WhiedaReel: React.FC<{ edit: Edit }> = ({ edit }) => {
       ["boom", c.start + 0.26, -3],
       ...(c.icon ? [["pop", c.start + 0.5, -2] as [string, number, number]] : []),
     ]),
+    ...(edit.endCard ? [["riser", edit.endCard.start - 1.15, -5], ["pop", edit.endCard.start + 0.7, 0]] as [string, number, number][] : []),
     ...(edit.sfx ?? []),
   ];
   return (
@@ -406,6 +408,11 @@ export const WhiedaReel: React.FC<{ edit: Edit }> = ({ edit }) => {
           <AccentCard card={c} accent={edit.accent} />
         </Sequence>
       ))}
+      {edit.endCard ? (
+        <Sequence from={sec(edit.endCard.start)} layout="none">
+          <EndCard spec={edit.endCard} accent={edit.accent} />
+        </Sequence>
+      ) : null}
       <Audio src={staticFile(`${edit.name}/voice.wav`)} />
       <Audio
         src={staticFile(`assets/music/${edit.music}.mp3`)}
