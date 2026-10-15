@@ -9,7 +9,7 @@ derived from project.json: whoosh+boom on every camera transition, boom on
 accent cards, pop on logos/icons/bubbles, tick on pills and cover, ding on
 the banner, riser+pop on the end card, plus anything listed in "sfx".
 """
-import argparse, json, subprocess
+import argparse, json, subprocess, sys
 from pathlib import Path
 
 KIT = Path(__file__).resolve().parents[1]
@@ -41,6 +41,9 @@ if tm.get("end_card_at"):
     ev += [("riser", e - 1.15, -5), ("pop", e + .95, 0)]
 ev += [tuple(x) for x in cfg.get("sfx", [])]
 ev = [e for e in ev if 0 <= e[1] < LEN - .1]
+SFX = KIT / "assets" / "sfx"
+if any(not (SFX / f"{f}.wav").exists() for f, _, _ in ev):
+    subprocess.run([sys.executable, str(KIT / "pipeline" / "gen_sfx.py")], check=True)
 
 music = KIT / "assets" / "music" / f'{cfg.get("music", "chronos")}.mp3'
 inputs = ["-i", str(P / "out" / "pic.mp4"), "-i", str(P / "work" / "voice.wav"), "-stream_loop", "-1", "-i", str(music)]
@@ -50,7 +53,7 @@ fc = [f"[1:a]aresample=48000,atrim=0:{LEN},apad=whole_dur={LEN},volume={cfg.get(
       "[bed][key]sidechaincompress=threshold=0.03:ratio=4:attack=20:release=400:makeup=1[ducked]"]
 labels = []
 for i, (f, t, g) in enumerate(ev):
-    inputs += ["-i", str(KIT / "assets" / "sfx" / f"{f}.wav")]
+    inputs += ["-i", str(SFX / f"{f}.wav")]
     fc.append(f"[{3 + i}:a]aresample=48000,adelay={int(t * 1000)}:all=1,volume={g}dB[e{i}]")
     labels.append(f"[e{i}]")
 if labels:
