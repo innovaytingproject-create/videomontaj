@@ -29,6 +29,17 @@ export type Sticker = {
   w: number;
   rot?: number;
 };
+export type Badge = {
+  start: number;
+  end: number;
+  icon: string; // assets/icons/<icon>-blue.png | -white.png
+  label?: string;
+  theme: "white" | "black";
+  x: number; // centre, px
+  y: number;
+  size?: number;
+  rot?: number;
+};
 export type Edit = {
   name: string;
   duration: number; // seconds
@@ -39,6 +50,7 @@ export type Edit = {
   captions: Caption[];
   pills: Pill[];
   stickers: Sticker[];
+  badges?: Badge[]; // icon tiles on a white or black background
   music: string;
   musicDb: number;
   sfx?: [string, number, number][]; // extra [sound, time, dB]
@@ -210,6 +222,56 @@ const StickerView: React.FC<{ s: Sticker }> = ({ s }) => {
   );
 };
 
+const BadgeView: React.FC<{ b: Badge }> = ({ b }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const len = (b.end - b.start) * fps;
+  const size = b.size ?? 200;
+  const k = spring({ frame, fps, config: { damping: 11, stiffness: 170 } });
+  const out = spring({ frame: frame - (len - 9), fps, config: { damping: 200 } });
+  const dark = b.theme === "black";
+  const float = Math.sin(frame / 15) * 5;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: b.x - size / 2,
+        top: b.y - size / 2 + float,
+        width: size,
+        height: size,
+        borderRadius: size * 0.24,
+        background: dark ? "#111214" : "#FFFFFF",
+        boxShadow: dark ? "0 16px 40px rgba(0,0,0,.45)" : "0 16px 40px rgba(10,20,40,.30)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: size * 0.04,
+        transform: `scale(${k * (1 - out)}) rotate(${(b.rot ?? 0) * (2 - k)}deg)`,
+      }}
+    >
+      <Img
+        src={staticFile(`assets/icons/${b.icon}-${dark ? "white" : "blue"}.png`)}
+        style={{ height: size * (b.label ? 0.52 : 0.66), width: "auto" }}
+      />
+      {b.label ? (
+        <span
+          style={{
+            fontFamily: "Montserrat",
+            fontWeight: 700,
+            fontSize: size * 0.13,
+            lineHeight: 1,
+            color: dark ? "#FFFFFF" : INK,
+            whiteSpace: "nowrap",
+          }}
+        >
+          {b.label}
+        </span>
+      ) : null}
+    </div>
+  );
+};
+
 const Sfx: React.FC<{ name: string; at: number; gainDb: number }> = ({ name, at, gainDb }) => {
   const { fps } = useVideoConfig();
   return (
@@ -227,6 +289,7 @@ export const WhiedaReel: React.FC<{ edit: Edit }> = ({ edit }) => {
     ...edit.cuts.flatMap((c): [string, number, number][] => [["whoosh", c - 0.32, 0], ["boom", c, -6]]),
     ...edit.stickers.map((s): [string, number, number] => ["pop", s.start, -1]),
     ...edit.pills.map((p): [string, number, number] => ["tick", p.start, 0]),
+    ...(edit.badges ?? []).map((b): [string, number, number] => ["pop", b.start, -2]),
     ...(edit.sfx ?? []),
   ];
   return (
@@ -235,6 +298,11 @@ export const WhiedaReel: React.FC<{ edit: Edit }> = ({ edit }) => {
       {edit.stickers.map((s, i) => (
         <Sequence key={`s${i}`} from={sec(s.start)} durationInFrames={sec(s.end - s.start)} layout="none">
           <StickerView s={s} />
+        </Sequence>
+      ))}
+      {(edit.badges ?? []).map((b, i) => (
+        <Sequence key={`b${i}`} from={sec(b.start)} durationInFrames={sec(b.end - b.start)} layout="none">
+          <BadgeView b={b} />
         </Sequence>
       ))}
       {edit.pills.map((p, i) => (
