@@ -10,6 +10,8 @@ Usage: python prepare_reel.py <kit-project> [--grade cinema] [--as <reel>] <star
   --grade neutral  re-grade from the source: cooler, natural skin, no brown/orange
                    cast (use when warm wood/skin makes the kit look too brown)
   --grade cinema   soft filmic look: bright, face not over-bright, light vignette and grain
+  --smooth 0.75    soft skin retouch on the speaker (edge-preserving blur blended in
+                   before the grade/grain; eyes, brows, hair stay sharp). 0 = off
 
 Takes whieda-video-kit/projects/<name>/work/video.mp4 + voice.wav (made by the
 kit's prepare.py: graded picture, cleaned voice) and writes
@@ -34,6 +36,11 @@ reel = None
 if "--as" in args:
     i = args.index("--as")
     reel = args[i + 1]
+    del args[i:i + 2]
+smooth = 0.0
+if "--smooth" in args:
+    i = args.index("--smooth")
+    smooth = float(args[i + 1])
     del args[i:i + 2]
 name = args[0]
 pieces = [tuple(map(float, a.split(":"))) for a in args[1:]]
@@ -65,6 +72,16 @@ else:
 OUT = ROOT / "public" / (reel or name)
 OUT.mkdir(parents=True, exist_ok=True)
 
+if smooth > 0:
+    # skin retouch: bilateral (edge-preserving) blur blended over the picture, before
+    # the colour grade so the grade's film grain still sits on top
+    SM = (f"split[sa][sb];[sb]bilateral=sigmaS=30:sigmaR=0.18[ss];"
+          f"[sa][ss]blend=all_mode=normal:all_opacity={smooth},unsharp=3:3:0.25:3:3:0,")
+    if GRADES[grade]:
+        head, tail = GRADES[grade].split("hqdn3d=1.5:1.5:4:4,", 1)
+        pre = head + "hqdn3d=1.5:1.5:4:4," + SM + tail + ","
+    else:
+        pre = SM
 n = len(pieces)
 trim_v = f"[0:v]{pre}split={n}" + "".join(f"[s{i}]" for i in range(n)) + ";" + ";".join(
     f"[s{i}]trim={a}:{b},setpts=PTS-STARTPTS[v{i}]" for i, (a, b) in enumerate(pieces))

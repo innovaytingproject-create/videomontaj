@@ -1,0 +1,1242 @@
+{
+ "name": "video17",
+ "duration": 79.5,
+ "accent": "#FFD60A",
+ "captionBottom": 520,
+ "framing": {
+  "originX": 540,
+  "originY": 720,
+  "scale": 1.35,
+  "shiftY": -110
+ },
+ "cuts": [
+  {
+   "t": 6.74,
+   "type": "whip"
+  },
+  {
+   "t": 9.52,
+   "type": "punch"
+  },
+  {
+   "t": 13.2,
+   "type": "zoomblur"
+  },
+  {
+   "t": 24.04,
+   "type": "spin"
+  },
+  {
+   "t": 27.4,
+   "type": "punch"
+  },
+  {
+   "t": 37.14,
+   "type": "whip"
+  },
+  {
+   "t": 46.1,
+   "type": "zoomblur"
+  },
+  {
+   "t": 50.04,
+   "type": "spin"
+  },
+  {
+   "t": 64.38,
+   "type": "whip"
+  },
+  {
+   "t": 71.74,
+   "type": "zoomblur"
+  }
+ ],
+ "punches": [
+  5.9,
+  10.68,
+  13.58,
+  28.92,
+  29.84,
+  37.92,
+  46.58,
+  48.54,
+  65.64,
+  70.1
+ ],
+ "captions": [
+  {
+   "start": 0.04,
+   "end": 1.7,
+   "words": [
+    {
+     "t": 0.04,
+     "text": "Bugun"
+    },
+    {
+     "t": 0.26,
+     "text": "men"
+    },
+    {
+     "t": 0.42,
+     "text": "orzu,",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 4.64,
+   "end": 5.66,
+   "words": [
+    {
+     "t": 4.64,
+     "text": "Ya’ni,"
+    },
+    {
+     "t": 4.9,
+     "text": "eng"
+    },
+    {
+     "t": 5.06,
+     "text": "birinchi"
+    },
+    {
+     "t": 5.36,
+     "text": "o’rinda"
+    }
+   ]
+  },
+  {
+   "start": 5.68,
+   "end": 6.7,
+   "words": [
+    {
+     "t": 5.68,
+     "text": "bu"
+    },
+    {
+     "t": 5.9,
+     "text": "niyat",
+     "hot": true
+    },
+    {
+     "t": 6.34,
+     "text": "turadi."
+    }
+   ]
+  },
+  {
+   "start": 6.74,
+   "end": 8.08,
+   "words": [
+    {
+     "t": 6.74,
+     "text": "Ya’ni,"
+    },
+    {
+     "t": 7.0,
+     "text": "aytadilar:"
+    }
+   ]
+  },
+  {
+   "start": 8.12,
+   "end": 9.48,
+   "words": [
+    {
+     "t": 8.12,
+     "text": "«niyating",
+     "hot": true
+    },
+    {
+     "t": 8.58,
+     "text": "xolis"
+    },
+    {
+     "t": 8.92,
+     "text": "bo’lsin»."
+    }
+   ]
+  },
+  {
+   "start": 9.52,
+   "end": 11.1,
+   "words": [
+    {
+     "t": 9.52,
+     "text": "Ya’ni,"
+    },
+    {
+     "t": 9.76,
+     "text": "qaysi"
+    },
+    {
+     "t": 10.68,
+     "text": "niyat",
+     "hot": true
+    },
+    {
+     "t": 10.98,
+     "text": "bilan"
+    }
+   ]
+  },
+  {
+   "start": 11.14,
+   "end": 13.16,
+   "words": [
+    {
+     "t": 11.14,
+     "text": "siz"
+    },
+    {
+     "t": 11.28,
+     "text": "boshlayapsiz,"
+    },
+    {
+     "t": 12.02,
+     "text": "nima"
+    },
+    {
+     "t": 12.4,
+     "text": "turibdi,"
+    }
+   ]
+  },
+  {
+   "start": 13.2,
+   "end": 14.46,
+   "words": [
+    {
+     "t": 13.2,
+     "text": "mana"
+    },
+    {
+     "t": 13.4,
+     "text": "bir"
+    },
+    {
+     "t": 13.58,
+     "text": "maqsad",
+     "hot": true
+    },
+    {
+     "t": 14.02,
+     "text": "qo’yasiz."
+    }
+   ]
+  },
+  {
+   "start": 14.5,
+   "end": 16.4,
+   "words": [
+    {
+     "t": 14.5,
+     "text": "Aslida"
+    },
+    {
+     "t": 14.82,
+     "text": "maqsad",
+     "hot": true
+    },
+    {
+     "t": 16.04,
+     "text": "— bu"
+    }
+   ]
+  },
+  {
+   "start": 21.0,
+   "end": 22.6,
+   "words": [
+    {
+     "t": 21.0,
+     "text": "orzuni"
+    },
+    {
+     "t": 21.2,
+     "text": "siz"
+    },
+    {
+     "t": 21.48,
+     "text": "maqsadga",
+     "hot": true
+    },
+    {
+     "t": 22.02,
+     "text": "aylantirasiz,"
+    }
+   ]
+  },
+  {
+   "start": 22.64,
+   "end": 24.0,
+   "words": [
+    {
+     "t": 22.64,
+     "text": "maqsaddan",
+     "hot": true
+    },
+    {
+     "t": 23.08,
+     "text": "keyin"
+    },
+    {
+     "t": 23.2,
+     "text": "reja",
+     "hot": true
+    },
+    {
+     "t": 23.46,
+     "text": "qilasiz."
+    }
+   ]
+  },
+  {
+   "start": 24.04,
+   "end": 25.56,
+   "words": [
+    {
+     "t": 24.04,
+     "text": "Endi"
+    },
+    {
+     "t": 24.26,
+     "text": "qarang,"
+    },
+    {
+     "t": 24.58,
+     "text": "ko’p"
+    },
+    {
+     "t": 25.0,
+     "text": "odamlarda"
+    }
+   ]
+  },
+  {
+   "start": 25.6,
+   "end": 26.28,
+   "words": [
+    {
+     "t": 25.6,
+     "text": "orzu",
+     "hot": true
+    },
+    {
+     "t": 26.06,
+     "text": "bor,"
+    }
+   ]
+  },
+  {
+   "start": 26.32,
+   "end": 27.36,
+   "words": [
+    {
+     "t": 26.32,
+     "text": "lekin"
+    },
+    {
+     "t": 26.48,
+     "text": "odamlardan"
+    },
+    {
+     "t": 26.96,
+     "text": "so’rasangiz,"
+    }
+   ]
+  },
+  {
+   "start": 27.4,
+   "end": 28.72,
+   "words": [
+    {
+     "t": 27.4,
+     "text": "orzu,"
+    },
+    {
+     "t": 28.0,
+     "text": "orzuyingiz"
+    },
+    {
+     "t": 28.54,
+     "text": "uchun"
+    }
+   ]
+  },
+  {
+   "start": 28.76,
+   "end": 29.8,
+   "words": [
+    {
+     "t": 28.76,
+     "text": "siz"
+    },
+    {
+     "t": 28.92,
+     "text": "nima",
+     "hot": true
+    },
+    {
+     "t": 29.18,
+     "text": "qilyapsiz,"
+    }
+   ]
+  },
+  {
+   "start": 29.84,
+   "end": 31.46,
+   "words": [
+    {
+     "t": 29.84,
+     "text": "harakat",
+     "hot": true
+    },
+    {
+     "t": 30.12,
+     "text": "qilyapsizmi,"
+    },
+    {
+     "t": 30.92,
+     "text": "desak,"
+    }
+   ]
+  },
+  {
+   "start": 31.5,
+   "end": 32.36,
+   "words": [
+    {
+     "t": 31.5,
+     "text": "o’zgaryapsizmi,"
+    }
+   ]
+  },
+  {
+   "start": 32.4,
+   "end": 34.0,
+   "words": [
+    {
+     "t": 32.4,
+     "text": "komfort",
+     "hot": true
+    },
+    {
+     "t": 32.96,
+     "text": "zonasidan",
+     "hot": true
+    },
+    {
+     "t": 33.4,
+     "text": "chiqyapsizmi,"
+    }
+   ]
+  },
+  {
+   "start": 34.04,
+   "end": 35.08,
+   "words": [
+    {
+     "t": 34.04,
+     "text": "desak —"
+    },
+    {
+     "t": 34.42,
+     "text": "«yo’q»,"
+    },
+    {
+     "t": 34.86,
+     "text": "deydi."
+    }
+   ]
+  },
+  {
+   "start": 37.14,
+   "end": 38.3,
+   "words": [
+    {
+     "t": 37.14,
+     "text": "Qachonki"
+    },
+    {
+     "t": 37.78,
+     "text": "siz"
+    },
+    {
+     "t": 37.92,
+     "text": "haqiqiy",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 38.34,
+   "end": 39.32,
+   "words": [
+    {
+     "t": 38.34,
+     "text": "orzuyingizni"
+    },
+    {
+     "t": 38.9,
+     "text": "topsangiz,"
+    }
+   ]
+  },
+  {
+   "start": 39.36,
+   "end": 40.96,
+   "words": [
+    {
+     "t": 39.36,
+     "text": "sizni"
+    },
+    {
+     "t": 39.6,
+     "text": "bu"
+    },
+    {
+     "t": 39.78,
+     "text": "orzu"
+    },
+    {
+     "t": 40.2,
+     "text": "uxlatmaydi.",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 41.0,
+   "end": 43.28,
+   "words": [
+    {
+     "t": 41.0,
+     "text": "Siz"
+    },
+    {
+     "t": 41.14,
+     "text": "uni"
+    },
+    {
+     "t": 41.42,
+     "text": "maqsadga",
+     "hot": true
+    },
+    {
+     "t": 42.18,
+     "text": "aylantirasiz,"
+    }
+   ]
+  },
+  {
+   "start": 43.32,
+   "end": 44.94,
+   "words": [
+    {
+     "t": 43.32,
+     "text": "keyin"
+    },
+    {
+     "t": 43.66,
+     "text": "rejalarini",
+     "hot": true
+    },
+    {
+     "t": 44.68,
+     "text": "qilib,"
+    }
+   ]
+  },
+  {
+   "start": 44.98,
+   "end": 46.06,
+   "words": [
+    {
+     "t": 44.98,
+     "text": "va"
+    },
+    {
+     "t": 45.06,
+     "text": "harakatini",
+     "hot": true
+    },
+    {
+     "t": 45.6,
+     "text": "qilasiz."
+    }
+   ]
+  },
+  {
+   "start": 46.1,
+   "end": 47.26,
+   "words": [
+    {
+     "t": 46.1,
+     "text": "Bu"
+    },
+    {
+     "t": 46.3,
+     "text": "juda"
+    },
+    {
+     "t": 46.58,
+     "text": "muhim",
+     "hot": true
+    },
+    {
+     "t": 46.92,
+     "text": "narsa,"
+    }
+   ]
+  },
+  {
+   "start": 47.3,
+   "end": 50.0,
+   "words": [
+    {
+     "t": 47.3,
+     "text": "o’rtada"
+    },
+    {
+     "t": 47.62,
+     "text": "biz"
+    },
+    {
+     "t": 48.54,
+     "text": "komfort",
+     "hot": true
+    },
+    {
+     "t": 49.08,
+     "text": "zonadan"
+    },
+    {
+     "t": 49.62,
+     "text": "chiqib,"
+    }
+   ]
+  },
+  {
+   "start": 50.04,
+   "end": 51.82,
+   "words": [
+    {
+     "t": 50.04,
+     "text": "keyingi"
+    },
+    {
+     "t": 50.9,
+     "text": "zonaga"
+    },
+    {
+     "t": 51.28,
+     "text": "o’tamiz —"
+    }
+   ]
+  },
+  {
+   "start": 51.86,
+   "end": 53.2,
+   "words": [
+    {
+     "t": 51.86,
+     "text": "bu"
+    },
+    {
+     "t": 51.96,
+     "text": "diskomfort",
+     "hot": true
+    },
+    {
+     "t": 52.52,
+     "text": "zonasi"
+    },
+    {
+     "t": 52.88,
+     "text": "bo’ladi."
+    }
+   ]
+  },
+  {
+   "start": 53.24,
+   "end": 54.92,
+   "words": [
+    {
+     "t": 53.24,
+     "text": "O’sha"
+    },
+    {
+     "t": 53.36,
+     "text": "diskomfortda —"
+    },
+    {
+     "t": 54.08,
+     "text": "yangi",
+     "hot": true
+    },
+    {
+     "t": 54.48,
+     "text": "odatlar,",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 54.96,
+   "end": 56.32,
+   "words": [
+    {
+     "t": 54.96,
+     "text": "yangi",
+     "hot": true
+    },
+    {
+     "t": 55.36,
+     "text": "harakatlar",
+     "hot": true
+    },
+    {
+     "t": 55.92,
+     "text": "bo’ladi,"
+    }
+   ]
+  },
+  {
+   "start": 56.36,
+   "end": 57.74,
+   "words": [
+    {
+     "t": 56.36,
+     "text": "ya’ni"
+    },
+    {
+     "t": 56.52,
+     "text": "yangi",
+     "hot": true
+    },
+    {
+     "t": 57.02,
+     "text": "daraja",
+     "hot": true
+    },
+    {
+     "t": 57.34,
+     "text": "bo’ladi."
+    }
+   ]
+  },
+  {
+   "start": 60.72,
+   "end": 61.76,
+   "words": [
+    {
+     "t": 60.72,
+     "text": "Albatta,"
+    },
+    {
+     "t": 61.2,
+     "text": "sizga"
+    },
+    {
+     "t": 61.52,
+     "text": "buning"
+    }
+   ]
+  },
+  {
+   "start": 61.8,
+   "end": 63.12,
+   "words": [
+    {
+     "t": 61.8,
+     "text": "uchun"
+    },
+    {
+     "t": 62.2,
+     "text": "bilim",
+     "hot": true
+    },
+    {
+     "t": 62.8,
+     "text": "kerak,"
+    }
+   ]
+  },
+  {
+   "start": 63.16,
+   "end": 64.34,
+   "words": [
+    {
+     "t": 63.16,
+     "text": "buning"
+    },
+    {
+     "t": 63.4,
+     "text": "uchun"
+    },
+    {
+     "t": 63.68,
+     "text": "ustoz",
+     "hot": true
+    },
+    {
+     "t": 64.0,
+     "text": "kerak,"
+    }
+   ]
+  },
+  {
+   "start": 64.38,
+   "end": 66.68,
+   "words": [
+    {
+     "t": 64.38,
+     "text": "buning"
+    },
+    {
+     "t": 64.6,
+     "text": "uchun"
+    },
+    {
+     "t": 64.92,
+     "text": "orzularingizga"
+    },
+    {
+     "t": 65.64,
+     "text": "xiyonat",
+     "hot": true
+    },
+    {
+     "t": 66.12,
+     "text": "qilmaslik."
+    }
+   ]
+  },
+  {
+   "start": 69.36,
+   "end": 70.44,
+   "words": [
+    {
+     "t": 69.36,
+     "text": "Va"
+    },
+    {
+     "t": 69.5,
+     "text": "qanday"
+    },
+    {
+     "t": 69.76,
+     "text": "qilib"
+    },
+    {
+     "t": 70.1,
+     "text": "haqiqiy",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 70.48,
+   "end": 71.7,
+   "words": [
+    {
+     "t": 70.48,
+     "text": "orzuga",
+     "hot": true
+    },
+    {
+     "t": 70.92,
+     "text": "erishish"
+    },
+    {
+     "t": 71.34,
+     "text": "mumkin,"
+    }
+   ]
+  },
+  {
+   "start": 71.74,
+   "end": 72.74,
+   "words": [
+    {
+     "t": 71.74,
+     "text": "qanday"
+    },
+    {
+     "t": 71.9,
+     "text": "qilib"
+    },
+    {
+     "t": 72.3,
+     "text": "o’zingizni,"
+    }
+   ]
+  },
+  {
+   "start": 72.78,
+   "end": 74.42,
+   "words": [
+    {
+     "t": 72.78,
+     "text": "missiyangizni",
+     "hot": true
+    },
+    {
+     "t": 73.44,
+     "text": "topishingiz"
+    },
+    {
+     "t": 73.98,
+     "text": "mumkin."
+    }
+   ]
+  },
+  {
+   "start": 74.46,
+   "end": 75.76,
+   "words": [
+    {
+     "t": 74.46,
+     "text": "Bu"
+    },
+    {
+     "t": 74.72,
+     "text": "haqida"
+    },
+    {
+     "t": 75.14,
+     "text": "mini-masterklassimda",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 75.8,
+   "end": 77.06,
+   "words": [
+    {
+     "t": 76.3,
+     "text": "gaplashamiz."
+    }
+   ]
+  }
+ ],
+ "brolls": [
+  {
+   "file": "01_pexels_woman-writing-notebook_1440p_25fps.mp4",
+   "start": 20.98,
+   "end": 24.02,
+   "from": 1.0,
+   "enter": "whip"
+  },
+  {
+   "file": "02_pexels_woman-lying-couch_1440p_30fps.mp4",
+   "start": 32.38,
+   "end": 35.1,
+   "from": 1.0,
+   "enter": "zoomblur"
+  },
+  {
+   "file": "03_pexels_woman-typing-laptop-lamp_1440p_24fps.mp4",
+   "start": 39.34,
+   "end": 43.3,
+   "from": 1.0,
+   "enter": "spin"
+  },
+  {
+   "file": "04_pexels_woman-climbing-stairs_1440p_24fps.mp4",
+   "start": 53.22,
+   "end": 57.76,
+   "from": 1.0,
+   "enter": "whip"
+  },
+  {
+   "file": "05_pexels_woman-reading-book_1440p_24fps.mp4",
+   "start": 61.78,
+   "end": 64.36,
+   "from": 1.0,
+   "enter": "zoomblur"
+  }
+ ],
+ "cards": [
+  {
+   "start": 1.72,
+   "end": 4.62,
+   "thin": "Bugun gaplashamiz",
+   "big": "*Orzu*|maqsad|niyat",
+   "theme": "white",
+   "icon": "i7558",
+   "enter": "circle",
+   "exit": "slide"
+  },
+  {
+   "start": 16.44,
+   "end": 20.98,
+   "thin": "Maqsad — bu",
+   "big": "*upakovka*|qilingan|orzu",
+   "theme": "black",
+   "enter": "wipe",
+   "exit": "zoom"
+  },
+  {
+   "start": 35.1,
+   "end": 37.12,
+   "thin": "Demak, bu",
+   "big": "*haqiqiy*|orzu emas",
+   "theme": "white",
+   "icon": "i7557",
+   "enter": "circle",
+   "exit": "slide"
+  },
+  {
+   "start": 57.76,
+   "end": 60.7,
+   "thin": "Siz eski fikrlar bilan",
+   "big": "*yangi hayotni*|qura olmaysiz",
+   "theme": "black",
+   "enter": "wipe",
+   "exit": "zoom"
+  },
+  {
+   "start": 66.7,
+   "end": 69.34,
+   "thin": "Farqi bor:",
+   "big": "Orzu|Maqsad|*Xohish*",
+   "theme": "white",
+   "enter": "circle",
+   "exit": "slide"
+  }
+ ],
+ "pills": [
+  {
+   "start": 6.74,
+   "end": 9.48,
+   "text": "Niyat xolis bo’lsin"
+  },
+  {
+   "start": 24.04,
+   "end": 26.28,
+   "text": "Ko’pchilikda orzu bor",
+   "icon": "i7555"
+  },
+  {
+   "start": 43.32,
+   "end": 46.06,
+   "text": "Reja → Harakat",
+   "icon": "i7556"
+  },
+  {
+   "start": 46.1,
+   "end": 47.26,
+   "text": "Juda muhim!",
+   "icon": "i7578"
+  },
+  {
+   "start": 72.78,
+   "end": 74.42,
+   "text": "Missiyangizni toping",
+   "icon": "i7569"
+  },
+  {
+   "start": 74.46,
+   "end": 77.06,
+   "text": "Mini-masterklass",
+   "icon": "i7556"
+  }
+ ],
+ "badges": [
+  {
+   "start": 4.64,
+   "end": 6.7,
+   "icon": "i7558",
+   "label": "Niyat",
+   "theme": "white",
+   "x": 155,
+   "y": 580,
+   "size": 220,
+   "rot": -6
+  },
+  {
+   "start": 13.2,
+   "end": 14.46,
+   "icon": "i7575",
+   "label": "Maqsad",
+   "theme": "black",
+   "x": 155,
+   "y": 580,
+   "size": 220,
+   "rot": 6
+  },
+  {
+   "start": 29.84,
+   "end": 31.46,
+   "icon": "i7557",
+   "label": "Harakat?",
+   "theme": "white",
+   "x": 155,
+   "y": 580,
+   "size": 220,
+   "rot": -5
+  },
+  {
+   "start": 37.14,
+   "end": 39.32,
+   "icon": "i7561",
+   "label": "Haqiqiy orzu",
+   "theme": "black",
+   "x": 160,
+   "y": 590,
+   "size": 230,
+   "rot": 5
+  },
+  {
+   "start": 47.3,
+   "end": 50.0,
+   "icon": "i7558",
+   "label": "Komfort",
+   "theme": "white",
+   "x": 155,
+   "y": 590,
+   "size": 220,
+   "rot": -6
+  },
+  {
+   "start": 50.04,
+   "end": 53.2,
+   "icon": "i7578",
+   "label": "Diskomfort",
+   "theme": "black",
+   "x": 155,
+   "y": 590,
+   "size": 220,
+   "rot": 6
+  },
+  {
+   "start": 64.38,
+   "end": 66.68,
+   "icon": "i7566",
+   "label": "Sodiqlik",
+   "theme": "white",
+   "x": 155,
+   "y": 590,
+   "size": 220,
+   "rot": -5
+  },
+  {
+   "start": 69.36,
+   "end": 71.7,
+   "icon": "i7575",
+   "label": "Orzu",
+   "theme": "black",
+   "x": 155,
+   "y": 590,
+   "size": 220,
+   "rot": 5
+  },
+  {
+   "start": 75.8,
+   "end": 77.06,
+   "icon": "i7582",
+   "label": "Obuna!",
+   "theme": "white",
+   "x": 155,
+   "y": 590,
+   "size": 220,
+   "rot": -6
+  }
+ ],
+ "stickers": [
+  {
+   "file": "s3899",
+   "start": 9.52,
+   "end": 11.1,
+   "x": 925,
+   "y": 640,
+   "w": 210,
+   "rot": 8
+  },
+  {
+   "file": "s4072",
+   "start": 14.5,
+   "end": 16.4,
+   "x": 925,
+   "y": 640,
+   "w": 210,
+   "rot": -6
+  },
+  {
+   "file": "s4049",
+   "start": 26.32,
+   "end": 29.8,
+   "x": 925,
+   "y": 640,
+   "w": 150,
+   "rot": 10
+  },
+  {
+   "file": "s4051",
+   "start": 37.14,
+   "end": 39.32,
+   "x": 925,
+   "y": 640,
+   "w": 210,
+   "rot": 8
+  },
+  {
+   "file": "s4073",
+   "start": 47.3,
+   "end": 50.0,
+   "x": 925,
+   "y": 640,
+   "w": 210,
+   "rot": -6
+  },
+  {
+   "file": "s4041",
+   "start": 50.04,
+   "end": 53.2,
+   "x": 925,
+   "y": 640,
+   "w": 210,
+   "rot": 8
+  },
+  {
+   "file": "s4097",
+   "start": 71.74,
+   "end": 74.42,
+   "x": 925,
+   "y": 640,
+   "w": 210,
+   "rot": -6
+  },
+  {
+   "file": "s3885",
+   "start": 74.46,
+   "end": 77.06,
+   "x": 925,
+   "y": 640,
+   "w": 200,
+   "rot": 8
+  }
+ ],
+ "endCard": {
+  "start": 77.1,
+  "title": "Feruza *Sabitova*",
+  "sub": "@sabitova_akademiyasi",
+  "cta": "Obuna bo’ling"
+ },
+ "music": "raising-me-higher",
+ "musicDb": -23,
+ "musicFrom": 2.0,
+ "jumps": [
+  4.74,
+  14.52,
+  28.16,
+  50.54,
+  61.66,
+  64.98,
+  69.4,
+  74.56
+ ]
+}

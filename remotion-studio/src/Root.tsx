@@ -4,6 +4,7 @@ import { Edit, WhiedaReel } from "./WhiedaReel";
 import video16 from "./edits/video16.json";
 import video16full from "./edits/video16-full.json";
 import video12 from "./edits/video12.json";
+import video17 from "./edits/video17.json";
 
 const reel = (id: string, edit: Edit) => (
   <Composition
@@ -24,6 +25,7 @@ export const RemotionRoot: React.FC = () => {
       {reel("Video16-Maqsad-15s", video16 as Edit)}
       {reel("Video16-Maqsad-Full", video16full as Edit)}
       {reel("Video12-Ishonchlar", video12 as Edit)}
+      {reel("Video17-Orzu", video17 as Edit)}
     </>
   );
 };
