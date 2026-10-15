@@ -1,50 +1,297 @@
 {
-  "name": "video16",
-  "duration": 15.27,
-  "accent": "#FFD60A",
-  "framing": { "originX": 540, "originY": 720, "scale": 1.35, "shiftY": -110 },
-  "cuts": [5.78, 8.91, 12.2],
-  "captions": [
-    { "start": 0.07, "end": 1.62, "words": [
-      { "t": 0.07, "text": "Men" }, { "t": 0.47, "text": "Feruza", "hot": true }, { "t": 0.95, "text": "Sabitovaman," } ] },
-    { "start": 1.67, "end": 3.4, "words": [
-      { "t": 1.67, "text": "qariyb" }, { "t": 2.51, "text": "30", "hot": true }, { "t": 2.71, "text": "yildan", "hot": true }, { "t": 3.25, "text": "beri" } ] },
-    { "start": 3.45, "end": 4.6, "words": [
-      { "t": 3.45, "text": "kino" }, { "t": 3.77, "text": "sohasida" }, { "t": 4.23, "text": "aktrisa", "hot": true } ] },
-    { "start": 4.65, "end": 5.76, "words": [
-      { "t": 4.65, "text": "bo’lib" }, { "t": 4.97, "text": "ishlab" }, { "t": 5.43, "text": "kelyapman." } ] },
-    { "start": 5.87, "end": 7.62, "words": [
-      { "t": 5.87, "text": "Yuzdan", "hot": true }, { "t": 6.71, "text": "ortiq", "hot": true }, { "t": 7.21, "text": "filmlarda" } ] },
-    { "start": 7.67, "end": 8.86, "words": [
-      { "t": 7.67, "text": "rol" }, { "t": 8.01, "text": "ijro" }, { "t": 8.19, "text": "etganman." } ] },
-    { "start": 8.92, "end": 10.36, "words": [
-      { "t": 8.92, "text": "Men" }, { "t": 9.48, "text": "o’z" }, { "t": 9.68, "text": "qadrimni,", "hot": true } ] },
-    { "start": 10.42, "end": 12.15, "words": [
-      { "t": 10.42, "text": "ichki", "hot": true }, { "t": 11.58, "text": "kuchimni", "hot": true } ] },
-    { "start": 12.24, "end": 13.6, "words": [
-      { "t": 12.24, "text": "va" }, { "t": 12.56, "text": "o’zimda" }, { "t": 13.12, "text": "ayollik", "hot": true } ] },
-    { "start": 13.66, "end": 15.24, "words": [
-      { "t": 13.66, "text": "energiyasini", "hot": true }, { "t": 14.34, "text": "ochishni" }, { "t": 14.74, "text": "boshladim" } ] }
-  ],
-  "pills": [
-    { "start": 5.9, "end": 8.8, "text": "100+ filmda rol", "icon": "i7575" },
-    { "start": 10.45, "end": 12.15, "text": "Ichki kuch", "icon": "i7565" },
-    { "start": 12.6, "end": 15.1, "text": "Ayollik energiyasi", "icon": "i7561" }
-  ],
-  "stickers": [
-    { "file": "s3942", "start": 3.35, "end": 5.75, "x": 880, "y": 560, "w": 250, "rot": 10 },
-    { "file": "s4098", "start": 5.95, "end": 8.85, "x": 870, "y": 540, "w": 260, "rot": 8 },
-    { "file": "s4051", "start": 9.0, "end": 10.9, "x": 885, "y": 570, "w": 220, "rot": 8 },
-    { "file": "s4040", "start": 10.5, "end": 12.15, "x": 165, "y": 580, "w": 240, "rot": -10 },
-    { "file": "s3900", "start": 12.65, "end": 15.1, "x": 890, "y": 610, "w": 230, "rot": 6 }
-  ],
-  "badges": [
-    { "start": 1.7, "end": 3.4, "icon": "i7575", "label": "30 yil", "theme": "white", "x": 155, "y": 560, "size": 220, "rot": -6 },
-    { "start": 3.45, "end": 5.72, "icon": "i7556", "label": "Aktrisa", "theme": "black", "x": 155, "y": 570, "size": 220, "rot": 5 },
-    { "start": 5.95, "end": 8.85, "icon": "i7555", "label": "100+ film", "theme": "white", "x": 155, "y": 570, "size": 220, "rot": -5 },
-    { "start": 8.95, "end": 10.4, "icon": "i7566", "label": "O’z qadri", "theme": "black", "x": 155, "y": 580, "size": 220, "rot": 6 },
-    { "start": 12.6, "end": 15.1, "icon": "i7562", "label": "Ayollik", "theme": "white", "x": 155, "y": 590, "size": 220, "rot": -6 }
-  ],
-  "music": "chronos",
-  "musicDb": -17
+ "name": "video16",
+ "duration": 12.57,
+ "accent": "#FFD60A",
+ "framing": {
+  "originX": 540,
+  "originY": 720,
+  "scale": 1.35,
+  "shiftY": -110
+ },
+ "cuts": [
+  {
+   "t": 2.47,
+   "type": "whip"
+  },
+  {
+   "t": 7.51,
+   "type": "zoomblur"
+  },
+  {
+   "t": 10.0,
+   "type": "spin"
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.04,
+   "end": 1.3,
+   "words": [
+    {
+     "t": 0.06,
+     "text": "Men"
+    },
+    {
+     "t": 0.28,
+     "text": "Feruza",
+     "hot": true
+    },
+    {
+     "t": 0.64,
+     "text": "Sabitovaman,"
+    }
+   ]
+  },
+  {
+   "start": 1.36,
+   "end": 2.42,
+   "words": [
+    {
+     "t": 1.38,
+     "text": "qariyb"
+    },
+    {
+     "t": 1.6,
+     "text": "30",
+     "hot": true
+    },
+    {
+     "t": 1.9,
+     "text": "yildan",
+     "hot": true
+    },
+    {
+     "t": 2.22,
+     "text": "beri"
+    }
+   ]
+  },
+  {
+   "start": 2.47,
+   "end": 3.62,
+   "words": [
+    {
+     "t": 2.47,
+     "text": "kino"
+    },
+    {
+     "t": 2.79,
+     "text": "sohasida"
+    },
+    {
+     "t": 3.25,
+     "text": "aktrisa",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 3.67,
+   "end": 4.78,
+   "words": [
+    {
+     "t": 3.67,
+     "text": "bo’lib"
+    },
+    {
+     "t": 3.99,
+     "text": "ishlab"
+    },
+    {
+     "t": 4.45,
+     "text": "kelyapman."
+    }
+   ]
+  },
+  {
+   "start": 6.27,
+   "end": 7.46,
+   "words": [
+    {
+     "t": 6.27,
+     "text": "rol"
+    },
+    {
+     "t": 6.61,
+     "text": "ijro"
+    },
+    {
+     "t": 6.79,
+     "text": "etganman."
+    }
+   ]
+  },
+  {
+   "start": 7.6,
+   "end": 8.74,
+   "words": [
+    {
+     "t": 7.6,
+     "text": "Men"
+    },
+    {
+     "t": 7.86,
+     "text": "o’z"
+    },
+    {
+     "t": 8.06,
+     "text": "qadrimni,",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 10.02,
+   "end": 11.11,
+   "words": [
+    {
+     "t": 10.02,
+     "text": "va"
+    },
+    {
+     "t": 10.2,
+     "text": "o’zimda"
+    },
+    {
+     "t": 10.63,
+     "text": "ayollik",
+     "hot": true
+    }
+   ]
+  },
+  {
+   "start": 11.17,
+   "end": 12.53,
+   "words": [
+    {
+     "t": 11.17,
+     "text": "energiyasini",
+     "hot": true
+    },
+    {
+     "t": 11.85,
+     "text": "ochishni"
+    },
+    {
+     "t": 12.04,
+     "text": "boshladim"
+    }
+   ]
+  }
+ ],
+ "pills": [
+  {
+   "start": 10.11,
+   "end": 12.39,
+   "text": "Ayollik energiyasi",
+   "icon": "i7561"
+  }
+ ],
+ "stickers": [
+  {
+   "file": "s4098",
+   "start": 6.28,
+   "end": 7.45,
+   "x": 870,
+   "y": 540,
+   "w": 260,
+   "rot": 8
+  },
+  {
+   "file": "s4051",
+   "start": 7.68,
+   "end": 8.73,
+   "x": 885,
+   "y": 570,
+   "w": 220,
+   "rot": 8
+  },
+  {
+   "file": "s3900",
+   "start": 10.16,
+   "end": 12.39,
+   "x": 890,
+   "y": 610,
+   "w": 230,
+   "rot": 6
+  }
+ ],
+ "badges": [
+  {
+   "start": 1.3,
+   "end": 2.42,
+   "icon": "i7575",
+   "label": "30 yil",
+   "theme": "white",
+   "x": 155,
+   "y": 560,
+   "size": 220,
+   "rot": -6
+  },
+  {
+   "start": 7.63,
+   "end": 8.78,
+   "icon": "i7566",
+   "label": "O’z qadri",
+   "theme": "black",
+   "x": 155,
+   "y": 580,
+   "size": 220,
+   "rot": 6
+  },
+  {
+   "start": 10.11,
+   "end": 12.39,
+   "icon": "i7562",
+   "label": "Ayollik",
+   "theme": "white",
+   "x": 155,
+   "y": 590,
+   "size": 220,
+   "rot": -6
+  }
+ ],
+ "music": "raising-me-higher",
+ "musicDb": -18,
+ "punches": [
+  1.53,
+  10.63
+ ],
+ "cards": [
+  {
+   "start": 4.74,
+   "end": 6.22,
+   "thin": "Yuzdan ortiq",
+   "big": "*100+*|film",
+   "theme": "white",
+   "icon": "i7555",
+   "numeric": true,
+   "enter": "circle",
+   "exit": "slide"
+  },
+  {
+   "start": 8.78,
+   "end": 10.0,
+   "thin": "Men ochdim",
+   "big": "Ichki|*kuch*",
+   "theme": "black",
+   "icon": "i7565",
+   "enter": "wipe",
+   "exit": "zoom"
+  }
+ ],
+ "brolls": [
+  {
+   "file": "01_pexels_film-camera-monitor_1440p_50fps.mp4",
+   "start": 2.47,
+   "end": 4.77,
+   "from": 6.6,
+   "enter": "whip"
+  }
+ ],
+ "jumps": [
+  1.34,
+  12.04
+ ],
+ "musicFrom": 2.0
 }
